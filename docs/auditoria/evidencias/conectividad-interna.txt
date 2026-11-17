@@ -1,0 +1,3 @@
+$ docker compose exec -T question-service curl -fsS http://validation-service:8082/actuator/health
+{"status":"UP"}
+EXIT_CODE=0

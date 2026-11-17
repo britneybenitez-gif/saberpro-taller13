@@ -1,0 +1,174 @@
+## feature/taller13-fase2
+ M .gitignore
+ M INFORME_AUDITORIA.md
+ M README.md
+ M docs/diagramas.md
+ M pom.xml
+ D src/main/java/co/edu/unicauca/saberpro/SaberProApplication.java
+ D src/main/java/co/edu/unicauca/saberpro/application/CrearPreguntaService.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/exception/ReglaNegocioException.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/model/EstadoPregunta.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/model/Pregunta.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/inbound/CrearPreguntaUseCase.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/outbound/NotificacionRevisionPort.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/outbound/PreguntaRepositoryPort.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/Enunciado.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/Justificacion.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/OpcionRespuesta.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/in/web/ApiExceptionHandler.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/in/web/PreguntaController.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/JpaQuestionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/OpcionEmbeddable.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/PreguntaJpaEntity.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/SpringDataPreguntaRepository.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/memory/InMemoryQuestionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/notification/LoggingNotificacionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/config/HexagonalConfiguration.java
+ D src/main/resources/application.properties
+ D src/test/java/co/edu/unicauca/saberpro/application/IntercambiabilidadTest.java
+ D src/test/java/co/edu/unicauca/saberpro/domain/PreguntaTest.java
+ D src/test/java/co/edu/unicauca/saberpro/infrastructure/ApiJpaIntegrationTest.java
+ D src/test/java/co/edu/unicauca/saberpro/infrastructure/ApiMemoryIntegrationTest.java
+?? .dockerignore
+?? .mvn/wrapper/maven-wrapper.properties
+?? docker-compose.yml
+?? docs/INFORME_IMPLEMENTACION.md
+?? docs/INFORME_TECNICO.md
+?? docs/INVENTARIO_CAMBIOS.md
+?? docs/arquitectura/arquitectura.md
+?? docs/arquitectura/decisiones.md
+?? docs/arquitectura/diagramas.md
+?? docs/arquitectura/trazabilidad.md
+?? docs/auditoria/evidencias/huellas-antes.json
+?? docs/auditoria/evidencias/inventario-recursivo.txt
+?? docs/auditoria/evidencias/lisw2_guia_paso_a_paso_taller13_estudiantes.txt
+?? docs/auditoria/evidencias/lisw2_taller13_entrega_final_DDDHexagonalDocker.txt
+?? docs/auditoria/evidencias/reportes-previos/lifecycle-service/surefire-reports/TEST-co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest.xml
+?? docs/auditoria/evidencias/reportes-previos/lifecycle-service/surefire-reports/co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest.txt
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/TEST-co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest.xml
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/TEST-co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest.xml
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/TEST-co.edu.unicauca.saberpro.question.domain.PreguntaTest.xml
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/TEST-co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest.xml
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest.txt
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest.txt
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/co.edu.unicauca.saberpro.question.domain.PreguntaTest.txt
+?? docs/auditoria/evidencias/reportes-previos/question-service/surefire-reports/co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest.txt
+?? docs/auditoria/evidencias/reportes-previos/validation-service/surefire-reports/TEST-co.edu.unicauca.saberpro.validation.ValidationApiTest.xml
+?? docs/auditoria/evidencias/reportes-previos/validation-service/surefire-reports/co.edu.unicauca.saberpro.validation.ValidationApiTest.txt
+?? docs/evidencias/README.md
+?? docs/evidencias/conectividad-interna.txt
+?? docs/evidencias/docker-compose-build.log
+?? docs/evidencias/docker-compose-config.yml
+?? docs/evidencias/docker-compose-ps.txt
+?? docs/evidencias/docker-compose-up.log
+?? docs/evidencias/docker-ps.txt
+?? docs/evidencias/dominio-puro.txt
+?? docs/evidencias/guias-sha256.json
+?? docs/evidencias/java-contenedor.txt
+?? docs/evidencias/junit/lifecycle-service/co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest.txt
+?? docs/evidencias/junit/lifecycle-service/co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.domain.PreguntaTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest.txt
+?? docs/evidencias/junit/question-service/co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest.txt
+?? docs/evidencias/junit/validation-service/co.edu.unicauca.saberpro.validation.ValidationApiTest.txt
+?? docs/evidencias/logs-lifecycle-service.txt
+?? docs/evidencias/logs-question-service.txt
+?? docs/evidencias/logs-rabbitmq.txt
+?? docs/evidencias/logs-validation-service.txt
+?? docs/evidencias/maven-host-verify.log
+?? docs/evidencias/maven-java17-integration.log
+?? docs/evidencias/openjdk-manifest.txt
+?? docs/evidencias/persistencia-reinicio.json
+?? docs/evidencias/rabbitmq-queue.json
+?? docs/evidencias/red-saberpro-net.json
+?? docs/evidencias/resumen-pruebas.json
+?? docs/evidencias/revision-final.json
+?? docs/evidencias/smoke-jpa.json
+?? docs/evidencias/smoke-jpa.log
+?? docs/evidencias/smoke-memory.json
+?? docs/evidencias/smoke-memory.log
+?? docs/evidencias/taller12-baseline-tests.log
+?? docs/guias/lisw2_guia_paso_a_paso_taller13_estudiantes.pdf
+?? docs/guias/lisw2_taller13_entrega_final_DDDHexagonalDocker.pdf
+?? docs/pruebas/README.md
+?? docs/pruebas/SaberPRO_Taller13.postman_collection.json
+?? docs/pruebas/peticiones.http
+?? docs/taller12/INFORME_AUDITORIA.md
+?? docs/taller12/README.md
+?? docs/taller12/diagramas.md
+?? docs/taller12/pom-original.xml
+?? lifecycle-service/.dockerignore
+?? lifecycle-service/Dockerfile
+?? lifecycle-service/mvnw
+?? lifecycle-service/pom.xml
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/LifecycleServiceApplication.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/api/ReviewRestController.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/application/ReviewProcessingService.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/messaging/QuestionReviewListener.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/messaging/QuestionReviewMessage.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/messaging/RabbitTopology.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/persistence/ReviewReceipt.java
+?? lifecycle-service/src/main/java/co/edu/unicauca/saberpro/lifecycle/persistence/ReviewReceiptRepository.java
+?? lifecycle-service/src/main/resources/application.properties
+?? lifecycle-service/src/test/java/co/edu/unicauca/saberpro/lifecycle/LifecycleIntegrationTest.java
+?? lifecycle-service/src/test/java/co/edu/unicauca/saberpro/lifecycle/ReviewProcessingTest.java
+?? mvnw
+?? mvnw.cmd
+?? question-service/.dockerignore
+?? question-service/Dockerfile
+?? question-service/mvnw
+?? question-service/pom.xml
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/QuestionServiceApplication.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/api/ApiExceptionHandler.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/api/QuestionRestController.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/application/QuestionApplicationService.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/application/exception/DependenciaNoDisponibleException.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/exception/ReglaNegocioException.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/model/Enunciado.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/model/EstadoPregunta.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/model/Justificacion.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/model/OpcionRespuesta.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/model/Pregunta.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/ports/inbound/CrearPreguntaUseCase.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/ports/inbound/EvaluarPreguntaUseCase.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/ports/outbound/NotificacionRevisionPort.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/ports/outbound/PreguntaRepositoryPort.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/domain/ports/outbound/ValidacionContenidoPort.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/config/HexagonalConfiguration.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/config/JsonConfiguration.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/jpa/JpaQuestionAdapter.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/jpa/OpcionEmbeddable.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/jpa/QuestionDomainMapper.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/jpa/QuestionRecord.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/jpa/SpringDataPreguntaRepository.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/memory/InMemoryQuestionAdapter.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/messaging/QuestionReviewEvent.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/messaging/RabbitMQPublisher.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/messaging/RabbitTopology.java
+?? question-service/src/main/java/co/edu/unicauca/saberpro/question/infrastructure/validation/RestValidationAdapter.java
+?? question-service/src/main/resources/application.properties
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/application/IntercambiabilidadTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/application/QuestionApplicationServiceTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/domain/PreguntaTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/infrastructure/AdditionalApiContract.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/infrastructure/ApiEmptyIntegrationTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/infrastructure/ApiJpaIntegrationTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/infrastructure/ApiMemoryIntegrationTest.java
+?? question-service/src/test/java/co/edu/unicauca/saberpro/question/infrastructure/RabbitMQPublisherTest.java
+?? scripts/check-domain.sh
+?? scripts/smoke_test.py
+?? scripts/verify.sh
+?? validation-service/.dockerignore
+?? validation-service/Dockerfile
+?? validation-service/mvnw
+?? validation-service/pom.xml
+?? validation-service/src/main/java/co/edu/unicauca/saberpro/validation/ValidationServiceApplication.java
+?? validation-service/src/main/java/co/edu/unicauca/saberpro/validation/api/JsonConfiguration.java
+?? validation-service/src/main/java/co/edu/unicauca/saberpro/validation/api/ValidationExceptionHandler.java
+?? validation-service/src/main/java/co/edu/unicauca/saberpro/validation/api/ValidationRestController.java
+?? validation-service/src/main/resources/application.properties
+?? validation-service/src/test/java/co/edu/unicauca/saberpro/validation/ValidationApiTest.java

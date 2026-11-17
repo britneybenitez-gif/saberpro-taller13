@@ -1,0 +1,310 @@
+[
+  {
+    "archivo": "README.md",
+    "linea": 5,
+    "destino": "docs/taller12/README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 5,
+    "destino": "docs/INFORME_IMPLEMENTACION.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 29,
+    "destino": "docs/arquitectura/decisiones.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 48,
+    "destino": "docs/arquitectura/diagramas.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 48,
+    "destino": "docs/arquitectura/arquitectura.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 48,
+    "destino": "docs/arquitectura/trazabilidad.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 158,
+    "destino": "docs/arquitectura/decisiones.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 202,
+    "destino": "docs/pruebas/README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 202,
+    "destino": "docs/pruebas/SaberPRO_Taller13.postman_collection.json",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 238,
+    "destino": "docs/INFORME_TECNICO.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "README.md",
+    "linea": 238,
+    "destino": "docs/evidencias/README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "INFORME_AUDITORIA.md",
+    "linea": 3,
+    "destino": "docs/taller12/INFORME_AUDITORIA.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "INFORME_AUDITORIA.md",
+    "linea": 7,
+    "destino": "docs/INFORME_IMPLEMENTACION.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "INFORME_AUDITORIA.md",
+    "linea": 8,
+    "destino": "docs/arquitectura/trazabilidad.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "INFORME_AUDITORIA.md",
+    "linea": 9,
+    "destino": "docs/evidencias/README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "INFORME_AUDITORIA.md",
+    "linea": 10,
+    "destino": "docs/INFORME_TECNICO.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 32,
+    "destino": "arquitectura/arquitectura.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 32,
+    "destino": "arquitectura/diagramas.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 42,
+    "destino": "arquitectura/decisiones.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 69,
+    "destino": "evidencias/README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 73,
+    "destino": "arquitectura/trazabilidad.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 85,
+    "destino": "../README.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_TECNICO.md",
+    "linea": 85,
+    "destino": "INVENTARIO_CAMBIOS.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/diagramas.md",
+    "linea": 3,
+    "destino": "arquitectura/diagramas.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/diagramas.md",
+    "linea": 5,
+    "destino": "taller12/diagramas.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_IMPLEMENTACION.md",
+    "linea": 11,
+    "destino": "INVENTARIO_CAMBIOS.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_IMPLEMENTACION.md",
+    "linea": 15,
+    "destino": "arquitectura/trazabilidad.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_IMPLEMENTACION.md",
+    "linea": 83,
+    "destino": "arquitectura/decisiones.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/INFORME_IMPLEMENTACION.md",
+    "linea": 87,
+    "destino": "arquitectura/trazabilidad.md",
+    "imagen": false,
+    "existe": true
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 53,
+    "destino": "docs/figurasYEvidencias/arquitectura.png",
+    "imagen": true,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 70,
+    "destino": "docs/figurasYEvidencias/modelo_ddd.png",
+    "imagen": true,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 183,
+    "destino": "ejemplo-pregunta.json",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 183,
+    "destino": "postman/SaberPRO_Taller12.postman_collection.json",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 222,
+    "destino": "docs/diagramas.md",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 224,
+    "destino": "docs/figurasYEvidencias/flujo_revision.png",
+    "imagen": true,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 228,
+    "destino": "docs/figurasYEvidencias/Pruebas%20JUnit%205.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 229,
+    "destino": "docs/figurasYEvidencias/Creaci%C3%B3n%20de%20una%20pregunta%20con%20JPA%20y%20H2.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 230,
+    "destino": "docs/figurasYEvidencias/Cambio%20de%20estado%20de%20una%20pregunta%20mediante%20el%20adaptador%20JPA.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 231,
+    "destino": "docs/figurasYEvidencias/Validaci%C3%B3n%20de%20invariantes%20del%20dominio%20mediante%20DDD..PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 232,
+    "destino": "docs/figurasYEvidencias/Activaci%C3%B3n%20del%20adaptador%20en%20memoria.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 233,
+    "destino": "docs/figurasYEvidencias/Evidencia_05_Adaptador_Memoria.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 234,
+    "destino": "docs/figurasYEvidencias/Crear%20una%20pregunta%20usando%20el%20adaptador%20en%20memoria.PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 235,
+    "destino": "docs/figurasYEvidencias/Env%C3%ADo%20de%20una%20pregunta%20a%20revisi%C3%B3n%20utilizando%20el%20adaptador%20en%20memoria..PNG",
+    "imagen": false,
+    "existe": false
+  },
+  {
+    "archivo": "docs/taller12/README.md",
+    "linea": 237,
+    "destino": "docs/figurasYEvidencias/",
+    "imagen": false,
+    "existe": false
+  }
+]

@@ -1,0 +1,647 @@
+{
+  "startedAt": "2026-11-16T20:58:53.328392+00:00",
+  "label": "auditoria-memory",
+  "checks": [
+    {
+      "name": "Salud del servicio",
+      "method": "GET",
+      "url": "http://localhost:8082/actuator/health",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "status": "UP"
+      }
+    },
+    {
+      "name": "Salud del servicio",
+      "method": "GET",
+      "url": "http://localhost:18083/actuator/health",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "status": "UP"
+      }
+    },
+    {
+      "name": "Salud del servicio",
+      "method": "GET",
+      "url": "http://localhost:8084/actuator/health",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "status": "UP"
+      }
+    },
+    {
+      "name": "Listado inicial",
+      "method": "GET",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 200,
+      "status": 200,
+      "body": [
+        {
+          "id": "0edf1d6d-9b3a-45a2-8ad2-0624b8785653",
+          "enunciado": {
+            "texto": ""
+          },
+          "justificacion": {
+            "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+          },
+          "opciones": [
+            {
+              "texto": "Responsabilidad única",
+              "correcta": false
+            },
+            {
+              "texto": "Abierto cerrado",
+              "correcta": true
+            },
+            {
+              "texto": "Sustitución de Liskov",
+              "correcta": false
+            },
+            {
+              "texto": "Inversión de dependencias",
+              "correcta": false
+            }
+          ],
+          "estado": "PENDIENTE_REVISION"
+        },
+        {
+          "id": "37fb1851-284f-4dbf-836e-d133ef747701",
+          "enunciado": {
+            "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+          },
+          "justificacion": {
+            "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+          },
+          "opciones": [
+            {
+              "texto": "",
+              "correcta": false
+            },
+            {
+              "texto": "Abierto cerrado",
+              "correcta": true
+            },
+            {
+              "texto": "Sustitución de Liskov",
+              "correcta": false
+            },
+            {
+              "texto": "Inversión de dependencias",
+              "correcta": false
+            }
+          ],
+          "estado": "PENDIENTE_REVISION"
+        },
+        {
+          "id": "adabb604-b863-4eab-a242-bffe5d056eb7",
+          "enunciado": {
+            "texto": ""
+          },
+          "justificacion": {
+            "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+          },
+          "opciones": [
+            {
+              "texto": "Responsabilidad única",
+              "correcta": false
+            },
+            {
+              "texto": "Abierto cerrado",
+              "correcta": true
+            },
+            {
+              "texto": "Sustitución de Liskov",
+              "correcta": false
+            },
+            {
+              "texto": "Inversión de dependencias",
+              "correcta": false
+            }
+          ],
+          "estado": "PENDIENTE_REVISION"
+        }
+      ]
+    },
+    {
+      "name": "Validación REST directa",
+      "method": "POST",
+      "url": "http://localhost:8082/api/validaciones/preguntas",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "valida": true,
+        "errores": []
+      }
+    },
+    {
+      "name": "Creación",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 201,
+      "status": 201,
+      "body": {
+        "id": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Consulta individual",
+      "method": "GET",
+      "url": "http://localhost:18083/api/preguntas/8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "id": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Envío a revisión",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6/enviar-revision",
+      "expected": 202,
+      "status": 202,
+      "body": {
+        "id": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "PENDIENTE_REVISION"
+      }
+    },
+    {
+      "name": "Consumo real Lifecycle",
+      "method": "GET",
+      "url": "http://localhost:8084/api/revisiones/8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "eventId": "dfc48c67-2aaa-38c9-ae74-6f3d6a713f60",
+        "preguntaId": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+        "estado": "PENDIENTE_REVISION",
+        "processedAt": "2026-11-16T20:58:53.498553Z"
+      }
+    },
+    {
+      "name": "Envío duplicado",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6/enviar-revision",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "La pregunta ya fue enviada a revision"
+      }
+    },
+    {
+      "name": "ID inexistente",
+      "method": "GET",
+      "url": "http://localhost:18083/api/preguntas/00000000-0000-0000-0000-000000000000",
+      "expected": 404,
+      "status": 404,
+      "body": {
+        "error": "Pregunta no encontrada: 00000000-0000-0000-0000-000000000000"
+      }
+    },
+    {
+      "name": "UUID mal formado",
+      "method": "GET",
+      "url": "http://localhost:18083/api/preguntas/incorrecto",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "Estructura JSON o identificador inválido"
+      }
+    },
+    {
+      "name": "Dato inválido: justificacion",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "La justificacion debe tener al menos 15 caracteres"
+      }
+    },
+    {
+      "name": "Dato inválido: enunciado",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "El enunciado es obligatorio"
+      }
+    },
+    {
+      "name": "Dato inválido: opciones",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "Estructura JSON o identificador inválido"
+      }
+    },
+    {
+      "name": "Borrador: Tres opciones",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 201,
+      "status": 201,
+      "body": {
+        "id": "8a87e95f-4d41-4716-bb80-49b447c7d1a2",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Rechazo: Tres opciones",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/8a87e95f-4d41-4716-bb80-49b447c7d1a2/enviar-revision",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "Se requieren exactamente 4 opciones"
+      }
+    },
+    {
+      "name": "Borrador: Dos claves correctas",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 201,
+      "status": 201,
+      "body": {
+        "id": "1640269c-2f54-4a58-81a9-ef0065b0bb6d",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "0",
+            "correcta": true
+          },
+          {
+            "texto": "1",
+            "correcta": true
+          },
+          {
+            "texto": "2",
+            "correcta": false
+          },
+          {
+            "texto": "3",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Rechazo: Dos claves correctas",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/1640269c-2f54-4a58-81a9-ef0065b0bb6d/enviar-revision",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "Debe existir exactamente una respuesta correcta"
+      }
+    },
+    {
+      "name": "Límite técnico Validation",
+      "method": "POST",
+      "url": "http://localhost:8082/api/validaciones/preguntas",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "valida": false,
+        "errores": [
+          "enunciado: size must be between 0 and 4000"
+        ]
+      }
+    },
+    {
+      "name": "Integración síncrona del límite",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 400,
+      "status": 400,
+      "body": {
+        "error": "El contenido excede los límites técnicos de validación"
+      }
+    },
+    {
+      "name": "Borrador para fallo de broker",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 201,
+      "status": 201,
+      "body": {
+        "id": "76442753-7d27-490e-a7e7-ea56e0dfda50",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Broker caído",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/76442753-7d27-490e-a7e7-ea56e0dfda50/enviar-revision",
+      "expected": 503,
+      "status": 503,
+      "body": {
+        "error": "No se pudo confirmar la publicación en RabbitMQ"
+      }
+    },
+    {
+      "name": "Rollback tras fallo",
+      "method": "GET",
+      "url": "http://localhost:18083/api/preguntas/76442753-7d27-490e-a7e7-ea56e0dfda50",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "id": "76442753-7d27-490e-a7e7-ea56e0dfda50",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    },
+    {
+      "name": "Reintento tras recuperación",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas/76442753-7d27-490e-a7e7-ea56e0dfda50/enviar-revision",
+      "expected": 202,
+      "status": 202,
+      "body": {
+        "id": "76442753-7d27-490e-a7e7-ea56e0dfda50",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "PENDIENTE_REVISION"
+      }
+    },
+    {
+      "name": "Consumo real Lifecycle",
+      "method": "GET",
+      "url": "http://localhost:8084/api/revisiones/76442753-7d27-490e-a7e7-ea56e0dfda50",
+      "expected": 200,
+      "status": 200,
+      "body": {
+        "eventId": "c4dc3610-54d0-3260-afd6-5b31cd2eb9e0",
+        "preguntaId": "76442753-7d27-490e-a7e7-ea56e0dfda50",
+        "estado": "PENDIENTE_REVISION",
+        "processedAt": "2026-11-16T20:59:10.548140Z"
+      }
+    },
+    {
+      "name": "Validation caído",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 503,
+      "status": 503,
+      "body": {
+        "error": "Validation Service no está disponible"
+      }
+    },
+    {
+      "name": "Validación recuperada",
+      "method": "POST",
+      "url": "http://localhost:18083/api/preguntas",
+      "expected": 201,
+      "status": 201,
+      "body": {
+        "id": "5fdd4c72-159e-4915-93ff-758adf2ecae6",
+        "enunciado": {
+          "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+        },
+        "justificacion": {
+          "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+        },
+        "opciones": [
+          {
+            "texto": "Responsabilidad única",
+            "correcta": false
+          },
+          {
+            "texto": "Abierto cerrado",
+            "correcta": true
+          },
+          {
+            "texto": "Sustitución de Liskov",
+            "correcta": false
+          },
+          {
+            "texto": "Inversión de dependencias",
+            "correcta": false
+          }
+        ],
+        "estado": "BORRADOR"
+      }
+    }
+  ],
+  "preguntaId": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+  "rabbitmq": {
+    "name": "pregunta.revisar.queue",
+    "durable": true,
+    "consumers": 1,
+    "messages": 0,
+    "message_stats": {
+      "ack": 1,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 1,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 1,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "deliver_no_ack": 0,
+      "deliver_no_ack_details": {
+        "rate": 0.0
+      },
+      "get": 0,
+      "get_details": {
+        "rate": 0.0
+      },
+      "get_empty": 0,
+      "get_empty_details": {
+        "rate": 0.0
+      },
+      "get_no_ack": 0,
+      "get_no_ack_details": {
+        "rate": 0.0
+      },
+      "publish": 1,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 0,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  "success": true,
+  "finishedAt": "2026-11-16T20:59:21.681635+00:00"
+}

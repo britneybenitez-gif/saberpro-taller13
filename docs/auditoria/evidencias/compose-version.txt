@@ -1,0 +1,4 @@
+$ docker compose version
+Docker Compose version v5.7.0
+
+EXIT_CODE=0

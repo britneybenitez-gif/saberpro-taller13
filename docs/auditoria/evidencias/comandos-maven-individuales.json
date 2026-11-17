@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      "mvn",
+      "-f",
+      "question-service/pom.xml",
+      "clean",
+      "test"
+    ],
+    "startedAt": "2026-11-16T20:48:10.906693+00:00",
+    "seconds": 14.6,
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mvn",
+      "-f",
+      "validation-service/pom.xml",
+      "clean",
+      "test"
+    ],
+    "startedAt": "2026-11-16T20:48:25.507543+00:00",
+    "seconds": 14.85,
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mvn",
+      "-f",
+      "lifecycle-service/pom.xml",
+      "clean",
+      "test"
+    ],
+    "startedAt": "2026-11-16T20:48:40.353159+00:00",
+    "seconds": 15.15,
+    "exitCode": 0
+  }
+]

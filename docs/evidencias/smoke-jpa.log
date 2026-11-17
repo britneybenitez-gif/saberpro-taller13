@@ -1,0 +1,38 @@
+Salud del servicio: HTTP 200
+Salud del servicio: HTTP 200
+Salud del servicio: HTTP 200
+Listado inicial: HTTP 200
+Validación REST directa: HTTP 200
+Creación: HTTP 201
+Consulta individual: HTTP 200
+Envío a revisión: HTTP 202
+Consumo real Lifecycle: HTTP 200
+Envío duplicado: HTTP 400
+ID inexistente: HTTP 404
+UUID mal formado: HTTP 400
+Dato inválido: justificacion: HTTP 400
+Dato inválido: enunciado: HTTP 400
+Dato inválido: opciones: HTTP 400
+Borrador: Tres opciones: HTTP 201
+Rechazo: Tres opciones: HTTP 400
+Borrador: Dos claves correctas: HTTP 201
+Rechazo: Dos claves correctas: HTTP 400
+Límite técnico Validation: HTTP 400
+Integración síncrona del límite: HTTP 400
+RabbitMQ Management: cola durable y consumidor real disponibles
+Borrador para fallo de broker: HTTP 201
+ Container saberpro-rabbitmq Stopping 
+ Container saberpro-rabbitmq Stopped 
+Broker caído: HTTP 503
+Rollback tras fallo: HTTP 200
+ Container saberpro-rabbitmq Starting 
+ Container saberpro-rabbitmq Started 
+Reintento tras recuperación: HTTP 202
+Consumo real Lifecycle: HTTP 200
+ Container saberpro-validation-service Stopping 
+ Container saberpro-validation-service Stopped 
+Validation caído: HTTP 503
+ Container saberpro-validation-service Starting 
+ Container saberpro-validation-service Started 
+Validación recuperada: HTTP 201
+RESULTADO: PASS

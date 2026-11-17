@@ -1,0 +1,207 @@
+{
+  "at": "2026-11-16T21:09:59.374208+00:00",
+  "health": [
+    {
+      "url": "http://localhost:8082/actuator/health",
+      "status": 200,
+      "body": {
+        "contentType": "application/vnd.spring-boot.actuator.v3+json",
+        "bytes": 15,
+        "containsRabbitMQ": false
+      }
+    },
+    {
+      "url": "http://localhost:8083/actuator/health",
+      "status": 200,
+      "body": {
+        "contentType": "application/vnd.spring-boot.actuator.v3+json",
+        "bytes": 15,
+        "containsRabbitMQ": false
+      }
+    },
+    {
+      "url": "http://localhost:8084/actuator/health",
+      "status": 200,
+      "body": {
+        "contentType": "application/vnd.spring-boot.actuator.v3+json",
+        "bytes": 15,
+        "containsRabbitMQ": false
+      }
+    }
+  ],
+  "management": {
+    "url": "http://localhost:15672",
+    "status": 200,
+    "body": {
+      "contentType": "text/html",
+      "bytes": 1634,
+      "containsRabbitMQ": true
+    }
+  },
+  "queue": {
+    "url": "http://localhost:15672/api/queues/%2F/pregunta.revisar.queue",
+    "status": 200,
+    "body": {
+      "consumer_details": [
+        {
+          "arguments": {},
+          "channel_details": {
+            "connection_name": "172.18.0.4:46658 -> 172.18.0.2:5672",
+            "name": "172.18.0.4:46658 -> 172.18.0.2:5672 (1)",
+            "node": "rabbit@rabbitmq",
+            "number": 1,
+            "peer_host": "172.18.0.4",
+            "peer_port": 46658,
+            "user": "guest"
+          },
+          "ack_required": true,
+          "active": true,
+          "activity_status": "up",
+          "consumer_tag": "amq.ctag-IIjlZ77Lbe2eURo3AZ37Jw",
+          "consumer_timeout": 1800000,
+          "exclusive": false,
+          "prefetch_count": 10,
+          "queue": {
+            "name": "pregunta.revisar.queue",
+            "vhost": "/"
+          }
+        }
+      ],
+      "arguments": {
+        "x-dead-letter-exchange": "pregunta.revisar.queue.dlx",
+        "x-dead-letter-routing-key": "pregunta.revisar.queue.dlq"
+      },
+      "auto_delete": false,
+      "consumer_capacity": 0.9940784592056945,
+      "consumer_utilisation": 0.9940784674146874,
+      "consumers": 1,
+      "deliveries": [],
+      "durable": true,
+      "effective_policy_definition": {},
+      "exclusive": false,
+      "exclusive_consumer_tag": null,
+      "garbage_collection": {
+        "fullsweep_after": 65535,
+        "max_heap_size": 0,
+        "min_bin_vheap_size": 46422,
+        "min_heap_size": 233,
+        "minor_gcs": 12
+      },
+      "head_message_timestamp": null,
+      "idle_since": "2026-11-16T20:59:15.958+00:00",
+      "incoming": [],
+      "memory": 10952,
+      "message_bytes": 0,
+      "message_bytes_paged_out": 0,
+      "message_bytes_persistent": 0,
+      "message_bytes_ram": 0,
+      "message_bytes_ready": 0,
+      "message_bytes_unacknowledged": 0,
+      "message_stats": {
+        "ack": 1,
+        "ack_details": {
+          "rate": 0.0
+        },
+        "deliver": 1,
+        "deliver_details": {
+          "rate": 0.0
+        },
+        "deliver_get": 1,
+        "deliver_get_details": {
+          "rate": 0.0
+        },
+        "deliver_no_ack": 0,
+        "deliver_no_ack_details": {
+          "rate": 0.0
+        },
+        "get": 0,
+        "get_details": {
+          "rate": 0.0
+        },
+        "get_empty": 0,
+        "get_empty_details": {
+          "rate": 0.0
+        },
+        "get_no_ack": 0,
+        "get_no_ack_details": {
+          "rate": 0.0
+        },
+        "publish": 1,
+        "publish_details": {
+          "rate": 0.0
+        },
+        "redeliver": 0,
+        "redeliver_details": {
+          "rate": 0.0
+        }
+      },
+      "messages": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_paged_out": 0,
+      "messages_persistent": 0,
+      "messages_ram": 0,
+      "messages_ready": 0,
+      "messages_ready_details": {
+        "rate": 0.0
+      },
+      "messages_ready_ram": 0,
+      "messages_unacknowledged": 0,
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_ram": 0,
+      "name": "pregunta.revisar.queue",
+      "node": "rabbit@rabbitmq",
+      "operator_policy": null,
+      "policy": null,
+      "recoverable_slaves": null,
+      "reductions": 16678,
+      "reductions_details": {
+        "rate": 0.0
+      },
+      "single_active_consumer_tag": null,
+      "state": "running",
+      "storage_version": 1,
+      "type": "classic",
+      "vhost": "/"
+    }
+  },
+  "flows": [
+    {
+      "source": "smoke-jpa.json",
+      "preguntaId": "5bc8bafc-b9cf-4ded-a4d3-45496f27360e",
+      "receipt": {
+        "url": "http://localhost:8084/api/revisiones/5bc8bafc-b9cf-4ded-a4d3-45496f27360e",
+        "status": 200,
+        "body": {
+          "eventId": "231ceb28-8ffa-3be3-bfbd-bc83cc449ad5",
+          "preguntaId": "5bc8bafc-b9cf-4ded-a4d3-45496f27360e",
+          "estado": "PENDIENTE_REVISION",
+          "processedAt": "2026-11-16T20:53:05.887453Z"
+        }
+      },
+      "consumerLogLines": [
+        "saberpro-lifecycle-service  | 2026-11-16T20:53:05.893Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=5bc8bafc-b9cf-4ded-a4d3-45496f27360e eventId=231ceb28-8ffa-3be3-bfbd-bc83cc449ad5"
+      ]
+    },
+    {
+      "source": "smoke-memory.json",
+      "preguntaId": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+      "receipt": {
+        "url": "http://localhost:8084/api/revisiones/8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+        "status": 200,
+        "body": {
+          "eventId": "dfc48c67-2aaa-38c9-ae74-6f3d6a713f60",
+          "preguntaId": "8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6",
+          "estado": "PENDIENTE_REVISION",
+          "processedAt": "2026-11-16T20:58:53.498553Z"
+        }
+      },
+      "consumerLogLines": [
+        "saberpro-lifecycle-service  | 2026-11-16T20:58:53.506Z  INFO 1 --- [lifecycle-service] [ntContainer#0-5] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=8e7a22f4-f7f9-4a4b-af29-6408af8ddaa6 eventId=dfc48c67-2aaa-38c9-ae74-6f3d6a713f60"
+      ]
+    }
+  ]
+}

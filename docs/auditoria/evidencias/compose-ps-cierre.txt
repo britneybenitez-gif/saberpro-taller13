@@ -1,0 +1,5 @@
+NAME                          IMAGE                                                                     COMMAND                  SERVICE              CREATED          STATUS                    PORTS
+saberpro-lifecycle-service    sha256:592a75949c0731fd2ae32e1f3d8747df415faa29fd275a394b3f924bb788be39   "java -jar app.jar"      lifecycle-service    45 minutes ago   Up 36 minutes (healthy)   0.0.0.0:8084->8084/tcp
+saberpro-question-service     sha256:bf672a9e24fb2e1bf968f958b2f75e981fbd00ed10b717114db0dc3e6f42389c   "java -jar app.jar"      question-service     37 minutes ago   Up 37 minutes (healthy)   0.0.0.0:8083->8083/tcp
+saberpro-rabbitmq             rabbitmq:3-management                                                     "docker-entrypoint.s…"   rabbitmq             45 minutes ago   Up 11 minutes (healthy)   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp
+saberpro-validation-service   sha256:6be57390959cc9d2db07091d254cd2c6762e2c1b3a09606dd02d8ab2255ea820   "java -jar app.jar"      validation-service   45 minutes ago   Up 10 minutes (healthy)   0.0.0.0:8082->8082/tcp

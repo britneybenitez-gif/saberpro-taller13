@@ -1,0 +1,112 @@
+{
+  "docs/figurasYEvidencias/arquitectura.png": {
+    "rep": "Arquitectura hexagonal de la aplicación del Taller 12.",
+    "ele": "PreguntaController, CrearPreguntaUseCase, CrearPreguntaService, dominio, repositorio, JPA, HashMap y LoggingNotificacionAdapter.",
+    "part": "Antecedente de Question Service y de la inversión de dependencias.",
+    "req": "Ilustra separación de capas; no acredita los tres servicios de G p.2/E p.1–2.",
+    "current": "Desactualizada para Taller 13: nombres antiguos, adaptador de log y ausencia de Validation, Lifecycle y RabbitMQ.",
+    "kind": "Diagrama ilustrativo; no es una captura de ejecución.",
+    "valid": "Válida como antecedente identificado; no como arquitectura final.",
+    "action": "Conservar en histórico y usar los C4 actuales en el informe final; no presentar el adaptador de log como AMQP."
+  },
+  "docs/figurasYEvidencias/flujo_revision.png": {
+    "rep": "Secuencia de envío a revisión del Taller 12.",
+    "ele": "Cliente Postman, controlador, caso de uso, agregado con regla 4/1, repositorio, notificación y respuesta HTTP 200.",
+    "part": "Antecedente de EvaluarPreguntaUseCase.enviarRevision.",
+    "req": "Explica la regla de revisión, pero no demuestra HTTP 202 ni consumo AMQP de G p.5.",
+    "current": "Desactualizada: representa 200, nombres anteriores y notificación local.",
+    "kind": "Diagrama de secuencia ilustrativo.",
+    "valid": "Solo histórica; no acredita el flujo distribuido final.",
+    "action": "Usar la secuencia actual con confirms, 202, cola y consumidor; conservar esta imagen como comparación."
+  },
+  "docs/figurasYEvidencias/modelo_ddd.png": {
+    "rep": "Estructura del agregado Pregunta.",
+    "ele": "UUID, Enunciado, Justificacion, opciones, EstadoPregunta, BORRADOR/PENDIENTE_REVISION, creación y revisión.",
+    "part": "domain/model/Pregunta.java y sus objetos de valor.",
+    "req": "Ilustra DDD y separación de objetos de valor, G p.3/E p.1.",
+    "current": "La estructura esencial sigue vigente. La multiplicidad 0..* describe borradores; la revisión exige 4/1. No muestra el defecto HALL-01.",
+    "kind": "Diagrama de clases ilustrativo.",
+    "valid": "Sí como apoyo conceptual etiquetado como reutilizado; no demuestra que las invariantes se ejecuten correctamente.",
+    "action": "Añadir nota de la condición 4/1 al revisar y usar el C4 nivel 4 actual para mostrar puertos y adaptadores."
+  },
+  "docs/figurasYEvidencias/Activación del adaptador en memoria.PNG": {
+    "rep": "Terminal con arranque de la aplicación histórica.",
+    "ele": "SaberProApplication, Tomcat en 8080, mensajes de Hikari/H2 y arranque Spring.",
+    "part": "Configuración histórica del Taller 12.",
+    "req": "No acredita por sí sola la selección HashMap ni los servicios Docker de Taller 13.",
+    "current": "Histórica: puerto 8080 y clase anterior; no se ve el argumento app.repository=memory.",
+    "kind": "Captura de terminal con salida de ejecución histórica; no generada en esta auditoría.",
+    "valid": "Limitada: prueba visual de un arranque, no identifica inequívocamente el repositorio efectivo.",
+    "action": "No usar como prueba aislada de memoria; una captura actual debe incluir configuración y peticiones. Es idéntica a Evidencia_05_Adaptador_Memoria.PNG."
+  },
+  "docs/figurasYEvidencias/Evidencia_05_Adaptador_Memoria.PNG": {
+    "rep": "La misma terminal de arranque que la imagen Activación del adaptador en memoria.PNG.",
+    "ele": "Mismos píxeles, tamaño y SHA-256; Spring, Hikari y puerto 8080.",
+    "part": "Evidencia histórica repetida.",
+    "req": "No aporta una comprobación adicional de intercambiabilidad.",
+    "current": "Desactualizada para Taller 13 y duplicada exactamente.",
+    "kind": "Captura histórica duplicada, no una ejecución independiente.",
+    "valid": "No contar como segunda evidencia; el nombre no demuestra una configuración ausente de la imagen.",
+    "action": "Referenciar una sola copia o explicar el duplicado en el archivo histórico; cualquier limpieza futura debe preservar la historia."
+  },
+  "docs/figurasYEvidencias/Crear una pregunta usando el adaptador en memoria.PNG": {
+    "rep": "Creación histórica de una pregunta con modo memoria visible.",
+    "ele": "Comando --app.repository=memory, curl al puerto 8080, HTTP 201, UUID eb0ddf6b-6d2c-49d2-b1ed-9b97a41e4d23, BORRADOR y cuatro opciones.",
+    "part": "InMemoryQuestionAdapter y creación por API en Taller 12.",
+    "req": "Sustenta el antecedente de creación e intercambio de adaptador, no la integración REST/AMQP actual.",
+    "current": "Histórica; el código final atiende en 8083 y valida por REST.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Sí como evidencia del Taller 12 con alcance limitado; no acredita el sistema final.",
+    "action": "Obtener captura actual de configuración memory, POST 201, revisión 202 y recibo Lifecycle; no editar la antigua para cambiar puertos."
+  },
+  "docs/figurasYEvidencias/Envío de una pregunta a revisión utilizando el adaptador en memoria..PNG": {
+    "rep": "Revisión histórica de la pregunta creada en memoria.",
+    "ele": "POST en 8080, UUID eb0ddf6b-6d2c-49d2-b1ed-9b97a41e4d23, HTTP 200 y estado PENDIENTE_REVISION.",
+    "part": "Transición del agregado y API anterior.",
+    "req": "Demuestra visualmente la transición antigua, no el 202 requerido por G p.5.",
+    "current": "Desactualizada respecto a código HTTP, puerto y mensajería.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Válida únicamente como antecedente; no muestra RabbitMQ ni consumidor.",
+    "action": "Tomar una captura nueva de 202 en 8083 y enlazar el mismo ID con Management/logs/recibo."
+  },
+  "docs/figurasYEvidencias/Creación de una pregunta con JPA y H2.PNG": {
+    "rep": "Petición histórica de creación y su respuesta.",
+    "ele": "curl a 8080, HTTP 201, UUID 952125f7-987d-4bb5-8866-8a462464f1fc y BORRADOR.",
+    "part": "Creación de Pregunta en la API del Taller 12.",
+    "req": "Acredita visualmente el contrato antiguo de creación; la captura no prueba por sí sola qué adaptador guardó.",
+    "current": "Histórica; 8080 y entorno anterior.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Limitada: el título dice JPA/H2, pero no hay evidencia SQL o configuración suficiente en ese cuadro.",
+    "action": "En nueva captura incluir selección JPA y consulta/reinicio o evidencia de persistencia junto a la respuesta 201."
+  },
+  "docs/figurasYEvidencias/Cambio de estado de una pregunta mediante el adaptador JPA.PNG": {
+    "rep": "Respuesta histórica al envío a revisión.",
+    "ele": "UUID 952125f7-987d-4bb5-8866-8a462464f1fc, curl en 8080, HTTP 200, PENDIENTE_REVISION.",
+    "part": "Agregado, API anterior y supuesto modo JPA.",
+    "req": "Apoya transición de estado; no acredita por sí sola JPA ni RabbitMQ.",
+    "current": "Desactualizada: Taller 13 debe devolver 202 y usar 8083.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Solo antecedente; no sustituye evidencia de persistencia/AMQP.",
+    "action": "Crear captura actual con 202 y prueba del mismo ID persistido/consumido."
+  },
+  "docs/figurasYEvidencias/Pruebas JUnit 5.PNG": {
+    "rep": "Resultados Maven del Taller 12.",
+    "ele": "23 pruebas, cero fallos/errores y BUILD SUCCESS; clases del diseño anterior.",
+    "part": "Pruebas originales preservadas y adaptadas.",
+    "req": "Prueba visual de la base; no demuestra los 55 casos actuales.",
+    "current": "Histórica: número y clases no corresponden a la suite final.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Válida para comparar la base, no para certificar la auditoría actual.",
+    "action": "Agregar captura nueva del verify -Pintegration y resumen de 55; no cambiar el número sobre esta imagen."
+  },
+  "docs/figurasYEvidencias/Validación de invariantes del dominio mediante DDD..PNG": {
+    "rep": "Rechazo histórico de una justificación corta.",
+    "ele": "curl en 8080 con justificación corta, HTTP 400 y mensaje del mínimo de 15 caracteres.",
+    "part": "Justificacion y tratamiento de ReglaNegocioException.",
+    "req": "Demuestra visualmente una regla DDD de G p.3.",
+    "current": "La regla sigue vigente, pero la ejecución es del sistema anterior.",
+    "kind": "Captura de terminal de ejecución histórica.",
+    "valid": "Útil como antecedente de una regla; no demuestra todas las invariantes ni descarta HALL-01.",
+    "action": "Añadir evidencias actuales de 400 y explicar que esta captura cubre solo la justificación."
+  }
+}

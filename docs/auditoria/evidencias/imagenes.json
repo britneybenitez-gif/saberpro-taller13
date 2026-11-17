@@ -1,0 +1,79 @@
+[
+  {
+    "path": "docs/figurasYEvidencias/Cambio de estado de una pregunta mediante el adaptador JPA.PNG",
+    "width": 1364,
+    "height": 160,
+    "sha256": "e3f1dab6dbabb0df34ec958aa22091aedff43138c4e5cb33d9a26166ea111870",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Crear una pregunta usando el adaptador en memoria.PNG",
+    "width": 1366,
+    "height": 340,
+    "sha256": "12a7c45e7050a7de1ec1473d8ae91882e1458cf82bc84ba995431ac500a09e2e",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Envío de una pregunta a revisión utilizando el adaptador en memoria..PNG",
+    "width": 1363,
+    "height": 180,
+    "sha256": "e56f90c0d7242452e6b159f77687ec5184ba7bb9568e109068780e6087a912eb",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/flujo_revision.png",
+    "width": 2331,
+    "height": 556,
+    "sha256": "f93e6f4b4eb928f7f04df9a64e394080960cdbf5e07a9452bb056e25a0324b44",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Evidencia_05_Adaptador_Memoria.PNG",
+    "width": 1362,
+    "height": 565,
+    "sha256": "b29ba59ea9e1bd424dd54fe318dd531c9d1745beb4f1757366947d959730ee5c",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Creación de una pregunta con JPA y H2.PNG",
+    "width": 1366,
+    "height": 526,
+    "sha256": "dd90f59d2aa436f4efc0e97fb4dc8b6018975bf0de164445e49471a691711294",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/arquitectura.png",
+    "width": 1429,
+    "height": 989,
+    "sha256": "c61873b380827b2dfc52b656d672278acf94d619bad09d84f317ee585da003d7",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Pruebas JUnit 5.PNG",
+    "width": 1323,
+    "height": 699,
+    "sha256": "8b6e34768333e3be41f8ee3ed31224a85254b87511b524437a3ce513107adc78",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Activación del adaptador en memoria.PNG",
+    "width": 1362,
+    "height": 565,
+    "sha256": "b29ba59ea9e1bd424dd54fe318dd531c9d1745beb4f1757366947d959730ee5c",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/modelo_ddd.png",
+    "width": 2128,
+    "height": 833,
+    "sha256": "657eca3cb7583d735d1406c9863bdfea3dccd5d4f3925a9020d02b140a793aab",
+    "identicaTaller12": true
+  },
+  {
+    "path": "docs/figurasYEvidencias/Validación de invariantes del dominio mediante DDD..PNG",
+    "width": 1270,
+    "height": 307,
+    "sha256": "64dd890cfec74be7aad05428f6cf3fb0f56852e3eff9ea47aca5f80c145f4632",
+    "identicaTaller12": true
+  }
+]

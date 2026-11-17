@@ -1,0 +1,5 @@
+NAME                          IMAGE                                  COMMAND                  SERVICE              CREATED          STATUS                   PORTS
+saberpro-lifecycle-service    saberpro-taller13-lifecycle-service    "java -jar app.jar"      lifecycle-service    13 minutes ago   Up 4 minutes (healthy)   0.0.0.0:8084->8084/tcp
+saberpro-question-service     saberpro-taller13-question-service     "java -jar app.jar"      question-service     4 minutes ago    Up 4 minutes (healthy)   0.0.0.0:8083->8083/tcp
+saberpro-rabbitmq             rabbitmq:3-management                  "docker-entrypoint.s…"   rabbitmq             13 minutes ago   Up 5 minutes (healthy)   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp
+saberpro-validation-service   saberpro-taller13-validation-service   "java -jar app.jar"      validation-service   13 minutes ago   Up 5 minutes (healthy)   0.0.0.0:8082->8082/tcp

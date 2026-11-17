@@ -1,0 +1,244 @@
+[
+  {
+    "case": "enunciado",
+    "repository": "jpa",
+    "input": {
+      "enunciado": "\u0000\t ",
+      "justificacion": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente.",
+      "opciones": [
+        {
+          "texto": "Responsabilidad única",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "El enunciado es obligatorio"
+    }
+  },
+  {
+    "case": "enunciado",
+    "repository": "memory",
+    "input": {
+      "enunciado": "\u0000\t ",
+      "justificacion": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente.",
+      "opciones": [
+        {
+          "texto": "Responsabilidad única",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ]
+    },
+    "status": 201,
+    "response": {
+      "id": "0edf1d6d-9b3a-45a2-8ad2-0624b8785653",
+      "enunciado": {
+        "texto": ""
+      },
+      "justificacion": {
+        "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+      },
+      "opciones": [
+        {
+          "texto": "Responsabilidad única",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ],
+      "estado": "BORRADOR"
+    },
+    "reviewStatus": 202,
+    "reviewBody": {
+      "id": "0edf1d6d-9b3a-45a2-8ad2-0624b8785653",
+      "enunciado": {
+        "texto": ""
+      },
+      "justificacion": {
+        "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+      },
+      "opciones": [
+        {
+          "texto": "Responsabilidad única",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ],
+      "estado": "PENDIENTE_REVISION"
+    },
+    "lifecycleStatus": 200,
+    "receipt": {
+      "eventId": "dc1a5c2a-4e91-33ef-b51c-452efcfcff7e",
+      "preguntaId": "0edf1d6d-9b3a-45a2-8ad2-0624b8785653",
+      "estado": "PENDIENTE_REVISION",
+      "processedAt": "2026-11-16T20:52:20.289432Z"
+    }
+  },
+  {
+    "case": "opcion",
+    "repository": "jpa",
+    "input": {
+      "enunciado": "¿Qué principio SOLID favorece la extensión sin modificación?",
+      "justificacion": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente.",
+      "opciones": [
+        {
+          "texto": "\u0000\t ",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "El texto de la opcion es obligatorio"
+    }
+  },
+  {
+    "case": "opcion",
+    "repository": "memory",
+    "input": {
+      "enunciado": "¿Qué principio SOLID favorece la extensión sin modificación?",
+      "justificacion": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente.",
+      "opciones": [
+        {
+          "texto": "\u0000\t ",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ]
+    },
+    "status": 201,
+    "response": {
+      "id": "37fb1851-284f-4dbf-836e-d133ef747701",
+      "enunciado": {
+        "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+      },
+      "justificacion": {
+        "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+      },
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ],
+      "estado": "BORRADOR"
+    },
+    "reviewStatus": 202,
+    "reviewBody": {
+      "id": "37fb1851-284f-4dbf-836e-d133ef747701",
+      "enunciado": {
+        "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+      },
+      "justificacion": {
+        "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+      },
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false
+        },
+        {
+          "texto": "Abierto cerrado",
+          "correcta": true
+        },
+        {
+          "texto": "Sustitución de Liskov",
+          "correcta": false
+        },
+        {
+          "texto": "Inversión de dependencias",
+          "correcta": false
+        }
+      ],
+      "estado": "PENDIENTE_REVISION"
+    },
+    "lifecycleStatus": 200,
+    "receipt": {
+      "eventId": "61cb6950-2dc2-3d29-927b-345d441d8e18",
+      "preguntaId": "37fb1851-284f-4dbf-836e-d133ef747701",
+      "estado": "PENDIENTE_REVISION",
+      "processedAt": "2026-11-16T20:52:20.379031Z"
+    }
+  }
+]

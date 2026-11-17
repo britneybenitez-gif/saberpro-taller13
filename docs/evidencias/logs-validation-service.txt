@@ -1,0 +1,73 @@
+saberpro-validation-service  | 
+saberpro-validation-service  |   .   ____          _            __ _ _
+saberpro-validation-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-validation-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-validation-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-validation-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-validation-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-validation-service  | 
+saberpro-validation-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-validation-service  | 
+saberpro-validation-service  | 2026-11-16T20:24:38.866Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Starting ValidationServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-validation-service  | 2026-11-16T20:24:38.877Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+saberpro-validation-service  | 2026-11-16T20:24:42.634Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+saberpro-validation-service  | 2026-11-16T20:24:42.673Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-validation-service  | 2026-11-16T20:24:42.674Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-validation-service  | 2026-11-16T20:24:42.747Z  INFO 1 --- [validation-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-validation-service  | 2026-11-16T20:24:42.750Z  INFO 1 --- [validation-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3678 ms
+saberpro-validation-service  | 2026-11-16T20:24:45.011Z  INFO 1 --- [validation-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-validation-service  | 2026-11-16T20:24:45.281Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+saberpro-validation-service  | 2026-11-16T20:24:45.389Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Started ValidationServiceApplication in 7.956 seconds (process running for 9.182)
+saberpro-validation-service  | 2026-11-16T20:24:46.885Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:24:46.893Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:24:46.905Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+saberpro-validation-service  | 2026-11-16T20:29:52.993Z  INFO 1 --- [validation-service] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+saberpro-validation-service  | 2026-11-16T20:29:53.000Z  INFO 1 --- [validation-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+saberpro-validation-service  | 
+saberpro-validation-service  |   .   ____          _            __ _ _
+saberpro-validation-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-validation-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-validation-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-validation-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-validation-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-validation-service  | 
+saberpro-validation-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-validation-service  | 
+saberpro-validation-service  | 2026-11-16T20:29:58.626Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Starting ValidationServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-validation-service  | 2026-11-16T20:29:58.631Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+saberpro-validation-service  | 2026-11-16T20:30:01.183Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+saberpro-validation-service  | 2026-11-16T20:30:01.210Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-validation-service  | 2026-11-16T20:30:01.211Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-validation-service  | 2026-11-16T20:30:01.289Z  INFO 1 --- [validation-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-validation-service  | 2026-11-16T20:30:01.291Z  INFO 1 --- [validation-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2567 ms
+saberpro-validation-service  | 2026-11-16T20:30:02.412Z  INFO 1 --- [validation-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-validation-service  | 2026-11-16T20:30:02.563Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+saberpro-validation-service  | 2026-11-16T20:30:02.620Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Started ValidationServiceApplication in 4.812 seconds (process running for 5.9)
+saberpro-validation-service  | 2026-11-16T20:30:02.905Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:30:02.906Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:30:02.909Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+saberpro-validation-service  | 2026-11-16T20:32:05.163Z  INFO 1 --- [validation-service] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+saberpro-validation-service  | 2026-11-16T20:32:05.173Z  INFO 1 --- [validation-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+saberpro-validation-service  | 
+saberpro-validation-service  |   .   ____          _            __ _ _
+saberpro-validation-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-validation-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-validation-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-validation-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-validation-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-validation-service  | 
+saberpro-validation-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-validation-service  | 
+saberpro-validation-service  | 2026-11-16T20:32:10.470Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Starting ValidationServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-validation-service  | 2026-11-16T20:32:10.482Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+saberpro-validation-service  | 2026-11-16T20:32:13.336Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+saberpro-validation-service  | 2026-11-16T20:32:13.354Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-validation-service  | 2026-11-16T20:32:13.355Z  INFO 1 --- [validation-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-validation-service  | 2026-11-16T20:32:13.417Z  INFO 1 --- [validation-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-validation-service  | 2026-11-16T20:32:13.419Z  INFO 1 --- [validation-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2845 ms
+saberpro-validation-service  | 2026-11-16T20:32:14.420Z  INFO 1 --- [validation-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-validation-service  | 2026-11-16T20:32:14.522Z  INFO 1 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+saberpro-validation-service  | 2026-11-16T20:32:14.552Z  INFO 1 --- [validation-service] [           main] c.e.u.s.v.ValidationServiceApplication   : Started ValidationServiceApplication in 4.999 seconds (process running for 5.762)
+saberpro-validation-service  | 2026-11-16T20:32:14.911Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:32:14.912Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-validation-service  | 2026-11-16T20:32:14.915Z  INFO 1 --- [validation-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms

@@ -1,0 +1,52 @@
+[
+  {
+    "command": "docker compose ps",
+    "exitCode": 0,
+    "file": "compose-ps-final.txt"
+  },
+  {
+    "command": "docker ps",
+    "exitCode": 0,
+    "file": "docker-ps-final.txt"
+  },
+  {
+    "command": "docker network inspect saberpro-net",
+    "exitCode": 0,
+    "file": "red-saberpro-net.json"
+  },
+  {
+    "command": "docker compose exec -T question-service java -version",
+    "exitCode": 0,
+    "file": "java-contenedor.txt"
+  },
+  {
+    "command": "docker compose exec -T question-service curl -fsS http://validation-service:8082/actuator/health",
+    "exitCode": 0,
+    "file": "conectividad-interna.txt"
+  },
+  {
+    "command": "bash scripts/check-domain.sh",
+    "exitCode": 0,
+    "file": "dominio-puro.txt"
+  },
+  {
+    "command": "java -version",
+    "exitCode": 0,
+    "file": "java-host.txt"
+  },
+  {
+    "command": "mvn -version",
+    "exitCode": 0,
+    "file": "maven-host.txt"
+  },
+  {
+    "command": "docker version",
+    "exitCode": 0,
+    "file": "docker-version.txt"
+  },
+  {
+    "command": "docker compose version",
+    "exitCode": 0,
+    "file": "compose-version.txt"
+  }
+]

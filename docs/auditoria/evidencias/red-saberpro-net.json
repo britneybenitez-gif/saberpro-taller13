@@ -1,0 +1,85 @@
+$ docker network inspect saberpro-net
+[
+    {
+        "Name": "saberpro-net",
+        "Id": "8cb8b44778a3cf647e6a1513a168f98d883680e22231f4acf419b0b9601d3df3",
+        "Created": "2026-11-16T20:24:34.823818638Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "f3c338283fdfe74ce732ac18fdd1b07e21fa741a391da4a07d4c4441568513ee",
+            "com.docker.compose.network": "saberpro-net",
+            "com.docker.compose.project": "saberpro-taller13",
+            "com.docker.compose.version": "5.7.0"
+        },
+        "Containers": {
+            "8811b42c8830b1148666ee2c9168248be2057a741a0398f8255494a84051e623": {
+                "Name": "saberpro-auditoria-memory",
+                "EndpointID": "07e5d34a53670f825981da5575ef1b8aaa86f8fbd2350eaecd1c8eaa3c86f427",
+                "MacAddress": "7e:72:d3:d9:2c:ae",
+                "IPv4Address": "172.18.0.6/16",
+                "IPv6Address": ""
+            },
+            "b00ca9a2caabc8021038c5b30d390fda8f4738d9fe23a5643454cc40d5df67c9": {
+                "Name": "saberpro-lifecycle-service",
+                "EndpointID": "fb6898ad579a415267883b89ce2c1ca711102223cc0ded0cb99a4e5b97c30ef4",
+                "MacAddress": "86:35:f6:ce:52:ad",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            },
+            "df156907bf1bd0bb218607ac9b71214b237b1a062c3e6f13c0a5c6499c016428": {
+                "Name": "saberpro-rabbitmq",
+                "EndpointID": "f466fe92b2bc6d173101f9ebdccbf5176bec1505492d6e701dac22674c547a88",
+                "MacAddress": "e6:d6:bc:d8:8c:19",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "fd133ef3706c77c002645700140a1ac61456484f0026111848da86af5c03e443": {
+                "Name": "saberpro-validation-service",
+                "EndpointID": "4187b51eed92560800e41efc9a1585bf8d501030ef29d5d1798689b3698968da",
+                "MacAddress": "72:a7:16:8b:73:a2",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "ffcc48543e7e907789cde5001dc8584004e821783e6fadd70b1b6bcf8ac3cde5": {
+                "Name": "saberpro-question-service",
+                "EndpointID": "b1b8c4793838444b250938adec62a49cb3d12f0ad9c0c2b691cd535bf733a47d",
+                "MacAddress": "be:45:3d:da:4b:d7",
+                "IPv4Address": "172.18.0.5/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.18.0.0/16": {
+                        "IPsInUse": 8,
+                        "DynamicIPsAvailable": 65528
+                    }
+                }
+            }
+        }
+    }
+]
+
+EXIT_CODE=0

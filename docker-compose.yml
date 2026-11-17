@@ -1,0 +1,88 @@
+name: saberpro-taller13
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: saberpro-rabbitmq
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks: [saberpro-net]
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  validation-service:
+    build: ./validation-service
+    container_name: saberpro-validation-service
+    ports: ["8082:8082"]
+    networks: [saberpro-net]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8082/actuator/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  question-service:
+    build: ./question-service
+    container_name: saberpro-question-service
+    ports: ["8083:8083"]
+    environment:
+      APP_REPOSITORY: ${APP_REPOSITORY:-jpa}
+      VALIDATION_SERVICE_URL: http://validation-service:8082
+      SPRING_RABBITMQ_HOST: rabbitmq
+      DB_URL: jdbc:h2:file:/app/data/questions;DB_CLOSE_ON_EXIT=FALSE
+    volumes:
+      - question-data:/app/data
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      validation-service:
+        condition: service_healthy
+    networks: [saberpro-net]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8083/actuator/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  lifecycle-service:
+    build: ./lifecycle-service
+    container_name: saberpro-lifecycle-service
+    ports: ["8084:8084"]
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+      DB_URL: jdbc:h2:file:/app/data/lifecycle;DB_CLOSE_ON_EXIT=FALSE
+    volumes:
+      - lifecycle-data:/app/data
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks: [saberpro-net]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8084/actuator/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+networks:
+  saberpro-net:
+    name: saberpro-net
+    driver: bridge
+
+volumes:
+  rabbitmq-data:
+  question-data:
+  lifecycle-data:

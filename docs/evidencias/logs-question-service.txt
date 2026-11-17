@@ -1,0 +1,45 @@
+saberpro-question-service  | 
+saberpro-question-service  |   .   ____          _            __ _ _
+saberpro-question-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-question-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-question-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-question-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-question-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-question-service  | 
+saberpro-question-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-question-service  | 
+saberpro-question-service  | 2026-11-16T20:32:58.706Z  INFO 1 --- [question-service] [           main] c.e.u.s.q.QuestionServiceApplication     : Starting QuestionServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-question-service  | 2026-11-16T20:32:58.711Z  INFO 1 --- [question-service] [           main] c.e.u.s.q.QuestionServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+saberpro-question-service  | 2026-11-16T20:33:01.423Z  INFO 1 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+saberpro-question-service  | 2026-11-16T20:33:01.525Z  INFO 1 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interface.
+saberpro-question-service  | 2026-11-16T20:33:02.903Z  INFO 1 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+saberpro-question-service  | 2026-11-16T20:33:02.923Z  INFO 1 --- [question-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-question-service  | 2026-11-16T20:33:02.924Z  INFO 1 --- [question-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-question-service  | 2026-11-16T20:33:02.965Z  INFO 1 --- [question-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-question-service  | 2026-11-16T20:33:02.967Z  INFO 1 --- [question-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4076 ms
+saberpro-question-service  | 2026-11-16T20:33:03.603Z  INFO 1 --- [question-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+saberpro-question-service  | 2026-11-16T20:33:03.722Z  INFO 1 --- [question-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+saberpro-question-service  | 2026-11-16T20:33:03.794Z  INFO 1 --- [question-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+saberpro-question-service  | 2026-11-16T20:33:04.340Z  INFO 1 --- [question-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+saberpro-question-service  | 2026-11-16T20:33:04.400Z  INFO 1 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+saberpro-question-service  | 2026-11-16T20:33:04.810Z  INFO 1 --- [question-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/questions user=SA
+saberpro-question-service  | 2026-11-16T20:33:04.813Z  INFO 1 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+saberpro-question-service  | 2026-11-16T20:33:04.904Z  INFO 1 --- [question-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+saberpro-question-service  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+saberpro-question-service  | 	Database driver: undefined/unknown
+saberpro-question-service  | 	Database version: 2.3.232
+saberpro-question-service  | 	Autocommit mode: undefined/unknown
+saberpro-question-service  | 	Isolation level: undefined/unknown
+saberpro-question-service  | 	Minimum pool size: undefined/unknown
+saberpro-question-service  | 	Maximum pool size: undefined/unknown
+saberpro-question-service  | 2026-11-16T20:33:06.685Z  INFO 1 --- [question-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+saberpro-question-service  | 2026-11-16T20:33:06.767Z  INFO 1 --- [question-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+saberpro-question-service  | 2026-11-16T20:33:07.489Z  INFO 1 --- [question-service] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+saberpro-question-service  | 2026-11-16T20:33:10.088Z  INFO 1 --- [question-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-question-service  | 2026-11-16T20:33:10.292Z  INFO 1 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+saberpro-question-service  | 2026-11-16T20:33:10.341Z  INFO 1 --- [question-service] [           main] c.e.u.s.q.QuestionServiceApplication     : Started QuestionServiceApplication in 12.491 seconds (process running for 13.423)
+saberpro-question-service  | 2026-11-16T20:33:12.444Z  INFO 1 --- [question-service] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-question-service  | 2026-11-16T20:33:12.444Z  INFO 1 --- [question-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-question-service  | 2026-11-16T20:33:12.447Z  INFO 1 --- [question-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+saberpro-question-service  | 2026-11-16T20:33:12.526Z  INFO 1 --- [question-service] [nio-8083-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-question-service  | 2026-11-16T20:33:12.613Z  INFO 1 --- [question-service] [nio-8083-exec-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#61d1315b:0/SimpleConnection@7dded1e2 [delegate=amqp://guest@172.18.0.2:5672/, localPort=41354]

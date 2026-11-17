@@ -1,0 +1,48 @@
+{
+  "fechaBogota": "2026-11-16T15:37:49.759344-05:00",
+  "branch": "feature/taller13-fase2",
+  "modoFinal": "jpa",
+  "servicios": [
+    {
+      "servicio": "lifecycle-service",
+      "estado": "running",
+      "salud": "healthy"
+    },
+    {
+      "servicio": "question-service",
+      "estado": "running",
+      "salud": "healthy"
+    },
+    {
+      "servicio": "rabbitmq",
+      "estado": "running",
+      "salud": "healthy"
+    },
+    {
+      "servicio": "validation-service",
+      "estado": "running",
+      "salud": "healthy"
+    }
+  ],
+  "mavenTests": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "smoke": {
+    "jpa": {
+      "checks": 28,
+      "success": true
+    },
+    "memory": {
+      "checks": 28,
+      "success": true
+    }
+  },
+  "pendientes": [
+    "Trasladar informe a plantilla Formato-Documento.docx no proporcionada",
+    "Capturas manuales de interfaz",
+    "Publicación GitHub tras revisión del propietario"
+  ]
+}

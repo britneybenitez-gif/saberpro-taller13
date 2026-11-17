@@ -1,0 +1,65 @@
+{
+  "version": "11.17.2",
+  "results": [
+    {
+      "file": "README.md",
+      "block": 1,
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 1,
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 2,
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 3,
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 4,
+      "valid": true,
+      "type": "classDiagram"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 5,
+      "valid": true,
+      "type": "sequence"
+    },
+    {
+      "file": "docs/arquitectura/diagramas.md",
+      "block": 6,
+      "valid": true,
+      "type": "sequence"
+    },
+    {
+      "file": "docs/taller12/diagramas.md",
+      "block": 1,
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "file": "docs/taller12/diagramas.md",
+      "block": 2,
+      "valid": true,
+      "type": "sequence"
+    },
+    {
+      "file": "docs/taller12/diagramas.md",
+      "block": 3,
+      "valid": true,
+      "type": "classDiagram"
+    }
+  ]
+}

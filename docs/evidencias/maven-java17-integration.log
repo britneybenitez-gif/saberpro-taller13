@@ -1,0 +1,570 @@
+Unable to find image 'maven:3.9.9-eclipse-temurin-17' locally
+3.9.9-eclipse-temurin-17: Pulling from library/maven
+Digest: sha256:f58d59b6273e785ac0a4477f6e9b5ba1d7731c75b906c0f7b34076f1851318cc
+Status: Downloaded newer image for maven:3.9.9-eclipse-temurin-17
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] validation-service                                                 [jar]
+[INFO] question-service                                                   [jar]
+[INFO] lifecycle-service                                                  [jar]
+[INFO] Banco de Preguntas Saber PRO - Taller 13                           [pom]
+[INFO] 
+[INFO] -----------------< co.edu.unicauca:validation-service >-----------------
+[INFO] Building validation-service 2.0.0                                  [1/4]
+[INFO]   from validation-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ validation-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ validation-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 4 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ validation-service ---
+[INFO] skip non existing resourceDirectory /workspace/validation-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ validation-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ validation-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.edu.unicauca.saberpro.validation.ValidationApiTest
+20:25:51.009 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.validation.ValidationApiTest]: ValidationApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:25:51.160 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.unicauca.saberpro.validation.ValidationServiceApplication for test class co.edu.unicauca.saberpro.validation.ValidationApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:25:51.825Z  INFO 64 --- [validation-service] [           main] c.e.u.s.validation.ValidationApiTest     : Starting ValidationApiTest using Java 17.0.15 with PID 64 (started by ubuntu in /workspace/validation-service)
+2026-11-16T20:25:51.831Z  INFO 64 --- [validation-service] [           main] c.e.u.s.validation.ValidationApiTest     : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:25:53.872Z  INFO 64 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-16T20:25:53.893Z  INFO 64 --- [validation-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T20:25:53.894Z  INFO 64 --- [validation-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-11-16T20:25:53.993Z  INFO 64 --- [validation-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-16T20:25:53.995Z  INFO 64 --- [validation-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2129 ms
+2026-11-16T20:25:55.556Z  INFO 64 --- [validation-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-16T20:25:55.862Z  INFO 64 --- [validation-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 42353 (http) with context path '/'
+2026-11-16T20:25:55.889Z  INFO 64 --- [validation-service] [           main] c.e.u.s.validation.ValidationApiTest     : Started ValidationApiTest in 4.525 seconds (process running for 5.787)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-16T20:25:57.033Z  INFO 64 --- [validation-service] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T20:25:57.034Z  INFO 64 --- [validation-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T20:25:57.036Z  INFO 64 --- [validation-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.833 s -- in co.edu.unicauca.saberpro.validation.ValidationApiTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ validation-service ---
+[INFO] Building jar: /workspace/validation-service/target/validation-service-2.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.5:repackage (repackage) @ validation-service ---
+[INFO] Replacing main artifact /workspace/validation-service/target/validation-service-2.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/validation-service/target/validation-service-2.0.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.3:integration-test (default) @ validation-service ---
+[INFO] 
+[INFO] --- failsafe:3.5.3:verify (default) @ validation-service ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------< co.edu.unicauca:question-service >------------------
+[INFO] Building question-service 2.0.0                                    [2/4]
+[INFO]   from question-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ question-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ question-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 28 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ question-service ---
+[INFO] skip non existing resourceDirectory /workspace/question-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ question-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ question-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.436 s -- in co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest
+[INFO] Running co.edu.unicauca.saberpro.question.domain.PreguntaTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s -- in co.edu.unicauca.saberpro.question.domain.PreguntaTest
+[INFO] Running co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest
+[INFO] Running co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ question-service ---
+[INFO] Building jar: /workspace/question-service/target/question-service-2.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.5:repackage (repackage) @ question-service ---
+[INFO] Replacing main artifact /workspace/question-service/target/question-service-2.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/question-service/target/question-service-2.0.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.3:integration-test (default) @ question-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest
+20:26:08.397 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest]: ApiEmptyIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:26:08.574 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.unicauca.saberpro.question.QuestionServiceApplication for test class co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:26:09.289Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiEmptyIntegrationTest      : Starting ApiEmptyIntegrationTest using Java 17.0.15 with PID 224 (started by ubuntu in /workspace/question-service)
+2026-11-16T20:26:09.291Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiEmptyIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:26:11.085Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T20:26:11.179Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2026-11-16T20:26:12.499Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-16T20:26:12.521Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T20:26:12.523Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-11-16T20:26:12.603Z  INFO 224 --- [question-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-16T20:26:12.606Z  INFO 224 --- [question-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3276 ms
+2026-11-16T20:26:13.151Z  INFO 224 --- [question-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T20:26:13.242Z  INFO 224 --- [question-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-11-16T20:26:13.296Z  INFO 224 --- [question-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T20:26:13.753Z  INFO 224 --- [question-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T20:26:13.804Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T20:26:14.131Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:empty-it user=SA
+2026-11-16T20:26:14.135Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T20:26:14.273Z  INFO 224 --- [question-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T20:26:15.650Z  INFO 224 --- [question-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T20:26:15.756Z  INFO 224 --- [question-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T20:26:18.040Z  INFO 224 --- [question-service] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T20:26:18.920Z  INFO 224 --- [question-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-16T20:26:19.091Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 35125 (http) with context path '/'
+2026-11-16T20:26:19.125Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiEmptyIntegrationTest      : Started ApiEmptyIntegrationTest in 10.294 seconds (process running for 12.285)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-16T20:26:19.932Z  INFO 224 --- [question-service] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T20:26:19.934Z  INFO 224 --- [question-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T20:26:19.937Z  INFO 224 --- [question-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.23 s -- in co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest
+[INFO] Running co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest
+2026-11-16T20:26:20.332Z  INFO 224 --- [question-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest]: ApiJpaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T20:26:20.344Z  INFO 224 --- [question-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration co.edu.unicauca.saberpro.question.QuestionServiceApplication for test class co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:26:20.416Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiJpaIntegrationTest        : Starting ApiJpaIntegrationTest using Java 17.0.15 with PID 224 (started by ubuntu in /workspace/question-service)
+2026-11-16T20:26:20.416Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiJpaIntegrationTest        : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:26:20.958Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T20:26:20.984Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+2026-11-16T20:26:21.252Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-16T20:26:21.255Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T20:26:21.255Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-11-16T20:26:21.293Z  INFO 224 --- [question-service] [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-11-16T20:26:21.297Z  INFO 224 --- [question-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2026-11-16T20:26:21.491Z  INFO 224 --- [question-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T20:26:21.494Z  INFO 224 --- [question-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T20:26:21.509Z  INFO 224 --- [question-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T20:26:21.511Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-16T20:26:21.516Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:api-jpa-it user=SA
+2026-11-16T20:26:21.516Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-16T20:26:21.517Z  INFO 224 --- [question-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T20:26:21.567Z  INFO 224 --- [question-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T20:26:21.576Z  INFO 224 --- [question-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T20:26:22.465Z  INFO 224 --- [question-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-16T20:26:22.522Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 35669 (http) with context path '/'
+2026-11-16T20:26:22.539Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiJpaIntegrationTest        : Started ApiJpaIntegrationTest in 2.185 seconds (process running for 15.699)
+2026-11-16T20:26:22.571Z  INFO 224 --- [question-service] [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T20:26:22.571Z  INFO 224 --- [question-service] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T20:26:22.573Z  INFO 224 --- [question-service] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-16T20:26:23.818Z  INFO 224 --- [question-service] [o-auto-2-exec-5] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2026-11-16T20:26:23.894Z  INFO 224 --- [question-service] [o-auto-2-exec-5] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2101e969:0/SimpleConnection@392b05ec [delegate=amqp://guest@172.18.0.2:5672/, localPort=41114]
+2026-11-16T20:26:24.102Z  WARN 224 --- [question-service] [nectionFactory2] o.s.amqp.rabbit.core.RabbitTemplate      : Returned message but no callback available
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.594 s -- in co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest
+[INFO] Running co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest
+2026-11-16T20:26:25.927Z  INFO 224 --- [question-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest]: ApiMemoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T20:26:25.930Z  INFO 224 --- [question-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration co.edu.unicauca.saberpro.question.QuestionServiceApplication for test class co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:26:25.968Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiMemoryIntegrationTest     : Starting ApiMemoryIntegrationTest using Java 17.0.15 with PID 224 (started by ubuntu in /workspace/question-service)
+2026-11-16T20:26:25.969Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiMemoryIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:26:26.333Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T20:26:26.348Z  INFO 224 --- [question-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2026-11-16T20:26:26.565Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-16T20:26:26.567Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T20:26:26.567Z  INFO 224 --- [question-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-11-16T20:26:26.601Z  INFO 224 --- [question-service] [           main] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-11-16T20:26:26.601Z  INFO 224 --- [question-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 628 ms
+2026-11-16T20:26:26.792Z  INFO 224 --- [question-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T20:26:26.795Z  INFO 224 --- [question-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T20:26:26.812Z  INFO 224 --- [question-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T20:26:26.813Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-16T20:26:26.819Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:api-memory-it user=SA
+2026-11-16T20:26:26.819Z  INFO 224 --- [question-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-16T20:26:26.820Z  INFO 224 --- [question-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T20:26:26.866Z  INFO 224 --- [question-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T20:26:26.873Z  INFO 224 --- [question-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T20:26:27.884Z  INFO 224 --- [question-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-16T20:26:27.942Z  INFO 224 --- [question-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 44881 (http) with context path '/'
+2026-11-16T20:26:27.957Z  INFO 224 --- [question-service] [           main] c.e.u.s.q.i.ApiMemoryIntegrationTest     : Started ApiMemoryIntegrationTest in 2.023 seconds (process running for 21.117)
+2026-11-16T20:26:27.981Z  INFO 224 --- [question-service] [o-auto-3-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T20:26:27.981Z  INFO 224 --- [question-service] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T20:26:27.983Z  INFO 224 --- [question-service] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-16T20:26:28.241Z  INFO 224 --- [question-service] [o-auto-3-exec-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2026-11-16T20:26:28.249Z  INFO 224 --- [question-service] [o-auto-3-exec-6] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#47c8ced:0/SimpleConnection@74c2d8f4 [delegate=amqp://guest@172.18.0.2:5672/, localPort=41122]
+2026-11-16T20:26:28.319Z  WARN 224 --- [question-service] [nectionFactory2] o.s.amqp.rabbit.core.RabbitTemplate      : Returned message but no callback available
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.743 s -- in co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.3:verify (default) @ question-service ---
+[INFO] 
+[INFO] -----------------< co.edu.unicauca:lifecycle-service >------------------
+[INFO] Building lifecycle-service 2.0.0                                   [3/4]
+[INFO]   from lifecycle-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lifecycle-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ lifecycle-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 8 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lifecycle-service ---
+[INFO] skip non existing resourceDirectory /workspace/lifecycle-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ lifecycle-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ lifecycle-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest
+20:26:31.288 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest]: ReviewProcessingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:26:31.522 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.unicauca.saberpro.lifecycle.LifecycleServiceApplication for test class co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:26:32.108Z  INFO 426 --- [lifecycle-service] [           main] c.e.u.s.lifecycle.ReviewProcessingTest   : Starting ReviewProcessingTest using Java 17.0.15 with PID 426 (started by ubuntu in /workspace/lifecycle-service)
+2026-11-16T20:26:32.110Z  INFO 426 --- [lifecycle-service] [           main] c.e.u.s.lifecycle.ReviewProcessingTest   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:26:32.824Z  INFO 426 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T20:26:32.928Z  INFO 426 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2026-11-16T20:26:33.094Z  INFO 426 --- [lifecycle-service] [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-11-16T20:26:33.314Z  INFO 426 --- [lifecycle-service] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:2f7f5678-e0f2-4879-abbf-853e3f226f37;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-11-16T20:26:33.834Z  INFO 426 --- [lifecycle-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T20:26:33.937Z  INFO 426 --- [lifecycle-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-11-16T20:26:34.000Z  INFO 426 --- [lifecycle-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T20:26:34.480Z  INFO 426 --- [lifecycle-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T20:26:34.617Z  INFO 426 --- [lifecycle-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@7ea42c82']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T20:26:35.695Z  INFO 426 --- [lifecycle-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table revisiones_recibidas (event_id uuid not null, estado varchar(255) not null, pregunta_id uuid not null, processed_at timestamp(6) with time zone not null, primary key (event_id))
+Hibernate: alter table if exists revisiones_recibidas drop constraint if exists UKkwsqjxxnj0dyv8txbafy1k7ac
+Hibernate: alter table if exists revisiones_recibidas add constraint UKkwsqjxxnj0dyv8txbafy1k7ac unique (pregunta_id)
+2026-11-16T20:26:35.784Z  INFO 426 --- [lifecycle-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T20:26:36.471Z  INFO 426 --- [lifecycle-service] [           main] c.e.u.s.lifecycle.ReviewProcessingTest   : Started ReviewProcessingTest in 4.855 seconds (process running for 6.314)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Hibernate: select count(*) from revisiones_recibidas rr1_0
+Hibernate: select count(*) from revisiones_recibidas rr1_0 where rr1_0.event_id=?
+Hibernate: select rr1_0.event_id,rr1_0.estado,rr1_0.pregunta_id,rr1_0.processed_at from revisiones_recibidas rr1_0 where rr1_0.event_id=?
+Hibernate: insert into revisiones_recibidas (estado,pregunta_id,processed_at,event_id) values (?,?,?,?)
+Hibernate: select count(*) from revisiones_recibidas rr1_0 where rr1_0.event_id=?
+Hibernate: select count(*) from revisiones_recibidas rr1_0
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.801 s -- in co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ lifecycle-service ---
+[INFO] Building jar: /workspace/lifecycle-service/target/lifecycle-service-2.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.5:repackage (repackage) @ lifecycle-service ---
+[INFO] Replacing main artifact /workspace/lifecycle-service/target/lifecycle-service-2.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/lifecycle-service/target/lifecycle-service-2.0.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.3:integration-test (default) @ lifecycle-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest
+20:26:39.241 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest]: LifecycleIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:26:39.480 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.unicauca.saberpro.lifecycle.LifecycleServiceApplication for test class co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-11-16T20:26:40.394Z  INFO 490 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleIntegrationTest       : Starting LifecycleIntegrationTest using Java 17.0.15 with PID 490 (started by ubuntu in /workspace/lifecycle-service)
+2026-11-16T20:26:40.401Z  INFO 490 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleIntegrationTest       : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T20:26:42.313Z  INFO 490 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T20:26:42.385Z  INFO 490 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2026-11-16T20:26:43.658Z  INFO 490 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-16T20:26:43.673Z  INFO 490 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T20:26:43.674Z  INFO 490 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-11-16T20:26:43.741Z  INFO 490 --- [lifecycle-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-16T20:26:43.743Z  INFO 490 --- [lifecycle-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3290 ms
+2026-11-16T20:26:44.186Z  INFO 490 --- [lifecycle-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T20:26:44.264Z  INFO 490 --- [lifecycle-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-11-16T20:26:44.306Z  INFO 490 --- [lifecycle-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T20:26:44.604Z  INFO 490 --- [lifecycle-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T20:26:44.640Z  INFO 490 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T20:26:44.850Z  INFO 490 --- [lifecycle-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:lifecycle-it user=SA
+2026-11-16T20:26:44.852Z  INFO 490 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T20:26:44.954Z  INFO 490 --- [lifecycle-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T20:26:46.335Z  INFO 490 --- [lifecycle-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T20:26:46.452Z  INFO 490 --- [lifecycle-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T20:26:48.980Z  INFO 490 --- [lifecycle-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-16T20:26:49.240Z  INFO 490 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 36227 (http) with context path '/'
+2026-11-16T20:26:49.247Z  INFO 490 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2026-11-16T20:26:49.308Z  INFO 490 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6dabad5c:0/SimpleConnection@4f573b84 [delegate=amqp://guest@172.18.0.2:5672/, localPort=47030]
+2026-11-16T20:26:49.420Z  INFO 490 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleIntegrationTest       : Started LifecycleIntegrationTest in 9.66 seconds (process running for 11.116)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-16T20:26:50.213Z  WARN 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Evento inválido enviado a la cola de errores: Evento de revisión inválido o versión no soportada
+2026-11-16T20:26:50.715Z  WARN 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Evento inválido enviado a la cola de errores: Evento de revisión inválido o versión no soportada
+2026-11-16T20:26:51.717Z  WARN 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Evento inválido enviado a la cola de errores: Evento de revisión inválido o versión no soportada
+2026-11-16T20:26:51.737Z  WARN 490 --- [lifecycle-service] [ntContainer#0-1] o.s.a.r.r.RejectAndDontRequeueRecoverer  : Retries exhausted for message (Body:'[B@41fd8e8f(byte[21])' MessageProperties [headers={}, contentType=application/octet-stream, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=pregunta.revisar.queue.integration-lifecycle, deliveryTag=1, consumerTag=amq.ctag-yQ8zkxI_CNNbFZcu7EU9Bw, consumerQueue=pregunta.revisar.queue.integration-lifecycle])
+
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(org.springframework.amqp.core.Message)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:279) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:217) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1694) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1616) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.retry.interceptor.RetryOperationsInterceptor$1.doWithRetry(RetryOperationsInterceptor.java:114) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:246) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.interceptor.RetryOperationsInterceptor.invoke(RetryOperationsInterceptor.java:135) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.$Proxy165.invokeListener(Unknown Source) ~[na:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1595) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1540) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1518) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.14.6.jar:1.14.6]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1518) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1085) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1021) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1423) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1324) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.amqp.AmqpRejectAndDontRequeueException: Contrato JSON de revisión inválido
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(QuestionReviewListener.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:270) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Evento de revisión inválido o versión no soportada
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewMessage.validate(QuestionReviewMessage.java:12) ~[classes/:na]
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(QuestionReviewListener.java:29) ~[classes/:na]
+	... 38 common frames omitted
+
+2026-11-16T20:26:51.743Z  WARN 490 --- [lifecycle-service] [ntContainer#0-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Retry Policy Exhausted
+	at org.springframework.amqp.rabbit.retry.RejectAndDontRequeueRecoverer.recover(RejectAndDontRequeueRecoverer.java:76) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptorFactoryBean.recover(StatelessRetryOperationsInterceptorFactoryBean.java:78) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.retry.interceptor.RetryOperationsInterceptor$ItemRecovererCallback.recover(RetryOperationsInterceptor.java:150) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:573) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:418) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:246) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.interceptor.RetryOperationsInterceptor.invoke(RetryOperationsInterceptor.java:135) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.$Proxy165.invokeListener(Unknown Source) ~[na:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1595) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1540) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1518) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.14.6.jar:1.14.6]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1518) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1085) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1021) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1423) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1324) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.springframework.amqp.AmqpRejectAndDontRequeueException: null
+	... 21 common frames omitted
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(org.springframework.amqp.core.Message)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:279) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:217) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1694) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1616) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.retry.interceptor.RetryOperationsInterceptor$1.doWithRetry(RetryOperationsInterceptor.java:114) ~[spring-retry-2.0.11.jar:na]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.11.jar:na]
+	... 16 common frames omitted
+Caused by: org.springframework.amqp.AmqpRejectAndDontRequeueException: Contrato JSON de revisión inválido
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(QuestionReviewListener.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:45) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.2.6.jar:6.2.6]
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:270) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Evento de revisión inválido o versión no soportada
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewMessage.validate(QuestionReviewMessage.java:12) ~[classes/:na]
+	at co.edu.unicauca.saberpro.lifecycle.messaging.QuestionReviewListener.recibir(QuestionReviewListener.java:29) ~[classes/:na]
+	... 38 common frames omitted
+
+2026-11-16T20:26:52.621Z  INFO 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=6b788ce8-f89d-44ed-a3a4-e3d32d5e306b eventId=899ea845-84ed-44e9-ab7c-845c888e3187
+2026-11-16T20:26:52.665Z  INFO 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión duplicada ignorada: preguntaId=6b788ce8-f89d-44ed-a3a4-e3d32d5e306b eventId=899ea845-84ed-44e9-ab7c-845c888e3187
+2026-11-16T20:26:52.676Z  INFO 490 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=b6f553b3-0c7a-4c3f-afc2-2cf730a572da eventId=7b26b9e1-a00d-4df5-b34c-eb3b89249a1e
+2026-11-16T20:26:52.968Z  INFO 490 --- [lifecycle-service] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T20:26:52.968Z  INFO 490 --- [lifecycle-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T20:26:52.971Z  INFO 490 --- [lifecycle-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.31 s -- in co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.3:verify (default) @ lifecycle-service ---
+[INFO] 
+[INFO] -----------------< co.edu.unicauca:saberpro-taller13 >------------------
+[INFO] Building Banco de Preguntas Saber PRO - Taller 13 2.0.0            [4/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Banco de Preguntas Saber PRO - Taller 13 2.0.0:
+[INFO] 
+[INFO] validation-service ................................. SUCCESS [ 15.173 s]
+[INFO] question-service ................................... SUCCESS [ 28.991 s]
+[INFO] lifecycle-service .................................. SUCCESS [ 24.874 s]
+[INFO] Banco de Preguntas Saber PRO - Taller 13 ........... SUCCESS [  0.001 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:09 min
+[INFO] Finished at: 2026-11-16T20:26:54Z
+[INFO] ------------------------------------------------------------------------

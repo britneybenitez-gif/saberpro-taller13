@@ -1,0 +1,4 @@
+$ bash scripts/check-domain.sh
+Dominio y aplicación compilados con Java puro, sin classpath externo.
+
+EXIT_CODE=0

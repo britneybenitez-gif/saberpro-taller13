@@ -1,0 +1,247 @@
+
+--- PÁGINA 1 ---
+ 
+Página 1 de 5 
+Universidad del Cauca 
+Laboratorio de Ingeniería de Software II 
+Ing. Paola Andrea Bedoya Toro 
+2026.2 
+ 
+ 
+GUÍA PASO A PASO: TALLER 13 - ENTREGA FINAL (FASE II) 
+DDD, Arquitectura Hexagonal, Contenerización con Docker y Pruebas con Thunder Client 
+Esta guía instruccional orienta al estudiante en la consolidación y despliegue del proyecto integrador del Banco de 
+Preguntas Saber PRO. El documento detalla la fundamentación teórica de Docker, la ubicación exacta de los componentes 
+en la estructura de paquetes, la refactorización arquitectónica de la Fase I (DDD y Arquitectura Hexagonal) y el 
+procedimiento de contenerización, orquestación multi-servicio y pruebas integradas de la API en la Fase II. 
+1. Fundamentos Teóricos de Contenerización y Orquestación 
+La virtualización liviana mediante contenedores permite empaquetar una aplicación con sus dependencias de ejecución, 
+garantizando la portabilidad e independencia del entorno del sistema operativo anfitrión. 
+1.1 Conceptos Fundamentales de Docker 
+• Imagen Docker: Plantilla binaria inmutable de solo lectura que contiene el sistema operativo base (ej. OpenJDK 17 
+Linux), las bibliotecas necesarias y el archivo ejecutable compilado (.jar). 
+• Contenedor Docker: Instancia aislada en tiempo de ejecución generada a partir de una imagen Docker. Comparte el 
+núcleo (kernel) del sistema operativo anfitrión, lo que reduce el consumo de memoria y acelera el arranque frente a 
+una máquina virtual tradicional. 
+• Dockerfile: Script de configuración textual ubicado en la raíz de cada microservicio que especifica la secuencia de 
+instrucciones para construir la imagen personalizada de la aplicación. 
+ 
+Tabla 1. Directivas principales en un Dockerfile de Spring Boot 
+Directiva Propósito Técnico Ejemplo en el Proyecto 
+FROM Define la imagen base oficial sobre la cual se construye el 
+contenedor. 
+FROM openjdk:17-jdk-slim 
+WORKDIR Establece el directorio de trabajo activo dentro del contenedor. WORKDIR /app 
+COPY Copia el archivo ejecutable compilado .jar al sistema de archivos del 
+contenedor. 
+COPY target/*.jar app.jar 
+EXPOSE Informa el puerto de red en el que escucha el microservicio. EXPOSE 8083 
+ENTRYPOINT Especifica el comando ejecutable principal al iniciar el contenedor. ENTRYPOINT ["java", "-jar", "app.jar"] 
+ 
+1.2 Orquestación Multi-Contenedor con Docker Compose 
+Docker Compose es un motor de orquestación que permite definir y ejecutar aplicaciones compuestas por múltiples 
+contenedores mediante un archivo YAML unificado (docker-compose.yml). 
+• Red Virtualizada Interconectada (saberpro-net): Establece un segmento de red bridge aislado donde los contenedores 
+se comunican internamente mediante sus nombres de servicio como nombres de dominio (DNS interno). 
+• Gestión de Dependencias (depends_on): Garantiza que la infraestructura base (RabbitMQ y PostgreSQL) inicie antes 
+de levantar los microservicios de aplicación. 
+
+--- PÁGINA 2 ---
+ 
+Página 2 de 5 
+Universidad del Cauca 
+Laboratorio de Ingeniería de Software II 
+Ing. Paola Andrea Bedoya Toro 
+2026.2 
+ 
+2. Estructura Oficial de Encarpetado y Ubicación de Componentes 
+El estudiante debe estructurar el repositorio en GitHub respetando estrictamente la separación de responsabilidades entre 
+la raíz del proyecto y los paquetes internos de cada microservicio. 
+saberpro-banco-preguntas/                      <-- Raíz del Repositorio Unificado 
+├── docker-compose.yml                          <-- Orquestador unificado multi-contenedor 
+├── README.md                                   <-- Documentación y guía de despliegue 
+│ 
+├── validation-service/                        <-- Microservicio de Validación (:8082) 
+│   ├── Dockerfile                              <-- Dockerfile del servicio de validación 
+│   ├── pom.xml 
+│   └── src/main/java/co/edu/unicauca/saberpro/validation/ 
+│       ├── ValidationServiceApplication.java 
+│       └── api/ValidationRestController.java 
+│ 
+├── question-service/                          <-- Microservicio Principal (:8083) 
+│   ├── Dockerfile                              <-- Dockerfile del servicio de preguntas 
+│   ├── pom.xml 
+│   └── src/main/java/co/edu/unicauca/saberpro/question/ 
+│       ├── QuestionServiceApplication.java 
+│       ├── domain/                    <-- NÚCLEO DOMINIO PURO (Sin @Entity ni Spring) 
+│       │   ├── model/                 <-- Question.java, AnswerOption.java, Value Objects 
+│       │   ├── exception/             <-- ReglaNegocioException.java 
+│       │   └── ports/                 <-- PUERTOS HEXAGONALES 
+│       │       ├── inbound/           <-- CrearPreguntaUseCase.java 
+│       │       └── outbound/          <-- PreguntaRepositoryPort.java 
+│       ├── application/               <-- SERVICIOS DE APLICACIÓN (Orquestación) 
+│       │   └── QuestionApplicationService.java 
+│       ├── infrastructure/            <-- ADAPTADORES (Tecnología y Persistencia) 
+│       │   ├── jpa/                   <-- Adaptador Secundario JPA (JpaQuestionAdapter) 
+│       │   ├── memory/                <-- Adaptador Secundario Memory (InMemoryQuestionAdapter) 
+│       │   └── messaging/             <-- Publicador AMQP RabbitMQ (RabbitMQPublisher) 
+│       └── api/                       <-- Adaptador Primario REST (QuestionRestController) 
+│ 
+└── lifecycle-service/                         <-- Microservicio de Ciclo de Vida (:8084) 
+    ├── Dockerfile                              <-- Dockerfile del servicio de ciclo de vida 
+    ├── pom.xml 
+    └── src/main/java/co/edu/unicauca/saberpro/lifecycle/ 
+        ├── LifecycleServiceApplication.java 
+        └── messaging/QuestionReviewListener.java  <-- Consumidor @RabbitListener 
+Tabla 2. Guía de localización de archivos en la estructura del proyecto 
+Componente / Archivo Ubicación en el Proyecto Responsabilidad del Componente 
+docker-compose.yml Raíz / (saberpro-banco-
+preguntas/) 
+Orquesta los contenedores, puertos y la red 
+saberpro-net. 
+Dockerfile Raíz de cada microservicio Especifica la construcción de la imagen individual 
+del microservicio. 
+Agregado y Value Objects question-
+service/.../domain/model/ 
+Modelo de dominio puro en Java sin 
+dependencias tecnológicas. 
+Puertos Inbound / Outbound question-
+service/.../domain/ports/ 
+Contratos abstractos de casos de uso y 
+repositorios de dominio. 
+Adaptadores JPA / Memory / REST question- Implementaciones tecnológicas externas 
+
+--- PÁGINA 3 ---
+ 
+Página 3 de 5 
+Universidad del Cauca 
+Laboratorio de Ingeniería de Software II 
+Ing. Paola Andrea Bedoya Toro 
+2026.2 
+ 
+service/.../infrastructure/ y api/ acopladas a los puertos. 
+3. Fase I: Refactorización DDD Táctico y Arquitectura Hexagonal 
+El estudiante debe implementar el núcleo de negocio aislándolo de cualquier framework o librería de infraestructura de 
+acuerdo con las siguientes pautas: 
+3.1 Modelado del Dominio Puro Java (Sin Frameworks) 
+• Objetos de Valor Inmutables: Crear las clases Enunciado (valida texto no nulo/vacío), Justificacion (valida longitud 
+mayor o igual a 15 caracteres lanzando ReglaNegocioException) y OpcionRespuesta (texto y booleano indicando la 
+clave correcta). 
+• Raíz del Agregado (Pregunta): Implementar el Agregado Pregunta encapsulando las 4 opciones de respuesta. El método 
+de cambio de estado a PENDIENTE_REVISION debe validar que existan exactamente 4 opciones y 1 sola clave marcada 
+como correcta antes de cambiar el estado. 
+3.2 Definición de Puertos e Intercambiabilidad de Adaptadores 
+• Puertos Hexagonales: Definir la interfaz de puerto de entrada CrearPreguntaUseCase y la interfaz de puerto de salida 
+PreguntaRepositoryPort dentro de domain.ports. 
+• Prueba de Intercambiabilidad: Implementar JpaQuestionAdapter (basado en Spring Data JPA) e 
+InMemoryQuestionAdapter (basado en HashMap). Sustituir la implementación mediante la anotación @Bean en la 
+clase de configuración y verificar que los casos de uso se ejecutan sin modificar la capa de dominio. 
+4. Fase II: Empaquetado en Dockerfile y Orquestación con Docker Compose 
+Una vez verificado el núcleo de dominio, se procede con la contenerización e infraestructura de despliegue: 
+4.1 Generación del Artefacto Ejecutable (.jar) 
+En la raíz de cada microservicio, se ejecuta el comando de compilación excluyendo las pruebas unitarias para agilizar la 
+generación del paquete: 
+$ ./mvnw clean package -DskipTests 
+4.2 Creación del Dockerfile por Microservicio 
+Se crea un archivo denominado Dockerfile en la raíz de cada microservicio (validation-service, question-service y lifecycle-
+service) con el siguiente contenido estructurado: 
+FROM openjdk:17-jdk-slim 
+WORKDIR /app 
+COPY target/*.jar app.jar 
+EXPOSE 8083 
+ENTRYPOINT ["java", "-jar", "app.jar"] 
+4.3 Creación del Archivo Orquestador docker-compose.yml 
+Se crea el archivo docker-compose.yml en la raíz principal del proyecto para coordinar la red virtualizada y los servicios: 
+version: '3.8' 
+ 
+networks: 
+  saberpro-net: 
+    driver: bridge 
+
+--- PÁGINA 4 ---
+ 
+Página 4 de 5 
+Universidad del Cauca 
+Laboratorio de Ingeniería de Software II 
+Ing. Paola Andrea Bedoya Toro 
+2026.2 
+ 
+ 
+services: 
+  rabbitmq: 
+    image: rabbitmq:3-management 
+    container_name: saberpro-rabbitmq 
+    ports: 
+      - "5672:5672" 
+      - "15672:15672" 
+    networks: 
+      - saberpro-net 
+ 
+  validation-service: 
+    build: ./validation-service 
+    container_name: saberpro-validation-service 
+    ports: 
+      - "8082:8082" 
+    networks: 
+      - saberpro-net 
+ 
+  question-service: 
+    build: ./question-service 
+    container_name: saberpro-question-service 
+    ports: 
+      - "8083:8083" 
+    environment: 
+      - SPRING_RABBITMQ_HOST=rabbitmq 
+    depends_on: 
+      - rabbitmq 
+      - validation-service 
+    networks: 
+      - saberpro-net 
+ 
+  lifecycle-service: 
+    build: ./lifecycle-service 
+    container_name: saberpro-lifecycle-service 
+    ports: 
+      - "8084:8084" 
+    environment: 
+      - SPRING_RABBITMQ_HOST=rabbitmq 
+    depends_on: 
+      - rabbitmq 
+    networks: 
+      - saberpro-net 
+5. Despliegue, Comandos CLI y Verificación Integrada con Thunder Client 
+Para iniciar el ecosistema de microservicios y comprobar su funcionamiento, se ejecutan las siguientes operaciones desde la 
+terminal: 
+5.1 Comandos CLI para la Gestión de Contenedores 
+→ Construir y levantar el ecosistema en segundo plano: 
+$ docker compose up -d --build 
+→ Verificar el estado de los contenedores activos: 
+$ docker ps 
+
+--- PÁGINA 5 ---
+ 
+Página 5 de 5 
+Universidad del Cauca 
+Laboratorio de Ingeniería de Software II 
+Ing. Paola Andrea Bedoya Toro 
+2026.2 
+ 
+→ Inspeccionar los logs en tiempo real del servicio principal: 
+$ docker logs -f saberpro-question-service 
+5.2 Protocolo de Pruebas Integradas con Thunder Client (VS Code) 
+Thunder Client es una extensión ligera de cliente REST HTTP para Visual Studio Code. Permite validar los servicios sin 
+requerir una interfaz gráfica frontend. 
+a) Instalación y Apertura: Instalar la extensión Thunder Client desde el panel de extensiones de VS Code. Hacer clic en el 
+icono del rayo en la barra lateral e iniciar una solicitud mediante New Request. 
+b) Verificación de Disponibilidad (GET): Enviar una petición GET a http://localhost:8083/api/preguntas para comprobar 
+que el servicio responde con estado 200 OK y una lista vacía o previamente inicializada. 
+c) Creación Síncrona de Pregunta (POST): Configurar el método POST hacia http://localhost:8083/api/preguntas. En la 
+pestaña Body (formato JSON), ingresar la estructura con el enunciado, la justificación (mínimo 15 caracteres) y el 
+arreglo de 4 opciones de respuesta. Se debe recibir un código HTTP 201 Created con el objeto persistido y su 
+identificador asignado (id). 
+d) Envío a Revisión Asíncrona (POST AMQP): Enviar una petición POST a http://localhost:8083/api/preguntas/{id}/enviar-
+revision. El sistema debe responder de forma inmediata con un código HTTP 202 Accepted indicando que la solicitud de 
+revisión fue despachada a la cola de RabbitMQ. 
+e) Inspección en RabbitMQ Dashboard: Ingresar en el navegador a http://localhost:15672 (credenciales: guest / guest). 
+Confirmar el procesamiento del mensaje en la cola pregunta.revisar.queue y la recepción por parte de lifecycle-service 
+observando la consola con docker logs -f saberpro-lifecycle-service. 

@@ -1,0 +1,992 @@
+[
+  {
+    "id": "A01",
+    "group": "A",
+    "requisito": "Existe el agregado Pregunta.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.java",
+    "evidencia": "14 casos de PreguntaTest; agregado y transición inspeccionados.",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "UUID, estado, VO y lista encapsulados."
+  },
+  {
+    "id": "A02",
+    "group": "A",
+    "requisito": "El dominio está escrito en Java puro.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/**",
+    "evidencia": "scripts/check-domain.sh ejecutado: javac --release 17 sin classpath externo [PURE].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "Solo tipos Java y clases del núcleo."
+  },
+  {
+    "id": "A03",
+    "group": "A",
+    "requisito": "El dominio no depende de Spring ni de JPA.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/**",
+    "evidencia": "Revisión de imports/anotaciones y compilación aislada [PURE].",
+    "fuente": "G p.2–3; E p.1",
+    "observaciones": "No hay Spring/JPA dentro del dominio."
+  },
+  {
+    "id": "A04",
+    "group": "A",
+    "requisito": "Existe Enunciado como objeto de valor inmutable.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Enunciado.java",
+    "evidencia": "record inmutable y campo String inspeccionados; tests ordinarios aprobados [TD].",
+    "fuente": "G p.3",
+    "observaciones": "Inmutabilidad cumplida; validación incorrecta en HALL-01 se evalúa en A08."
+  },
+  {
+    "id": "A05",
+    "group": "A",
+    "requisito": "Existe Justificacion como objeto de valor inmutable.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Justificacion.java",
+    "evidencia": "record; prueba de 14/15 caracteres, null y normalización [TD].",
+    "fuente": "G p.3",
+    "observaciones": "Normaliza antes de contar."
+  },
+  {
+    "id": "A06",
+    "group": "A",
+    "requisito": "Existe OpcionRespuesta como objeto de valor inmutable.",
+    "estado": "✅ CUMPLE",
+    "archivo": "OpcionRespuesta.java",
+    "evidencia": "record String/boolean sin setters; copia de lista del agregado [TD].",
+    "fuente": "G p.3",
+    "observaciones": "Inmutable; HALL-01 afecta aceptación de su texto, no su mutabilidad."
+  },
+  {
+    "id": "A07",
+    "group": "A",
+    "requisito": "Existe ReglaNegocioException.",
+    "estado": "✅ CUMPLE",
+    "archivo": "ReglaNegocioException.java",
+    "evidencia": "RuntimeException lanzada por VO/agregado; HTTP 400 en casos ordinarios [TD/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Separa regla de negocio de errores técnicos."
+  },
+  {
+    "id": "A08",
+    "group": "A",
+    "requisito": "El enunciado no admite valores nulos o vacíos.",
+    "estado": "❌ NO CUMPLE",
+    "archivo": "Enunciado.java:8–11",
+    "evidencia": "Sonda Java y HTTP: NUL+tab+espacio queda vacío; memory devuelve 201 y luego 202 [HALL-01].",
+    "fuente": "G p.3",
+    "observaciones": "❌ La condición se valida antes de trim; el valor final puede ser vacío."
+  },
+  {
+    "id": "A09",
+    "group": "A",
+    "requisito": "La justificación exige mínimo 15 caracteres.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Justificacion.java",
+    "evidencia": "PreguntaTest y HTTP con justificación corta →400 en ambos modos [TD/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Mínimo 15 tras trim, no la longitud previa."
+  },
+  {
+    "id": "A10",
+    "group": "A",
+    "requisito": "Las preguntas nuevas empiezan en BORRADOR.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.crear",
+    "evidencia": "POST válido en ambos modos devuelve estado BORRADOR [SJ/SM].",
+    "fuente": "G p.3; U/T12",
+    "observaciones": "El estado inicial no depende del repositorio."
+  },
+  {
+    "id": "A11",
+    "group": "A",
+    "requisito": "Para enviar a revisión se exigen exactamente cuatro opciones.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.enviarRevision",
+    "evidencia": "Casos tres/cinco opciones rechazados; HTTP 400 con tres [TD/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Cuatro se exige al revisar; se admiten borradores incompletos."
+  },
+  {
+    "id": "A12",
+    "group": "A",
+    "requisito": "Existe exactamente una respuesta correcta.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.validarInvariantes",
+    "evidencia": "Cero/dos correctas rechazadas en dominio; dos por HTTP; una permite revisión [TD/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "La regla se aplica al cambio de estado, no a todos los borradores."
+  },
+  {
+    "id": "A13",
+    "group": "A",
+    "requisito": "Se impide enviar dos veces una pregunta a revisión.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.enviarRevision",
+    "evidencia": "Reenvío HTTP 400 en ambos modos; concurrencia un 202 y un 400 [IT/SJ/SM].",
+    "fuente": "U/T12; coherente con G p.3",
+    "observaciones": "No se repite la transición BORRADOR→PENDIENTE."
+  },
+  {
+    "id": "A14",
+    "group": "A",
+    "requisito": "El estado cambia correctamente a PENDIENTE_REVISION.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Pregunta.enviarRevision",
+    "evidencia": "Respuesta 202, consulta y recibo con PENDIENTE_REVISION [SJ/SM/MQ].",
+    "fuente": "G p.3,5",
+    "observaciones": "Comprobado con ID correlacionado."
+  },
+  {
+    "id": "B01",
+    "group": "B",
+    "requisito": "Existe CrearPreguntaUseCase.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/ports/inbound/CrearPreguntaUseCase.java",
+    "evidencia": "Controller inyecta interfaz; creación, consulta/listado ejecutados [IT/SJ/SM].",
+    "fuente": "G p.2–3; E p.2",
+    "observaciones": "crear, buscar y listar."
+  },
+  {
+    "id": "B02",
+    "group": "B",
+    "requisito": "Existe EvaluarPreguntaUseCase conforme al alcance de la guía.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/ports/inbound/EvaluarPreguntaUseCase.java",
+    "evidencia": "QuestionApplicationService lo implementa; revisión real [IT/SJ/SM].",
+    "fuente": "E p.2",
+    "observaciones": "Evalúa preparación para revisión; el PDF no define calificar/aprobar."
+  },
+  {
+    "id": "B03",
+    "group": "B",
+    "requisito": "Existe PreguntaRepositoryPort.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/ports/outbound/PreguntaRepositoryPort.java",
+    "evidencia": "Dos implementaciones usadas por el mismo servicio y mismo protocolo [IT/SJ/SM].",
+    "fuente": "G p.3; E p.2",
+    "observaciones": "save/findById/findAll/actualizar."
+  },
+  {
+    "id": "B04",
+    "group": "B",
+    "requisito": "Existe el puerto de notificaciones correspondiente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain/ports/outbound/NotificacionRevisionPort.java",
+    "evidencia": "RabbitMQPublisher implementa y aplicación invoca el puerto [MQ/IT].",
+    "fuente": "E p.1–2; U",
+    "observaciones": "Nombre equivalente conservado con autorización del usuario; árbol E lo llama NotificacionPort."
+  },
+  {
+    "id": "B05",
+    "group": "B",
+    "requisito": "Existe QuestionApplicationService.",
+    "estado": "✅ CUMPLE",
+    "archivo": "application/QuestionApplicationService.java",
+    "evidencia": "Tests de aplicación, API y compilación Java pura [TA/IT/PURE].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Orquesta mediante tres puertos; no importa Spring."
+  },
+  {
+    "id": "B06",
+    "group": "B",
+    "requisito": "Existe JpaQuestionAdapter.",
+    "estado": "✅ CUMPLE",
+    "archivo": "infrastructure/jpa/JpaQuestionAdapter.java",
+    "evidencia": "10 casos ApiJpaIntegrationTest y 28 respuestas smoke JPA [IT/SJ].",
+    "fuente": "G p.3; E p.2",
+    "observaciones": "JPA/H2 reales, bloqueo y rollback."
+  },
+  {
+    "id": "B07",
+    "group": "B",
+    "requisito": "Existe InMemoryQuestionAdapter.",
+    "estado": "✅ CUMPLE",
+    "archivo": "infrastructure/memory/InMemoryQuestionAdapter.java",
+    "evidencia": "Tests unitarios, 10 integrados y 28 respuestas smoke memory [TA/IT/SM].",
+    "fuente": "G p.3; E p.2",
+    "observaciones": "HashMap real; defecto de equivalencia se informa en G07."
+  },
+  {
+    "id": "B08",
+    "group": "B",
+    "requisito": "Existe una configuración correcta de inyección de dependencias.",
+    "estado": "✅ CUMPLE",
+    "archivo": "HexagonalConfiguration.java",
+    "evidencia": "@Bean y @ConditionalOnProperty; ambas aplicaciones arrancaron y ejecutaron flujos [IT/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Dependencias enlazadas fuera del dominio."
+  },
+  {
+    "id": "B09",
+    "group": "B",
+    "requisito": "Se puede cambiar entre JPA y memoria mediante configuración.",
+    "estado": "✅ CUMPLE",
+    "archivo": "app.repository/APP_REPOSITORY",
+    "evidencia": "Despliegue principal jpa y contenedor temporal memory con la misma imagen [SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Cambio efectivo por variable; no se alteró ninguna clase."
+  },
+  {
+    "id": "B10",
+    "group": "B",
+    "requisito": "Los controladores delegan correctamente a los casos de uso.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.java",
+    "evidencia": "Constructor recibe puertos; endpoints probados y rutas inspeccionadas [IT/SJ/SM].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Adapta HTTP y DTO; no usa SpringData directamente."
+  },
+  {
+    "id": "B11",
+    "group": "B",
+    "requisito": "Las implementaciones tecnológicas no están dentro del dominio.",
+    "estado": "✅ CUMPLE",
+    "archivo": "domain y infrastructure",
+    "evidencia": "Imports/ubicaciones revisados y núcleo compilado aisladamente [PURE].",
+    "fuente": "G p.2–3; E p.1–2",
+    "observaciones": "Entidades, HTTP y RabbitMQ están fuera del dominio."
+  },
+  {
+    "id": "B12",
+    "group": "B",
+    "requisito": "El cambio de adaptador no requiere modificar el código del dominio.",
+    "estado": "✅ CUMPLE",
+    "archivo": "HexagonalConfiguration + dos adaptadores",
+    "evidencia": "Mismos archivos de dominio y mismo servicio en JPA/Memory; hashes preservados [IT/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Arquitectura intercambiable; HALL-01 impide afirmar equivalencia total de comportamiento."
+  },
+  {
+    "id": "C01",
+    "group": "C",
+    "requisito": "Existe validation-service y usa el puerto 8082.",
+    "estado": "✅ CUMPLE",
+    "archivo": "validation-service/application.properties y Compose",
+    "evidencia": "HTTP health 200 en 8082 y contenedor saludable [DO/SJ/SM].",
+    "fuente": "G p.2,4; E p.1–2",
+    "observaciones": "Puerto real y mapeado."
+  },
+  {
+    "id": "C02",
+    "group": "C",
+    "requisito": "Existe ValidationRestController funcional.",
+    "estado": "✅ CUMPLE",
+    "archivo": "ValidationRestController.java",
+    "evidencia": "6 casos ValidationApiTest más endpoint real válido 200/límite 400 [TV/SJ/SM].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Valida estructura y límites técnicos."
+  },
+  {
+    "id": "C03",
+    "group": "C",
+    "requisito": "Existe comunicación síncrona REST para validación.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RestValidationAdapter.java",
+    "evidencia": "Límite remoto 400; parada Validation produce 503 sin guardar, recuperación 201 [SJ/SM].",
+    "fuente": "E p.3; U",
+    "observaciones": "No se simula Validation en la integración."
+  },
+  {
+    "id": "C04",
+    "group": "C",
+    "requisito": "Existe question-service y usa el puerto 8083.",
+    "estado": "✅ CUMPLE",
+    "archivo": "question-service/application.properties y Compose",
+    "evidencia": "HTTP y health en 8083, contenedor saludable [DO/SJ].",
+    "fuente": "G p.2,4–5; E p.1–2",
+    "observaciones": "El puerto antiguo 8080 queda en documentos históricos."
+  },
+  {
+    "id": "C05",
+    "group": "C",
+    "requisito": "Existe QuestionRestController funcional.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.java",
+    "evidencia": "GET/POST/detail/revisión, errores y Location verificados [IT/SJ/SM].",
+    "fuente": "G p.2,5; E p.2",
+    "observaciones": "El defecto semántico HALL-01 se registra en A08/E05/G07."
+  },
+  {
+    "id": "C06",
+    "group": "C",
+    "requisito": "Existe lifecycle-service y usa el puerto 8084.",
+    "estado": "✅ CUMPLE",
+    "archivo": "lifecycle-service/application.properties y Compose",
+    "evidencia": "Health 200 y recibos por 8084 [DO/MQ].",
+    "fuente": "G p.2,4; E p.1–2",
+    "observaciones": "Servicio y almacenamiento independientes."
+  },
+  {
+    "id": "C07",
+    "group": "C",
+    "requisito": "Existe QuestionReviewListener.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionReviewListener.java",
+    "evidencia": "@RabbitListener real; logs con preguntaId/eventId y recibos [MQ].",
+    "fuente": "G p.2,5; E p.2",
+    "observaciones": "Consume JSON sin compartir clases del productor."
+  },
+  {
+    "id": "C08",
+    "group": "C",
+    "requisito": "Los microservicios pueden ejecutarse conjuntamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docker-compose.yml y tres módulos",
+    "evidencia": "Cuatro contenedores saludables simultáneamente; flujo completo [DO/MQ].",
+    "fuente": "G p.4; E p.1",
+    "observaciones": "RabbitMQ es infraestructura adicional a los tres microservicios."
+  },
+  {
+    "id": "C09",
+    "group": "C",
+    "requisito": "La organización de paquetes corresponde a la guía institucional.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Paquetes co.edu.unicauca.saberpro.validation/question/lifecycle",
+    "evidencia": "Inventario y revisión individual de clases; compilación de los tres [INV/IT].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Capas y nombres principales coinciden; equivalentes Pregunta/OpcionRespuesta/NotificacionRevisionPort explicados abajo."
+  },
+  {
+    "id": "D01",
+    "group": "D",
+    "requisito": "RabbitMQ está configurado correctamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose, RabbitTopology y properties",
+    "evidencia": "Broker real, health, Management y cola durable [DO/MQ].",
+    "fuente": "G p.4–5",
+    "observaciones": "guest/guest según guía local."
+  },
+  {
+    "id": "D02",
+    "group": "D",
+    "requisito": "Question Service publica mensajes reales.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RabbitMQPublisher.java",
+    "evidencia": "POST 202 seguido de recibo y log Lifecycle; contadores publish/deliver/ack [MQ/SJ/SM].",
+    "fuente": "G p.5; E p.3",
+    "observaciones": "Mensajes JSON persistentes con confirms."
+  },
+  {
+    "id": "D03",
+    "group": "D",
+    "requisito": "Existe la cola `pregunta.revisar.queue`.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RabbitTopology.java en ambos servicios",
+    "evidencia": "API Management devuelve nombre exacto y durable=true [MQ].",
+    "fuente": "G p.5",
+    "observaciones": "Cola principal distinta de la cola aislada de tests Lifecycle."
+  },
+  {
+    "id": "D04",
+    "group": "D",
+    "requisito": "Lifecycle Service consume los mensajes mediante @RabbitListener.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionReviewListener.java",
+    "evidencia": "Anotación y ejecución contrastadas con logs y recibos del mismo ID [MQ].",
+    "fuente": "G p.2,5; E p.2",
+    "observaciones": "ACK después de procesamiento correcto."
+  },
+  {
+    "id": "D05",
+    "group": "D",
+    "requisito": "El evento contiene un identificador correcto de la pregunta.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionReviewEvent y QuestionReviewMessage",
+    "evidencia": "ID creado=ID en respuesta de revisión=ID en log/recibo [MQ/SJ/SM].",
+    "fuente": "G p.5; E p.3",
+    "observaciones": "eventId es otro UUID determinista, no se confunde con preguntaId."
+  },
+  {
+    "id": "D06",
+    "group": "D",
+    "requisito": "RabbitMQ puede visualizarse en localhost:15672.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RabbitMQ Management :15672",
+    "evidencia": "GET / devuelve HTML RabbitMQ 200; API autenticada de cola funciona [MQ].",
+    "fuente": "G p.4–5",
+    "observaciones": "Disponibilidad verificada; no se tomó captura de la interfaz en navegador."
+  },
+  {
+    "id": "D07",
+    "group": "D",
+    "requisito": "El consumidor registra el procesamiento del mensaje.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionReviewListener + ReviewProcessingService",
+    "evidencia": "Log «Revisión procesada» y comprobante persistido con timestamp [MQ].",
+    "fuente": "G p.5",
+    "observaciones": "No es solo un mensaje de log simulado por Question."
+  },
+  {
+    "id": "D08",
+    "group": "D",
+    "requisito": "Se maneja adecuadamente el fallo de publicación.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RabbitMQPublisher + adapters.actualizar",
+    "evidencia": "Broker parado →503/BORRADOR; recuperación →202. NACK/timeout/return unitarios y no-route real [IT/SJ/SM].",
+    "fuente": "U; E p.3",
+    "observaciones": "Ventana distribuida ACK/commit documentada L01; no se exige Outbox en los PDF."
+  },
+  {
+    "id": "D09",
+    "group": "D",
+    "requisito": "Se verifica el flujo completo desde el POST hasta el consumidor.",
+    "estado": "✅ CUMPLE",
+    "archivo": "POST revisión→RabbitMQ→Lifecycle",
+    "evidencia": "Dos IDs reales, respuestas 201/202, recibos 200 y logs correlacionados [MQ].",
+    "fuente": "G p.5; E p.3",
+    "observaciones": "No se deduce consumo solo de que la cola quede vacía."
+  },
+  {
+    "id": "E01",
+    "group": "E",
+    "requisito": "GET /api/preguntas devuelve HTTP 200.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.listar",
+    "evidencia": "GET colección 200; caso vacío [] en ApiEmptyIntegrationTest [IT/SJ/SM].",
+    "fuente": "G p.5",
+    "observaciones": "Lista JSON; orden estable por UUID."
+  },
+  {
+    "id": "E02",
+    "group": "E",
+    "requisito": "POST /api/preguntas crea preguntas y devuelve HTTP 201.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.crear",
+    "evidencia": "POST válido →201, Location, UUID y BORRADOR [IT/SJ/SM].",
+    "fuente": "G p.5",
+    "observaciones": "Se guarda después de validación remota satisfactoria."
+  },
+  {
+    "id": "E03",
+    "group": "E",
+    "requisito": "GET /api/preguntas/{id} permite consultar por ID.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.buscar",
+    "evidencia": "GET del UUID recién creado →200 y mismo contenido [SJ/SM].",
+    "fuente": "U/T12",
+    "observaciones": "No inventa otro identificador."
+  },
+  {
+    "id": "E04",
+    "group": "E",
+    "requisito": "Una pregunta inexistente devuelve HTTP 404.",
+    "estado": "✅ CUMPLE",
+    "archivo": "buscar + ApiExceptionHandler",
+    "evidencia": "UUID inexistente →404 en ambos modos [SJ/SM].",
+    "fuente": "U/T12",
+    "observaciones": "UUID mal formado →400, no 404."
+  },
+  {
+    "id": "E05",
+    "group": "E",
+    "requisito": "Los errores de reglas de negocio producen HTTP 400.",
+    "estado": "⚠️ PARCIAL",
+    "archivo": "VO, Pregunta y ApiExceptionHandler",
+    "evidencia": "Reglas ordinarias →400; HALL-01 no lanza excepción en memoria y responde 201/202 [HALL-01/SJ/SM].",
+    "fuente": "G p.3; E p.3",
+    "observaciones": "⚠️ La traducción de excepción funciona, pero no todos los datos semánticamente inválidos la generan."
+  },
+  {
+    "id": "E06",
+    "group": "E",
+    "requisito": "POST /api/preguntas/{id}/enviar-revision devuelve HTTP 202 cuando publica correctamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRestController.enviarRevision",
+    "evidencia": "202 cuando confirma el broker y termina la actualización; fallo →503 [SJ/SM/IT].",
+    "fuente": "G p.5",
+    "observaciones": "No espera finalización del consumidor; sí confirma publicación."
+  },
+  {
+    "id": "E07",
+    "group": "E",
+    "requisito": "Los endpoints funcionan mediante Thunder Client o peticiones HTTP equivalentes.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Colección/.http + scripts y TestRestTemplate",
+    "evidencia": "Peticiones HTTP reales equivalentes ejecutadas [IT/SJ/SM].",
+    "fuente": "G p.5; U",
+    "observaciones": "No se afirma uso de la interfaz Thunder Client."
+  },
+  {
+    "id": "E08",
+    "group": "E",
+    "requisito": "Los contratos JSON son correctos.",
+    "estado": "✅ CUMPLE",
+    "archivo": "DTOs, JsonConfiguration, evento y response",
+    "evidencia": "Tipos erróneos y estructura inválida rechazados; cuerpos reales conservados [TV/IT/SJ/SM].",
+    "fuente": "U: compatibilidad T12 y contratos",
+    "observaciones": "Request texto simple; response VO anidado. HALL-01 es validación de valor, no sintaxis JSON."
+  },
+  {
+    "id": "F01",
+    "group": "F",
+    "requisito": "Existe Dockerfile en validation-service.",
+    "estado": "✅ CUMPLE",
+    "archivo": "validation-service/Dockerfile",
+    "evidencia": "Imagen construida y servicio iniciado en 8082 [DO].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "Compila dentro de la etapa Maven."
+  },
+  {
+    "id": "F02",
+    "group": "F",
+    "requisito": "Existe Dockerfile en question-service.",
+    "estado": "✅ CUMPLE",
+    "archivo": "question-service/Dockerfile",
+    "evidencia": "Imagen construida y servicio iniciado en 8083 [DO].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "Misma imagen usada en pruebas JPA/memory."
+  },
+  {
+    "id": "F03",
+    "group": "F",
+    "requisito": "Existe Dockerfile en lifecycle-service.",
+    "estado": "✅ CUMPLE",
+    "archivo": "lifecycle-service/Dockerfile",
+    "evidencia": "Imagen construida y consumidor iniciado en 8084 [DO/MQ].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "JAR separado del productor."
+  },
+  {
+    "id": "F04",
+    "group": "F",
+    "requisito": "Los tres utilizan una imagen compatible con Java 17.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Tres Dockerfile",
+    "evidencia": "Etapas Temurin 17; java -version real en contenedor y verify Java 17 [DO/IT].",
+    "fuente": "G p.3; E p.1; U",
+    "observaciones": "Alternativa a openjdk:17-jdk-slim expresamente autorizada si no disponible; diferencia documentada."
+  },
+  {
+    "id": "F05",
+    "group": "F",
+    "requisito": "Los Dockerfile configuran WORKDIR, COPY, EXPOSE y ENTRYPOINT.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Tres Dockerfile",
+    "evidencia": "Directivas inspeccionadas y ENTRYPOINT ejecutado [DO].",
+    "fuente": "G p.1,3",
+    "observaciones": "EXPOSE individual 8082/8083/8084; COPY desde etapa build."
+  },
+  {
+    "id": "F06",
+    "group": "F",
+    "requisito": "Los JAR se generan correctamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "POMs y target/*.jar",
+    "evidencia": "verify -Pintegration genera tres JAR y Docker los ejecuta [IT/DO].",
+    "fuente": "G p.3; E p.3",
+    "observaciones": "Build con skipTests por sí solo no cuenta como pruebas."
+  },
+  {
+    "id": "F07",
+    "group": "F",
+    "requisito": "Existe docker-compose.yml en la raíz.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docker-compose.yml raíz",
+    "evidencia": "config y up desde raíz efectivos [DO].",
+    "fuente": "G p.2–4; E p.1–2",
+    "observaciones": "POM raíz solo agrega; no añade servicio."
+  },
+  {
+    "id": "F08",
+    "group": "F",
+    "requisito": "Existe la red bridge saberpro-net.",
+    "estado": "✅ CUMPLE",
+    "archivo": "networks.saberpro-net",
+    "evidencia": "docker network inspect: name saberpro-net, driver bridge; DNS interno probado [DO].",
+    "fuente": "G p.1,3–4; E p.1",
+    "observaciones": "No se usa localhost entre servicios."
+  },
+  {
+    "id": "F09",
+    "group": "F",
+    "requisito": "Se exponen correctamente los puertos 8082, 8083, 8084, 5672 y 15672.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose ports y properties",
+    "evidencia": "ps y peticiones reales a 8082/8083/8084/15672; AMQP real por 5672 [DO/MQ/IT].",
+    "fuente": "G p.4; E p.1",
+    "observaciones": "EXPOSE y mapeo ports cumplen funciones diferentes."
+  },
+  {
+    "id": "F10",
+    "group": "F",
+    "requisito": "Las variables de entorno están configuradas.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose environment y properties",
+    "evidencia": "APP_REPOSITORY, URLs, broker y DB_URL efectivos en ejecución [DO/SJ/SM].",
+    "fuente": "G p.4",
+    "observaciones": "Defaults locales y valores de contenedor diferenciados."
+  },
+  {
+    "id": "F11",
+    "group": "F",
+    "requisito": "Las dependencias de arranque están configuradas.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose depends_on/healthcheck",
+    "evidencia": "Question espera RabbitMQ y Validation; Lifecycle espera RabbitMQ; todos healthy [DO].",
+    "fuente": "G p.1,4",
+    "observaciones": "Se espera salud, no solo proceso iniciado."
+  },
+  {
+    "id": "F12",
+    "group": "F",
+    "requisito": "`docker compose config` es válido.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docker-compose.yml",
+    "evidencia": "docker compose config finalizó con código 0 [DO].",
+    "fuente": "G p.3–4; U",
+    "observaciones": "Configuración resuelta guardada."
+  },
+  {
+    "id": "F13",
+    "group": "F",
+    "requisito": "`docker compose up -d --build` funciona.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose y Dockerfile",
+    "evidencia": "docker compose up -d --build finalizó 0 [DO].",
+    "fuente": "G p.4; E p.1",
+    "observaciones": "Se usó caché de capas; construcción previa desde fuentes preservada."
+  },
+  {
+    "id": "F14",
+    "group": "F",
+    "requisito": "Los contenedores se mantienen ejecutándose correctamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Cuatro contenedores principales",
+    "evidencia": "Estado saludable antes/después de pruebas y al cierre [DO].",
+    "fuente": "G p.4–5",
+    "observaciones": "Las paradas deliberadas se recuperaron; solo se retiró el temporal de auditoría."
+  },
+  {
+    "id": "G01",
+    "group": "G",
+    "requisito": "JPA está implementado correctamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "JpaQuestionAdapter/SpringDataPreguntaRepository",
+    "evidencia": "API JPA real, lecturas, guardado, bloqueo, rollback y tests [IT/SJ].",
+    "fuente": "G p.3; E p.2",
+    "observaciones": "Aislamiento transaccional local observado; no transacción distribuida."
+  },
+  {
+    "id": "G02",
+    "group": "G",
+    "requisito": "Las entidades JPA están separadas del dominio.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionRecord/OpcionEmbeddable",
+    "evidencia": "@Entity/@Embeddable solo en infraestructura; domain compila sin JPA [PURE/INV].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "El agregado no es una entidad Hibernate."
+  },
+  {
+    "id": "G03",
+    "group": "G",
+    "requisito": "Existen los mapeadores necesarios.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionDomainMapper",
+    "evidencia": "Conversiones completas de ID/textos/opciones/estado; API persiste y recupera [IT/SJ].",
+    "fuente": "E p.2",
+    "observaciones": "Rehidratar VO revela HALL-01 en JPA y explica su diferencia con memory."
+  },
+  {
+    "id": "G04",
+    "group": "G",
+    "requisito": "H2 o PostgreSQL está configurado conforme a la guía.",
+    "estado": "✅ CUMPLE",
+    "archivo": "H2 en POM/properties/Compose",
+    "evidencia": "Base real en pruebas; DB_URL archivo y volúmenes en Compose [IT/DO].",
+    "fuente": "E p.1",
+    "observaciones": "E permite PostgreSQL/H2; G introduce PostgreSQL pero su YAML no declara ese servicio."
+  },
+  {
+    "id": "G05",
+    "group": "G",
+    "requisito": "Los repositorios permiten guardar y consultar preguntas.",
+    "estado": "✅ CUMPLE",
+    "archivo": "PreguntaRepositoryPort y adaptadores",
+    "evidencia": "save/findById/findAll ejecutados en ambas implementaciones [IT/SJ/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Revisión usa actualizar para aplicar cambio y notificar dentro del límite local."
+  },
+  {
+    "id": "G06",
+    "group": "G",
+    "requisito": "El adaptador HashMap funciona.",
+    "estado": "✅ CUMPLE",
+    "archivo": "InMemoryQuestionAdapter",
+    "evidencia": "HashMap real, copias defensivas, rollback y protocolo ordinario aprobado [TA/IT/SM].",
+    "fuente": "G p.3",
+    "observaciones": "Almacenamiento efímero esperado; defecto de contrato señalado a continuación."
+  },
+  {
+    "id": "G07",
+    "group": "G",
+    "requisito": "Ambos adaptadores respetan los mismos contratos.",
+    "estado": "⚠️ PARCIAL",
+    "archivo": "Enunciado/OpcionRespuesta + ambos adaptadores",
+    "evidencia": "Misma entrada de control: JPA400 vs memory201→202→Lifecycle200 [HALL-01].",
+    "fuente": "G p.3; E p.1,3",
+    "observaciones": "⚠️ Intercambio configurable, pero no equivalencia total de admisión de valores."
+  },
+  {
+    "id": "H01",
+    "group": "H",
+    "requisito": "Existen pruebas unitarias del dominio.",
+    "estado": "✅ CUMPLE",
+    "archivo": "PreguntaTest.java",
+    "evidencia": "14 tests de dominio aprobados [TD].",
+    "fuente": "G p.3; U",
+    "observaciones": "Falta el caso HALL-01; existencia/paso no implica cobertura exhaustiva."
+  },
+  {
+    "id": "H02",
+    "group": "H",
+    "requisito": "Existen pruebas de los casos de uso.",
+    "estado": "✅ CUMPLE",
+    "archivo": "QuestionApplicationServiceTest e IntercambiabilidadTest",
+    "evidencia": "6 casos aprobados con dobles de puertos donde corresponde [TA].",
+    "fuente": "U; G p.3",
+    "observaciones": "Aislan orquestación y rollback de memoria."
+  },
+  {
+    "id": "H03",
+    "group": "H",
+    "requisito": "Existen pruebas de JPA.",
+    "estado": "✅ CUMPLE",
+    "archivo": "ApiJpaIntegrationTest y ReviewProcessingTest",
+    "evidencia": "10 casos API JPA y 2 de recibos H2 aprobados [IT/TL].",
+    "fuente": "G p.3; U",
+    "observaciones": "JPA real en contextos de test separados."
+  },
+  {
+    "id": "H04",
+    "group": "H",
+    "requisito": "Existen pruebas del adaptador en memoria.",
+    "estado": "✅ CUMPLE",
+    "archivo": "ApiMemoryIntegrationTest y tests de aplicación",
+    "evidencia": "10 casos integrados memory más tests unitarios aprobados [IT/TA].",
+    "fuente": "G p.3; U",
+    "observaciones": "Contrato HALL-01 aún no cubierto por la suite Maven."
+  },
+  {
+    "id": "H05",
+    "group": "H",
+    "requisito": "Existen pruebas de los controladores REST.",
+    "estado": "✅ CUMPLE",
+    "archivo": "ValidationApiTest y Api*IntegrationTest",
+    "evidencia": "HTTP real con contextos Spring, puertos de prueba y despliegue [TV/IT].",
+    "fuente": "G p.5; U",
+    "observaciones": "No son únicamente llamadas directas a métodos de controller."
+  },
+  {
+    "id": "H06",
+    "group": "H",
+    "requisito": "Existen pruebas de reglas de negocio inválidas.",
+    "estado": "✅ CUMPLE",
+    "archivo": "PreguntaTest, Api* y ValidationApiTest",
+    "evidencia": "Justificación corta, opciones inválidas, reenvío, UUID y JSON inválidos [TD/IT/TV].",
+    "fuente": "G p.3,5; U",
+    "observaciones": "La cobertura de casos inválidos existe pero no es completa: HALL-01."
+  },
+  {
+    "id": "H07",
+    "group": "H",
+    "requisito": "Existen pruebas del flujo de RabbitMQ.",
+    "estado": "✅ CUMPLE",
+    "archivo": "RabbitMQPublisherTest y LifecycleIntegrationTest",
+    "evidencia": "4 casos unitarios producer; broker real, no-route, duplicado y DLQ en integración [IT].",
+    "fuente": "G p.5; U",
+    "observaciones": "Se distingue Mockito unitario de AMQP real."
+  },
+  {
+    "id": "H08",
+    "group": "H",
+    "requisito": "Existen pruebas de integración entre servicios.",
+    "estado": "✅ CUMPLE",
+    "archivo": "AdditionalApiContract/LifecycleIntegrationTest/smoke",
+    "evidencia": "Question→Validation y Question→Rabbit→Lifecycle reales [IT/SJ/SM].",
+    "fuente": "E p.3; U",
+    "observaciones": "Sin mocks en los escenarios integrados."
+  },
+  {
+    "id": "H09",
+    "group": "H",
+    "requisito": "Los tres microservicios compilan.",
+    "estado": "✅ CUMPLE",
+    "archivo": "POMs de tres servicios",
+    "evidencia": "clean test individual y verify Java 17 completados [IT].",
+    "fuente": "G p.3; U",
+    "observaciones": "24 Question, 6 Validation, 2 Lifecycle en ejecución individual."
+  },
+  {
+    "id": "H10",
+    "group": "H",
+    "requisito": "Las pruebas Maven terminan satisfactoriamente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Surefire/Failsafe",
+    "evidencia": "55 tests, 0 fallos, 0 errores, 0 omitidas [IT].",
+    "fuente": "U",
+    "observaciones": "La sonda adicional de auditoría sí falla por HALL-01; no se oculta ni se cuenta dentro de los 55."
+  },
+  {
+    "id": "H11",
+    "group": "H",
+    "requisito": "El despliegue Docker fue verificado realmente.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Compose + HTTP + AMQP",
+    "evidencia": "Arranque real, salud, red, logs, recibos y fallos controlados [DO/MQ/SJ/SM].",
+    "fuente": "G p.4–5; E p.3",
+    "observaciones": "No se limitó a inspección de YAML."
+  },
+  {
+    "id": "I01",
+    "group": "I",
+    "requisito": "README.md está actualizado al Taller 13.",
+    "estado": "✅ CUMPLE",
+    "archivo": "README.md",
+    "evidencia": "Comandos, puertos y flujo actual contrastados; enlaces actuales resuelven [LC/DO].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Actualizado a T13; debe incorporar el nuevo hallazgo HALL-01 cuando se apruebe su corrección."
+  },
+  {
+    "id": "I02",
+    "group": "I",
+    "requisito": "La estructura de carpetas coincide con las guías.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Raíz y paquetes por servicio",
+    "evidencia": "145 archivos clasificados y clases inspeccionadas individualmente [INV].",
+    "fuente": "G p.2; E p.2",
+    "observaciones": "Se conservan nombres españoles exigidos en el texto; diferencias explícitas más abajo."
+  },
+  {
+    "id": "I03",
+    "group": "I",
+    "requisito": "Existen diagramas C4 nivel 1.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docs/arquitectura/diagramas.md, bloque 1",
+    "evidencia": "Contexto revisado y sintaxis parseada [DM].",
+    "fuente": "E p.3",
+    "observaciones": "Actores y sistema; no requiere detallar procesos aquí."
+  },
+  {
+    "id": "I04",
+    "group": "I",
+    "requisito": "Existen diagramas C4 nivel 2.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Mismo documento, bloque 2",
+    "evidencia": "Tres servicios, RabbitMQ, H2 y red contrastados con Compose [DM/DO].",
+    "fuente": "E p.3",
+    "observaciones": "H2 embebido no es un quinto contenedor."
+  },
+  {
+    "id": "I05",
+    "group": "I",
+    "requisito": "Existen diagramas C4 nivel 3.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Mismo documento, bloque 3",
+    "evidencia": "Zoom de Question y sus puertos/adaptadores contrastado con clases [DM/INV].",
+    "fuente": "E p.3",
+    "observaciones": "Ámbito explícito: Question Service."
+  },
+  {
+    "id": "I06",
+    "group": "I",
+    "requisito": "Existen diagramas C4 nivel 4.",
+    "estado": "✅ CUMPLE",
+    "archivo": "Mismo documento, bloque 4",
+    "evidencia": "Clases de dominio, puertos y relaciones verificadas; parse válido [DM/INV].",
+    "fuente": "E p.3",
+    "observaciones": "El dibujo no prueba reglas de ejecución ni corrige HALL-01."
+  },
+  {
+    "id": "I07",
+    "group": "I",
+    "requisito": "Existe documentación del flujo REST.",
+    "estado": "✅ CUMPLE",
+    "archivo": "arquitectura.md y secuencia creación",
+    "evidencia": "REST síncrono documentado y probado por límite/caída real [SJ/SM].",
+    "fuente": "E p.3",
+    "observaciones": "Validation técnica y negocio en dominio diferenciados."
+  },
+  {
+    "id": "I08",
+    "group": "I",
+    "requisito": "Existe documentación del flujo AMQP.",
+    "estado": "✅ CUMPLE",
+    "archivo": "arquitectura.md y secuencia revisión",
+    "evidencia": "Evento v1, cola, confirms, ACK, recibo y límite de atomicidad comprobados [MQ/IT].",
+    "fuente": "G p.5; E p.3",
+    "observaciones": "HTTP202 no significa revisión académica terminada."
+  },
+  {
+    "id": "I09",
+    "group": "I",
+    "requisito": "Existe documentación de los puertos y adaptadores.",
+    "estado": "✅ CUMPLE",
+    "archivo": "arquitectura.md, decisiones.md y fichas de clases",
+    "evidencia": "Puertos, implementaciones y selección por beans contrastados [INV/PURE].",
+    "fuente": "G p.3; E p.1",
+    "observaciones": "Contratos documentados; limitación HALL-01 añadida en esta auditoría."
+  },
+  {
+    "id": "I10",
+    "group": "I",
+    "requisito": "Existe trazabilidad entre los Cortes I, II y III.",
+    "estado": "⚠️ PARCIAL",
+    "archivo": "docs/arquitectura/trazabilidad.md",
+    "evidencia": "Hay tabla I/II/III, pero no código/commits de Corte I ni evidencia histórica completa de II [GR].",
+    "fuente": "E p.1,3",
+    "observaciones": "⚠️ Explica conceptos; no demuestra íntegramente HU03/Microkernel/Builder/State en su evolución histórica."
+  },
+  {
+    "id": "I11",
+    "group": "I",
+    "requisito": "Existe un informe técnico final o están identificados sus pendientes.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docs/INFORME_TECNICO.md y pendientes",
+    "evidencia": "Contenido leído; identifica plantilla, portada y capturas pendientes [INV].",
+    "fuente": "E p.3; redacción U",
+    "observaciones": "Cumple este ítem «informe o pendientes»; no equivale a tener el entregable Word terminado."
+  },
+  {
+    "id": "I12",
+    "group": "I",
+    "requisito": "Se contempla la plantilla institucional Formato-Documento.docx.",
+    "estado": "✅ CUMPLE",
+    "archivo": "INFORME_TECNICO.md",
+    "evidencia": "Menciona Formato-Documento.docx y ausencia; no hay docx en el proyecto [INV].",
+    "fuente": "E p.3; redacción U",
+    "observaciones": "Cumple «se contempla»; requisito oficial de entrega en plantilla sigue NO CUMPLE."
+  },
+  {
+    "id": "I13",
+    "group": "I",
+    "requisito": "Existen capturas reales de Docker, o están identificadas como pendientes.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docs/evidencias/README.md",
+    "evidencia": "Enumera captura auténtica pendiente de compose ps [IM].",
+    "fuente": "E p.3; redacción U",
+    "observaciones": "Cumple «o identificada pendiente»; aún no existe captura final Docker."
+  },
+  {
+    "id": "I14",
+    "group": "I",
+    "requisito": "Existen capturas reales de RabbitMQ, o están identificadas como pendientes.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docs/evidencias/README.md",
+    "evidencia": "Enumera captura auténtica pendiente de Management [IM].",
+    "fuente": "E p.3; redacción U",
+    "observaciones": "Cumple «o identificada pendiente»; logs/API actuales no son pantallazos."
+  },
+  {
+    "id": "I15",
+    "group": "I",
+    "requisito": "Existe documentación para reproducir las pruebas en Thunder Client.",
+    "estado": "✅ CUMPLE",
+    "archivo": "docs/pruebas/README.md/.json/.http",
+    "evidencia": "Colección y protocolo inspeccionados; HTTP equivalente ejecutado [IT/SJ/SM].",
+    "fuente": "G p.5",
+    "observaciones": "Uso real de GUI e importación no verificados, instrucciones disponibles."
+  }
+]

@@ -1,0 +1,48 @@
+ M .gitignore
+ M INFORME_AUDITORIA.md
+ M README.md
+ M docs/diagramas.md
+ M pom.xml
+ D src/main/java/co/edu/unicauca/saberpro/SaberProApplication.java
+ D src/main/java/co/edu/unicauca/saberpro/application/CrearPreguntaService.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/exception/ReglaNegocioException.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/model/EstadoPregunta.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/model/Pregunta.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/inbound/CrearPreguntaUseCase.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/outbound/NotificacionRevisionPort.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/ports/outbound/PreguntaRepositoryPort.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/Enunciado.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/Justificacion.java
+ D src/main/java/co/edu/unicauca/saberpro/domain/valueobject/OpcionRespuesta.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/in/web/ApiExceptionHandler.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/in/web/PreguntaController.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/JpaQuestionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/OpcionEmbeddable.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/PreguntaJpaEntity.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/jpa/SpringDataPreguntaRepository.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/memory/InMemoryQuestionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/adapters/out/notification/LoggingNotificacionAdapter.java
+ D src/main/java/co/edu/unicauca/saberpro/infrastructure/config/HexagonalConfiguration.java
+ D src/main/resources/application.properties
+ D src/test/java/co/edu/unicauca/saberpro/application/IntercambiabilidadTest.java
+ D src/test/java/co/edu/unicauca/saberpro/domain/PreguntaTest.java
+ D src/test/java/co/edu/unicauca/saberpro/infrastructure/ApiJpaIntegrationTest.java
+ D src/test/java/co/edu/unicauca/saberpro/infrastructure/ApiMemoryIntegrationTest.java
+?? .dockerignore
+?? .mvn/
+?? docker-compose.yml
+?? docs/INFORME_IMPLEMENTACION.md
+?? docs/INFORME_TECNICO.md
+?? docs/INVENTARIO_CAMBIOS.md
+?? docs/arquitectura/
+?? docs/auditoria/
+?? docs/evidencias/
+?? docs/guias/
+?? docs/pruebas/
+?? docs/taller12/
+?? lifecycle-service/
+?? mvnw
+?? mvnw.cmd
+?? question-service/
+?? scripts/
+?? validation-service/

@@ -1,0 +1,644 @@
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  |   .   ____          _            __ _ _
+saberpro-lifecycle-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-lifecycle-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-lifecycle-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-lifecycle-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-lifecycle-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:24:48.011Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : Starting LifecycleServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-lifecycle-service  | 2026-11-16T20:24:48.023Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+saberpro-lifecycle-service  | 2026-11-16T20:24:54.009Z  INFO 1 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+saberpro-lifecycle-service  | 2026-11-16T20:24:54.315Z  INFO 1 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 269 ms. Found 1 JPA repository interface.
+saberpro-lifecycle-service  | 2026-11-16T20:24:58.422Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+saberpro-lifecycle-service  | 2026-11-16T20:24:58.460Z  INFO 1 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-lifecycle-service  | 2026-11-16T20:24:58.461Z  INFO 1 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-lifecycle-service  | 2026-11-16T20:24:58.552Z  INFO 1 --- [lifecycle-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-lifecycle-service  | 2026-11-16T20:24:58.555Z  INFO 1 --- [lifecycle-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10220 ms
+saberpro-lifecycle-service  | 2026-11-16T20:24:59.738Z  INFO 1 --- [lifecycle-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+saberpro-lifecycle-service  | 2026-11-16T20:24:59.873Z  INFO 1 --- [lifecycle-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+saberpro-lifecycle-service  | 2026-11-16T20:24:59.990Z  INFO 1 --- [lifecycle-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+saberpro-lifecycle-service  | 2026-11-16T20:25:00.870Z  INFO 1 --- [lifecycle-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+saberpro-lifecycle-service  | 2026-11-16T20:25:00.966Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+saberpro-lifecycle-service  | 2026-11-16T20:25:01.743Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/lifecycle user=SA
+saberpro-lifecycle-service  | 2026-11-16T20:25:01.749Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+saberpro-lifecycle-service  | 2026-11-16T20:25:01.972Z  INFO 1 --- [lifecycle-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+saberpro-lifecycle-service  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+saberpro-lifecycle-service  | 	Database driver: undefined/unknown
+saberpro-lifecycle-service  | 	Database version: 2.3.232
+saberpro-lifecycle-service  | 	Autocommit mode: undefined/unknown
+saberpro-lifecycle-service  | 	Isolation level: undefined/unknown
+saberpro-lifecycle-service  | 	Minimum pool size: undefined/unknown
+saberpro-lifecycle-service  | 	Maximum pool size: undefined/unknown
+saberpro-lifecycle-service  | 2026-11-16T20:25:05.107Z  INFO 1 --- [lifecycle-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+saberpro-lifecycle-service  | 2026-11-16T20:25:05.248Z  INFO 1 --- [lifecycle-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+saberpro-lifecycle-service  | 2026-11-16T20:25:11.182Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-lifecycle-service  | 2026-11-16T20:25:11.868Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+saberpro-lifecycle-service  | 2026-11-16T20:25:11.901Z  INFO 1 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:25:12.144Z  INFO 1 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1c3eeda4:0/SimpleConnection@3e94a6f6 [delegate=amqp://guest@172.18.0.2:5672/, localPort=57408]
+saberpro-lifecycle-service  | 2026-11-16T20:25:12.490Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : Started LifecycleServiceApplication in 26.38 seconds (process running for 28.727)
+saberpro-lifecycle-service  | 2026-11-16T20:25:13.668Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-lifecycle-service  | 2026-11-16T20:25:13.669Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-lifecycle-service  | 2026-11-16T20:25:13.672Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+saberpro-lifecycle-service  | 2026-11-16T20:26:25.429Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=53d71872-5371-41de-bad9-c4f3653d8f86 eventId=ee725c9c-e9b6-37a9-b9bd-54c66e38340c
+saberpro-lifecycle-service  | 2026-11-16T20:26:25.443Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=49eeda5b-65de-4c0e-811d-1447377f65c3 eventId=0feed1b8-b095-383c-992f-ee739a63f98e
+saberpro-lifecycle-service  | 2026-11-16T20:26:25.894Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=f66aebb5-4730-410f-93ff-2a26a24fa49e eventId=d7ab0116-3249-372a-b1c3-3b47dee73dbf
+saberpro-lifecycle-service  | 2026-11-16T20:26:28.271Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=e7c06cd0-cd99-488e-bc9e-8005c1d9f840 eventId=264fed2a-46e6-317a-8784-5c6c0fb32774
+saberpro-lifecycle-service  | 2026-11-16T20:26:28.419Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=97d1fe1b-0df5-4638-8057-9f7f5336e4c6 eventId=4dee5625-a74f-3814-a9be-5f5b3bff9a1d
+saberpro-lifecycle-service  | 2026-11-16T20:26:28.654Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=5a4a1d1a-428a-4613-b1a7-db0ad4b6c52e eventId=7e0214f7-42b4-3cc8-a6e6-697716d2360e
+saberpro-lifecycle-service  | 2026-11-16T20:29:36.517Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=5d7b62c6-28a0-420b-b691-e65cf11ab595 eventId=68b3b8b0-3ea4-3736-9b01-9763ed8fb5ad
+saberpro-lifecycle-service  | 2026-11-16T20:29:37.519Z  WARN 1 --- [lifecycle-service] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1007) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:997) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:935) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:890) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:275) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:741) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:29:37.552Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1e08f0cd: tags=[[amq.ctag-pbwcZAPoW_b3T9ifdu7MNg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.18.0.2:5672/,1), conn: Proxy@435a13ac Shared Rabbit Connection: SimpleConnection@3e94a6f6 [delegate=amqp://guest@172.18.0.2:5672/, localPort=57408], acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:29:37.560Z  INFO 1 --- [lifecycle-service] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:37.566Z ERROR 1 --- [lifecycle-service] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:671) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:644) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:533) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1484) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2268) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:467) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:451) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1972) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1936) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1481) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 15 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:29:37.568Z  INFO 1 --- [lifecycle-service] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:39.898Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:39.899Z  WARN 1 --- [lifecycle-service] [nio-8084-exec-3] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 80 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:29:42.572Z  WARN 1 --- [lifecycle-service] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:29:42.573Z  INFO 1 --- [lifecycle-service] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6f62c814: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:29:42.576Z  INFO 1 --- [lifecycle-service] [ntContainer#0-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:42.577Z ERROR 1 --- [lifecycle-service] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 2026-11-16T20:29:42.577Z  INFO 1 --- [lifecycle-service] [ntContainer#0-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:45.025Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:45.026Z  WARN 1 --- [lifecycle-service] [nio-8084-exec-4] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 80 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:29:47.581Z  WARN 1 --- [lifecycle-service] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:29:47.582Z  INFO 1 --- [lifecycle-service] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@cbf36b1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:29:47.584Z  INFO 1 --- [lifecycle-service] [ntContainer#0-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:47.585Z ERROR 1 --- [lifecycle-service] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 2026-11-16T20:29:47.585Z  INFO 1 --- [lifecycle-service] [ntContainer#0-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:50.124Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:29:50.129Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-7] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1c3eeda4:9/SimpleConnection@108247de [delegate=amqp://guest@172.18.0.2:5672/, localPort=40638]
+saberpro-lifecycle-service  | 2026-11-16T20:29:52.589Z  WARN 1 --- [lifecycle-service] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:29:52.590Z  INFO 1 --- [lifecycle-service] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@72b7d63b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:29:52.601Z  INFO 1 --- [lifecycle-service] [ntContainer#0-5] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=fa03a5ad-380b-4dab-bd1c-a24768f24cef eventId=d516a9d2-a741-3787-8b48-5bc386267adb
+saberpro-lifecycle-service  | 2026-11-16T20:31:48.822Z  INFO 1 --- [lifecycle-service] [ntContainer#0-5] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=511ff613-e629-4870-a722-2b741ced487f eventId=c39844c1-b0dc-3174-a5a9-e355e870c547
+saberpro-lifecycle-service  | 2026-11-16T20:31:49.824Z  WARN 1 --- [lifecycle-service] [ntContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1007) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:997) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:935) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:890) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:275) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:741) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:31:49.825Z  INFO 1 --- [lifecycle-service] [ntContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@747e6e8a: tags=[[amq.ctag-Nd_5VySgRIdpycUVlxuQ3g]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.18.0.2:5672/,1), conn: Proxy@435a13ac Shared Rabbit Connection: SimpleConnection@108247de [delegate=amqp://guest@172.18.0.2:5672/, localPort=40638], acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:31:49.828Z  INFO 1 --- [lifecycle-service] [ntContainer#0-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:49.829Z ERROR 1 --- [lifecycle-service] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:671) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:644) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:533) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1484) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2268) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:467) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:451) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1972) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1936) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1481) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 15 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:31:49.831Z  INFO 1 --- [lifecycle-service] [ntContainer#0-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:52.615Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.646Z  WARN 1 --- [lifecycle-service] [nio-8084-exec-9] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 80 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.836Z  WARN 1 --- [lifecycle-service] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.836Z  INFO 1 --- [lifecycle-service] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@66342922: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.838Z  INFO 1 --- [lifecycle-service] [ntContainer#0-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.839Z ERROR 1 --- [lifecycle-service] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 2026-11-16T20:31:54.839Z  INFO 1 --- [lifecycle-service] [ntContainer#0-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.775Z  INFO 1 --- [lifecycle-service] [io-8084-exec-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.778Z  WARN 1 --- [lifecycle-service] [io-8084-exec-10] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434) ~[spring-boot-actuator-3.4.5.jar!/:3.4.5]
+saberpro-lifecycle-service  | 	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar!/:6.2.6]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar!/:na]
+saberpro-lifecycle-service  | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+saberpro-lifecycle-service  | Caused by: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351) ~[na:na]
+saberpro-lifecycle-service  | 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar!/:5.22.0]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar!/:3.2.5]
+saberpro-lifecycle-service  | 	... 80 common frames omitted
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.844Z  WARN 1 --- [lifecycle-service] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.845Z  INFO 1 --- [lifecycle-service] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@9cb4038: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.847Z  INFO 1 --- [lifecycle-service] [ntContainer#0-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.848Z ERROR 1 --- [lifecycle-service] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+saberpro-lifecycle-service  | 2026-11-16T20:31:59.849Z  INFO 1 --- [lifecycle-service] [ntContainer#0-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:32:04.853Z  WARN 1 --- [lifecycle-service] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+saberpro-lifecycle-service  | 2026-11-16T20:32:04.854Z  INFO 1 --- [lifecycle-service] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5ba8991e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+saberpro-lifecycle-service  | 2026-11-16T20:32:04.856Z  INFO 1 --- [lifecycle-service] [ntContainer#0-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:32:04.864Z  INFO 1 --- [lifecycle-service] [ntContainer#0-9] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1c3eeda4:18/SimpleConnection@64548f1b [delegate=amqp://guest@172.18.0.2:5672/, localPort=35344]
+saberpro-lifecycle-service  | 2026-11-16T20:32:04.883Z  INFO 1 --- [lifecycle-service] [ntContainer#0-9] c.e.u.s.l.m.QuestionReviewListener       : Revisión procesada: preguntaId=b37f855d-a8e7-465e-8c8a-bd6ac752e99b eventId=7319ffa8-b3ae-3a7e-a17a-013a9d235988
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.437Z  INFO 1 --- [lifecycle-service] [tContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.899Z  INFO 1 --- [lifecycle-service] [tContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.900Z  INFO 1 --- [lifecycle-service] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.905Z  INFO 1 --- [lifecycle-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.916Z  INFO 1 --- [lifecycle-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.919Z  INFO 1 --- [lifecycle-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+saberpro-lifecycle-service  | 2026-11-16T20:33:13.965Z  INFO 1 --- [lifecycle-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  |   .   ____          _            __ _ _
+saberpro-lifecycle-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+saberpro-lifecycle-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+saberpro-lifecycle-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+saberpro-lifecycle-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+saberpro-lifecycle-service  |  =========|_|==============|___/=/_/_/_/
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  |  :: Spring Boot ::                (v3.4.5)
+saberpro-lifecycle-service  | 
+saberpro-lifecycle-service  | 2026-11-16T20:33:16.052Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : Starting LifecycleServiceApplication v2.0.0 using Java 17.0.21 with PID 1 (/app/app.jar started by ? in /app)
+saberpro-lifecycle-service  | 2026-11-16T20:33:16.057Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+saberpro-lifecycle-service  | 2026-11-16T20:33:18.763Z  INFO 1 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+saberpro-lifecycle-service  | 2026-11-16T20:33:18.844Z  INFO 1 --- [lifecycle-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+saberpro-lifecycle-service  | 2026-11-16T20:33:20.297Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+saberpro-lifecycle-service  | 2026-11-16T20:33:20.364Z  INFO 1 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+saberpro-lifecycle-service  | 2026-11-16T20:33:20.365Z  INFO 1 --- [lifecycle-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+saberpro-lifecycle-service  | 2026-11-16T20:33:20.507Z  INFO 1 --- [lifecycle-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+saberpro-lifecycle-service  | 2026-11-16T20:33:20.522Z  INFO 1 --- [lifecycle-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4331 ms
+saberpro-lifecycle-service  | 2026-11-16T20:33:21.974Z  INFO 1 --- [lifecycle-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+saberpro-lifecycle-service  | 2026-11-16T20:33:22.097Z  INFO 1 --- [lifecycle-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+saberpro-lifecycle-service  | 2026-11-16T20:33:22.221Z  INFO 1 --- [lifecycle-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+saberpro-lifecycle-service  | 2026-11-16T20:33:22.813Z  INFO 1 --- [lifecycle-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+saberpro-lifecycle-service  | 2026-11-16T20:33:22.888Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+saberpro-lifecycle-service  | 2026-11-16T20:33:23.486Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/lifecycle user=SA
+saberpro-lifecycle-service  | 2026-11-16T20:33:23.490Z  INFO 1 --- [lifecycle-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+saberpro-lifecycle-service  | 2026-11-16T20:33:23.701Z  INFO 1 --- [lifecycle-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+saberpro-lifecycle-service  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+saberpro-lifecycle-service  | 	Database driver: undefined/unknown
+saberpro-lifecycle-service  | 	Database version: 2.3.232
+saberpro-lifecycle-service  | 	Autocommit mode: undefined/unknown
+saberpro-lifecycle-service  | 	Isolation level: undefined/unknown
+saberpro-lifecycle-service  | 	Minimum pool size: undefined/unknown
+saberpro-lifecycle-service  | 	Maximum pool size: undefined/unknown
+saberpro-lifecycle-service  | 2026-11-16T20:33:25.838Z  INFO 1 --- [lifecycle-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+saberpro-lifecycle-service  | 2026-11-16T20:33:25.959Z  INFO 1 --- [lifecycle-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+saberpro-lifecycle-service  | 2026-11-16T20:33:33.357Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+saberpro-lifecycle-service  | 2026-11-16T20:33:33.629Z  INFO 1 --- [lifecycle-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+saberpro-lifecycle-service  | 2026-11-16T20:33:33.637Z  INFO 1 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+saberpro-lifecycle-service  | 2026-11-16T20:33:33.756Z  INFO 1 --- [lifecycle-service] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4a9b4d4e:0/SimpleConnection@1633962a [delegate=amqp://guest@172.18.0.2:5672/, localPort=53508]
+saberpro-lifecycle-service  | 2026-11-16T20:33:33.851Z  INFO 1 --- [lifecycle-service] [           main] c.e.u.s.l.LifecycleServiceApplication    : Started LifecycleServiceApplication in 18.619 seconds (process running for 19.45)
+saberpro-lifecycle-service  | 2026-11-16T20:33:34.148Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+saberpro-lifecycle-service  | 2026-11-16T20:33:34.149Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+saberpro-lifecycle-service  | 2026-11-16T20:33:34.154Z  INFO 1 --- [lifecycle-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+saberpro-lifecycle-service  | 2026-11-16T20:33:35.653Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión duplicada ignorada: preguntaId=5d7b62c6-28a0-420b-b691-e65cf11ab595 eventId=68b3b8b0-3ea4-3736-9b01-9763ed8fb5ad

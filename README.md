@@ -1,246 +1,238 @@
+# Banco de Preguntas Saber PRO — Taller 13
 
-# Banco de Preguntas Saber PRO
+Entrega final integradora, Fase II. Universidad del Cauca · Laboratorio de Ingeniería de Software II · 2026.2. Docente: Paola Andrea Bedoya Toro.
 
-**Taller 12 — Domain-Driven Design (DDD) y Arquitectura Hexagonal · Fase I**
+Evolución del [Taller 12](docs/taller12/README.md): conserva el agregado, las invariantes, los objetos de valor, los repositorios JPA/HashMap y sus pruebas. Añade tres microservicios, validación REST, eventos RabbitMQ reales, Docker Compose y pruebas de integración. El estado y las limitaciones de la verificación están en el [informe de implementación](docs/INFORME_IMPLEMENTACION.md).
 
-**Universidad del Cauca** · Laboratorio de Ingeniería de Software II · Periodo 2026.2  
-**Docente:** Paola Andrea Bedoya Toro
+## Ejecutar desde un clon limpio
 
-> Implementación de un módulo para crear, consultar y enviar a revisión preguntas Saber PRO, con reglas de negocio independientes de los frameworks y de los mecanismos de persistencia.
+Requiere Docker Engine y Docker Compose v2 o superior, los puertos 8082–8084, 5672 y 15672 libres y acceso a Docker Hub/Maven Central en la primera construcción.
 
-**Validación realizada en Google Cloud Shell:** **23 pruebas JUnit 5 aprobadas**, 0 fallos, 0 errores y 0 omitidas (`BUILD SUCCESS`). También se verificaron manualmente las operaciones REST con JPA/H2 y con el repositorio en memoria (HashMap).
+```bash
+docker compose config --quiet
+docker compose up -d --build
+docker compose ps
+docker ps
+docker compose logs -f question-service lifecycle-service
+```
 
-## Contenido
+Cada Dockerfile compila su JAR dentro de una etapa Maven/Java 17. No requiere `target/` previo ni Maven en el anfitrión. Esperar a que los cuatro servicios indiquen `healthy`; también puede usarse `docker compose up -d --build --wait`.
 
-- [Propósito y alcance](#propósito-y-alcance)
-- [Tecnologías](#tecnologías)
-- [Arquitectura hexagonal](#arquitectura-hexagonal)
-- [Modelo DDD y reglas de negocio](#modelo-ddd-y-reglas-de-negocio)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Instalación y ejecución](#instalación-y-ejecución)
-- [API REST](#api-rest)
-- [Intercambiabilidad JPA / memoria](#intercambiabilidad-jpa--memoria)
-- [Pruebas automatizadas](#pruebas-automatizadas)
-- [Diagramas y evidencias](#diagramas-y-evidencias)
+| Servicio | Dirección | Función |
+|---|---|---|
+| Validation | http://localhost:8082 | Validación técnica síncrona |
+| Question | http://localhost:8083/api/preguntas | Crear, listar, consultar y enviar a revisión |
+| Lifecycle | http://localhost:8084/api/revisiones | Consultar comprobantes de eventos procesados |
+| RabbitMQ | localhost:5672 | Transporte AMQP |
+| RabbitMQ Management | http://localhost:15672 | Cola y consumidores; desarrollo: `guest / guest` |
 
-## Propósito y alcance
+La imagen `openjdk:17-jdk-slim` de los PDF respondió `no such manifest` al comprobarla. Se usa [Eclipse Temurin 17 JDK](https://hub.docker.com/_/eclipse-temurin/tags?name=17-jdk-jammy), manteniendo `WORKDIR /app`, el JAR, `EXPOSE` y `ENTRYPOINT`. La etapa adicional Maven permite cumplir la construcción desde fuentes con un solo comando. Ver [decisiones y fuentes](docs/arquitectura/decisiones.md).
 
-Este proyecto desarrolla el avance obligatorio del **Banco de Preguntas Saber PRO**, aplicando patrones tácticos DDD y arquitectura de puertos y adaptadores. **GymClass es únicamente el proyecto de referencia arquitectónica**; no es la aplicación entregada.
+## Arquitectura y tecnologías
 
-El módulo permite crear borradores, consultar preguntas y enviarlas a revisión. No representa todavía una plataforma completa de simulacros o calificación de exámenes.
+Java 17, Spring Boot 3.4.5 (conservado de Taller 12), Spring Web, Bean Validation, Spring Data JPA, H2, Spring AMQP, RabbitMQ `3-management`, Maven Wrapper 3.9.9 y JUnit 5.
 
-## Tecnologías
+```mermaid
+flowchart LR
+    cliente[Thunder Client / cliente HTTP] -->|REST :8083| question[Question Service]
+    question -->|REST :8082| validation[Validation Service]
+    question -->|app.repository=jpa| h2q[(H2 preguntas)]
+    question -->|app.repository=memory| memory[(HashMap)]
+    question -->|JSON / AMQP :5672| rabbit[(pregunta.revisar.queue)]
+    rabbit -->|RabbitListener| lifecycle[Lifecycle Service :8084]
+    lifecycle --> h2l[(H2 comprobantes)]
+```
 
-| Tecnología | Función |
-|---|---|
-| Java 17 | Modelo del dominio y lógica de negocio |
-| Spring Boot 3.4.5 | API REST y configuración de componentes |
-| Maven | Compilación y ejecución de pruebas |
-| Spring Data JPA | Persistencia relacional |
-| H2 Database | Base de datos en memoria para JPA |
-| HashMap | Repositorio alternativo en memoria |
-| JUnit 5 / Spring Boot Test | Pruebas unitarias e integración |
-| Postman / cURL | Pruebas HTTP |
+Compose conecta los servicios a la red bridge `saberpro-net`. Question llama a `http://validation-service:8082`; ambos participantes AMQP usan `SPRING_RABBITMQ_HOST=rabbitmq`. `localhost` se usa para acceder desde el anfitrión y para las comprobaciones de salud dentro de cada contenedor.
 
-## Arquitectura hexagonal
+[Diagramas C4 niveles 1–4 y secuencia](docs/arquitectura/diagramas.md) · [modelo y contratos](docs/arquitectura/arquitectura.md) · [trazabilidad y rúbrica](docs/arquitectura/trazabilidad.md).
 
-La implementación separa tres responsabilidades:
-
-- **Dominio:** entidades, objetos de valor, invariantes y puertos, sin importaciones de Spring/JPA.
-- **Aplicación:** casos de uso que coordinan dominio, persistencia y notificación.
-- **Infraestructura:** controladores REST, adaptadores de repositorio, notificaciones y configuración de Spring.
-
-![Arquitectura hexagonal](docs/figurasYEvidencias/arquitectura.png)
-
-| Componente | Responsabilidad |
-|---|---|
-| `CrearPreguntaUseCase` | Puerto de entrada: `crear`, `buscar`, `enviarRevision` |
-| `CrearPreguntaService` | Implementación y orquestación de casos de uso |
-| `Pregunta` | Raíz del agregado; controla el estado y las invariantes |
-| `PreguntaRepositoryPort` | Puerto de salida: `save`, `findById` |
-| `NotificacionRevisionPort` | Puerto de salida para avisos al enviar a revisión |
-| `PreguntaController` | Adaptador HTTP de entrada |
-| `JpaQuestionAdapter` | Persistencia con Spring Data JPA y H2 |
-| `InMemoryQuestionAdapter` | Persistencia alternativa mediante HashMap |
-| `LoggingNotificacionAdapter` | Registra una notificación en el log (no envía correos) |
-| `HexagonalConfiguration` | Selecciona e inyecta las implementaciones de los puertos |
-
-## Modelo DDD y reglas de negocio
-
-![Modelo del agregado Pregunta](docs/figurasYEvidencias/modelo_ddd.png)
-
-La clase **`Pregunta`** es la raíz del agregado. Contiene un identificador UUID, `Enunciado`, `Justificacion`, una lista de `OpcionRespuesta` y el estado `EstadoPregunta`. Los objetos de valor se implementan como `record` inmutables de Java.
-
-Reglas aplicadas:
-
-1. El enunciado no puede ser nulo ni vacío.
-2. La justificación requiere **al menos 15 caracteres**.
-3. Toda pregunta inicia en estado **`BORRADOR`**.
-4. Un borrador puede tener opciones incompletas: **antes de pasar a `PENDIENTE_REVISION` deben existir exactamente cuatro opciones y solo una correcta**.
-5. Una pregunta ya enviada no puede enviarse nuevamente a revisión.
-6. Las violaciones de reglas de negocio producen `ReglaNegocioException`, transformada por la API en **HTTP 400**.
-
-## Estructura del proyecto
+## Estructura
 
 ```text
-saberpro-hexagonal/
-├── pom.xml
-├── README.md
-├── ejemplo-pregunta.json
-├── postman/
-│   └── SaberPRO_Taller12.postman_collection.json
-├── docs/
-│   ├── diagramas.md
-│   └── figurasYEvidencias/
-│       ├── arquitectura.png
-│       ├── flujo_revision.png
-│       ├── modelo_ddd.png
-│       └── ... capturas de pruebas reales
-└── src/
-    ├── main/
-    │   ├── java/co/edu/unicauca/saberpro/
-    │   │   ├── domain/
-    │   │   │   ├── model/
-    │   │   │   ├── valueobject/
-    │   │   │   ├── exception/
-    │   │   │   └── ports/
-    │   │   ├── application/
-    │   │   └── infrastructure/
-    │   │       ├── adapters/in/web/
-    │   │       ├── adapters/out/jpa/
-    │   │       ├── adapters/out/memory/
-    │   │       ├── adapters/out/notification/
-    │   │       └── config/
-    │   └── resources/application.properties
-    └── test/java/co/edu/unicauca/saberpro/
-        ├── domain/PreguntaTest.java
-        ├── application/IntercambiabilidadTest.java
-        └── infrastructure/
-            ├── ApiJpaIntegrationTest.java
-            └── ApiMemoryIntegrationTest.java
+.
+├── pom.xml                         # Agregador Maven de tres proyectos autónomos
+├── mvnw / mvnw.cmd / .mvn/          # Wrapper Maven
+├── docker-compose.yml
+├── .dockerignore / .gitignore
+├── validation-service/
+│   ├── Dockerfile / pom.xml / mvnw
+│   └── src/main/java/co/edu/unicauca/saberpro/validation/
+│       ├── ValidationServiceApplication.java
+│       └── api/
+├── question-service/
+│   ├── Dockerfile / pom.xml / mvnw
+│   └── src/main/java/co/edu/unicauca/saberpro/question/
+│       ├── QuestionServiceApplication.java
+│       ├── domain/model/             # Pregunta y objetos de valor
+│       ├── domain/exception/
+│       ├── domain/ports/inbound/      # CrearPreguntaUseCase, EvaluarPreguntaUseCase
+│       ├── domain/ports/outbound/     # Persistencia, notificación, validación
+│       ├── application/              # QuestionApplicationService
+│       ├── infrastructure/           # jpa, memory, messaging, validation, config
+│       └── api/                      # QuestionRestController
+├── lifecycle-service/
+│   ├── Dockerfile / pom.xml / mvnw
+│   └── src/main/java/co/edu/unicauca/saberpro/lifecycle/
+│       ├── LifecycleServiceApplication.java
+│       ├── messaging/                # QuestionReviewListener
+│       ├── application/ / persistence/
+│       └── api/
+├── scripts/                          # Verificación y pruebas HTTP reales
+└── docs/
+    ├── guias/                        # Dos PDF oficiales sin modificaciones
+    ├── arquitectura/                 # C4, secuencia, decisiones, trazabilidad
+    ├── pruebas/                      # Colección importable en Thunder Client
+    ├── evidencias/                    # Resultados ejecutados, logs y checklist
+    └── taller12/                     # Documentación original preservada
 ```
 
-## Instalación y ejecución
+Cada servicio tiene sus pruebas en `src/test/java`. Las capturas originales siguen en `docs/figurasYEvidencias/` y corresponden exclusivamente al Taller 12.
 
-**Requisitos:** JDK 17 o superior, Maven 3.9+ y acceso a Maven Central para descargar dependencias.
+## DDD, puertos y adaptadores
 
-```bash
-git clone https://github.com/britneybenitez-gif/saberpro-hexagonal-taller12.git
-cd saberpro-hexagonal-taller12
-mvn clean test
-mvn spring-boot:run
-```
+`Pregunta` es la raíz del agregado. `Enunciado`, `Justificacion` y `OpcionRespuesta` son records inmutables en `domain.model`. El dominio y el servicio de aplicación usan solamente Java; no tienen anotaciones Spring/JPA/AMQP.
 
-Por defecto, `src/main/resources/application.properties` usa `app.repository=jpa`.
+- Enunciado obligatorio, texto de opción obligatorio y justificación de al menos 15 caracteres después de quitar espacios de los extremos.
+- Toda creación inicia en `BORRADOR`. Conservando Taller 12, un borrador puede tener opciones incompletas.
+- Para pasar a `PENDIENTE_REVISION`: exactamente cuatro opciones y una correcta. Un segundo envío lanza `ReglaNegocioException`.
+- Las listas son inmutables y los repositorios usan copias del agregado. Se rechaza una rehidratación inconsistente.
+- Los errores del dominio se convierten en HTTP 400; los controladores no repiten las invariantes.
 
-- **API:** `http://localhost:8080/api/preguntas`
-- **H2 Console:** `http://localhost:8080/h2-console`
-- **JDBC URL:** `jdbc:h2:mem:saberprodb`
-- **Usuario H2:** `sa` — contraseña vacía.
+| Puerto | Implementación / responsabilidad |
+|---|---|
+| `CrearPreguntaUseCase` | `QuestionApplicationService`: crear, buscar y listar |
+| `EvaluarPreguntaUseCase` | El mismo servicio evalúa preparación y solicita revisión; no califica respuestas |
+| `PreguntaRepositoryPort` | `JpaQuestionAdapter` o `InMemoryQuestionAdapter` |
+| `NotificacionRevisionPort` | `RabbitMQPublisher`, equivalente al `NotificacionPort` de la guía |
+| `ValidacionContenidoPort` | `RestValidationAdapter` llama al servicio Validation |
 
-> Este proyecto es una API REST, **no una interfaz web**. Abrir `/` puede devolver 404 porque no existe un controlador para esa ruta. `GET /api/preguntas` devuelve 405; la creación utiliza POST.
+JPA traduce mediante `QuestionRecord`, `OpcionEmbeddable` y `QuestionDomainMapper`. Ninguna entidad de persistencia se usa como agregado.
 
-En **Google Cloud Shell**, se ejecutan los mismos comandos desde la carpeta que contiene `pom.xml`. En otra pestaña de terminal se pueden enviar peticiones con `curl` a `localhost:8080`.
+## API y ejemplos
 
-## API REST
-
-| Método | Endpoint | Respuesta esperada |
+| Servicio | Método y ruta | Respuestas |
 |---|---|---|
-| `POST` | `/api/preguntas` | `201 Created`, estado `BORRADOR` |
-| `GET` | `/api/preguntas/{id}` | `200 OK` o `404 Not Found` |
-| `POST` | `/api/preguntas/{id}/enviar-revision` | `200 OK`, estado `PENDIENTE_REVISION` |
-| `POST` repetido | `/api/preguntas/{id}/enviar-revision` | `400 Bad Request` si ya está en revisión |
+| Question | `GET /api/preguntas` | 200, lista vacía o preguntas |
+| Question | `POST /api/preguntas` | 201 + `Location`, 400 o 503 |
+| Question | `GET /api/preguntas/{id}` | 200, 404; UUID inválido: 400 |
+| Question | `POST /api/preguntas/{id}/enviar-revision` | 202, 400, 404 o 503 |
+| Validation | `POST /api/validaciones/preguntas` | 200 `{valida:true,errores:[]}` o 400 |
+| Lifecycle | `GET /api/revisiones` | 200, comprobantes persistidos |
+| Lifecycle | `GET /api/revisiones/{preguntaId}` | 200 o 404 mientras no exista comprobante |
+| Los tres | `GET /actuator/health` | 200 cuando están saludables |
 
-### Crear una pregunta
-
-```bash
-curl -i -X POST http://localhost:8080/api/preguntas \
-  -H "Content-Type: application/json" \
-  -d '{
-    "enunciado": "¿Qué permite la arquitectura hexagonal?",
-    "justificacion": "Permite cambiar adaptadores sin modificar el dominio.",
-    "opciones": [
-      {"texto": "Desacoplar el dominio de la infraestructura", "correcta": true},
-      {"texto": "Eliminar las interfaces", "correcta": false},
-      {"texto": "Depender directamente de JPA", "correcta": false},
-      {"texto": "Eliminar las pruebas unitarias", "correcta": false}
-    ]
-  }'
+```json
+{
+  "enunciado": "¿Qué permite la arquitectura hexagonal?",
+  "justificacion": "Permite cambiar adaptadores sin modificar el dominio.",
+  "opciones": [
+    {"texto": "Desacoplar dominio e infraestructura", "correcta": true},
+    {"texto": "Eliminar interfaces", "correcta": false},
+    {"texto": "Acoplar el dominio a JPA", "correcta": false},
+    {"texto": "Eliminar pruebas", "correcta": false}
+  ]
+}
 ```
 
-La respuesta devuelve HTTP 201, un UUID y `"estado":"BORRADOR"`.
-
-### Enviar a revisión
-
-Sustituye `UUID_GENERADO` por el `id` devuelto al crear la pregunta:
-
 ```bash
-curl -i -X POST http://localhost:8080/api/preguntas/UUID_GENERADO/enviar-revision
+curl -i http://localhost:8083/api/preguntas
+curl -i -X POST http://localhost:8083/api/preguntas \
+  -H 'Content-Type: application/json' --data-binary @ejemplo-pregunta.json
+# Sustituir UUID_GENERADO por el id de la respuesta anterior:
+curl -i http://localhost:8083/api/preguntas/UUID_GENERADO
+curl -i -X POST http://localhost:8083/api/preguntas/UUID_GENERADO/enviar-revision
+curl -i http://localhost:8084/api/revisiones/UUID_GENERADO
 ```
 
-La respuesta debe devolver HTTP 200 y `"estado":"PENDIENTE_REVISION"`.
+La respuesta mantiene el contrato del Taller 12: `id`, `estado`, `enunciado: {"texto":"..."}`, `justificacion: {"texto":"..."}` y `opciones`. La entrada recibe los textos como cadenas. El envío ahora responde **202** (Taller 12 respondía 200).
 
-También puedes utilizar [el JSON de ejemplo](ejemplo-pregunta.json) o importar la [colección Postman](postman/SaberPRO_Taller12.postman_collection.json), con cinco peticiones ordenadas. La primera guarda el `id` en la variable de colección `preguntaId`.
+Validation comprueba la estructura y límites técnicos: enunciado/justificación de hasta 4000 caracteres y texto de opción de hasta 2000, coherentes con las columnas JPA originales. No decide la cardinalidad de opciones, la clave correcta, la longitud mínima de justificación ni los estados. Esos límites técnicos son una decisión de implementación, no un requisito adicional atribuido a la docente.
 
-## Intercambiabilidad JPA / memoria
+## RabbitMQ y consistencia
 
-La prueba principal del taller consiste en **cambiar el adaptador de salida sin modificar una sola línea de `domain/`**.
+Se declara la cola durable `pregunta.revisar.queue` en productor y consumidor. El productor envía JSON persistente al exchange por defecto con la cola como routing key; espera publisher confirm positivo y comprueba que el mensaje no fue devuelto por falta de ruta. Un fallo o timeout produce **503**, nunca 202.
 
-**1. Ejecutar con JPA/H2:**
+La revisión bloquea la actualización, valida el agregado, guarda, publica y confirma la persistencia local. JPA utiliza transacción y bloqueo pesimista; HashMap utiliza exclusión mutua y restauración de la copia anterior. Una publicación fallida revierte a `BORRADOR`. Los envíos concurrentes se serializan.
 
-```bash
-mvn spring-boot:run -Dspring-boot.run.arguments=--app.repository=jpa
-```
+No hay transacción distribuida ni Outbox: un ACK perdido puede dejar el resultado de publicación incierto; un fallo después del ACK y antes del commit puede dejar un evento sin cambio persistido. El `eventId` estable y los comprobantes persistentes en Lifecycle evitan repetir el procesamiento durante reintentos, pero no eliminan esa ventana. Ver [límites de atomicidad](docs/arquitectura/decisiones.md).
 
-**2. Detener con `Ctrl+C` y arrancar con HashMap:**
+`QuestionReviewListener` consume con `@RabbitListener`, registra `preguntaId` y `eventId`, y confirma el mensaje tras persistir el comprobante. Reintenta fallos hasta tres veces. Los contratos inválidos o errores agotados van a `pregunta.revisar.queue.dlq` mediante `pregunta.revisar.queue.dlx`; no se reencolan indefinidamente.
 
-```bash
-mvn spring-boot:run -Dspring-boot.run.arguments=--app.repository=memory
-```
+## Persistencia e intercambiabilidad
 
-Repite la creación y el envío a revisión: en los dos modos se esperan **201 / `BORRADOR`** y **200 / `PENDIENTE_REVISION`**.
+Por defecto `app.repository=jpa`. En Compose, H2 guarda archivos en volúmenes distintos: `question-data` y `lifecycle-data`. RabbitMQ conserva su información en `rabbitmq-data`. Fuera de Compose, la configuración por defecto usa H2 en memoria.
 
-La selección se realiza con `@ConditionalOnProperty` en `HexagonalConfiguration`. En modo `memory`, las operaciones de preguntas utilizan `InMemoryQuestionAdapter`, aunque Spring puede seguir inicializando H2/JPA porque esas dependencias están incluidas en la aplicación. **Ambos almacenamientos son temporales**, no garantizan conservación de los datos entre reinicios.
-
-## Pruebas automatizadas
+Con el ecosistema iniciado:
 
 ```bash
-mvn clean test
+APP_REPOSITORY=memory docker compose up -d --no-deps --force-recreate question-service
+python3 scripts/smoke_test.py --label memory
+
+# Volver a JPA conservando sus datos anteriores:
+APP_REPOSITORY=jpa docker compose up -d --no-deps --force-recreate question-service
 ```
 
-| Clase de prueba | Cobertura |
+La selección usa beans condicionados por `app.repository`. HashMap pierde sus preguntas al reiniciar y no comparte datos con JPA. Las dependencias JPA siguen incluidas en modo memory y H2 puede inicializarse, aunque las operaciones de preguntas usan exclusivamente HashMap. No se modifica ninguna línea del dominio para cambiar de repositorio.
+
+## Compilación y pruebas
+
+Para compilar en el anfitrión se necesita JDK 17 o superior. El wrapper descarga Maven 3.9.9. Con Maven instalado también puede utilizarse `mvn`.
+
+```bash
+./mvnw clean verify                  # Pruebas sin broker externo y tres JAR
+./scripts/check-domain.sh            # Compila dominio/aplicación sin frameworks
+
+# Pruebas de integración: requieren RabbitMQ, Validation y Lifecycle reales.
+docker compose up -d --build --wait
+./mvnw -Pintegration verify
+python3 scripts/smoke_test.py --label jpa
+
+# Incluye caídas y recuperación; detiene brevemente dependencias de este Compose:
+python3 scripts/smoke_test.py --label jpa --faults --output docs/evidencias/smoke-local.json
+
+# Flujo completo equivalente:
+./scripts/verify.sh --output docs/evidencias/verificacion-local.json
+```
+
+Los `*IntegrationTest` se ejecutan con Maven Failsafe en el perfil `integration`; las pruebas habituales con Surefire. No se omiten silenciosamente: el perfil falla si las dependencias reales no están disponibles. Las seis pruebas HTTP originales fueron migradas conservando sus comprobaciones y ajustando solamente el contrato de revisión 200 → 202. Los tests de integración usan componentes reales; los dobles están limitados a pruebas unitarias.
+
+Para empaquetar un servicio según la guía: `cd question-service && ./mvnw clean package -DskipTests`. Este comando omite pruebas por solicitud explícita; para verificar la entrega utilizar los comandos anteriores.
+
+[Protocolo completo de pruebas](docs/pruebas/README.md) · [colección para Thunder Client](docs/pruebas/SaberPRO_Taller13.postman_collection.json).
+
+## Ejecución Java local
+
+Primero levantar dependencias; usar terminales distintas para los servicios que se ejecuten localmente. Evitar iniciar dos procesos sobre el mismo puerto.
+
+```bash
+./mvnw clean package
+# Dependencia AMQP para ejecución local:
+docker compose up -d rabbitmq
+java -jar validation-service/target/validation-service-2.0.0.jar
+java -jar lifecycle-service/target/lifecycle-service-2.0.0.jar
+java -jar question-service/target/question-service-2.0.0.jar --app.repository=jpa
+```
+
+`VALIDATION_SERVICE_URL`, `SPRING_RABBITMQ_HOST`, `SPRING_RABBITMQ_PORT`, `APP_REPOSITORY` y `DB_URL` permiten configurar los adaptadores. Las URLs y timeouts no pertenecen al dominio.
+
+## Solución de problemas
+
+| Síntoma | Comprobación / solución |
 |---|---|
-| `PreguntaTest` | Reglas, estados y objetos de valor del dominio |
-| `IntercambiabilidadTest` | Caso de uso y repositorio en memoria sin dependencia de Spring |
-| `ApiJpaIntegrationTest` | API, inyección del adaptador JPA/H2 y errores |
-| `ApiMemoryIntegrationTest` | API con HashMap, consulta, revisión y rechazos |
+| Puerto ocupado | Identificar el proceso con `docker ps`/herramientas del sistema y detener únicamente el despliegue propio que corresponda |
+| 503 al crear | Revisar `docker compose logs validation-service question-service`, conectividad y `VALIDATION_SERVICE_URL` |
+| 503 al revisar | Revisar salud de RabbitMQ, logs, cola y credenciales; consultar estado antes de reintentar |
+| 400 al revisar | Verificar cuatro opciones, una correcta y estado BORRADOR |
+| Cola sin mensajes visibles | El consumidor puede vaciarla inmediatamente; revisar consumidor, logs y `/api/revisiones/{id}` |
+| Mensaje inválido | Inspeccionar `pregunta.revisar.queue.dlq` y el contrato v1 antes de reintentarlo |
+| Pruebas de integración fallan por conexión | Iniciar Compose y esperar `healthy`; las pruebas no usan brokers simulados |
+| Imagen de la guía no existe | Usar los Dockerfile entregados con Temurin 17; no sustituir por una versión incompatible de Java |
+| Poco espacio / descarga interrumpida | Revisar `df -h` y `docker system df`; reintentar después de liberar espacio bajo control del propietario |
+| Datos desaparecen en memory | Es el comportamiento esperado del HashMap; elegir JPA con su volumen para persistencia |
 
-**Ejecución documentada en Cloud Shell:** `Tests run: 23, Failures: 0, Errors: 0, Skipped: 0` — **`BUILD SUCCESS`**.
+Para detener sin borrar datos: `docker compose stop`. `docker compose down` retira los contenedores y conserva los volúmenes; no usar `-v` si se desea conservar la información.
 
-## Diagramas y evidencias
+## Entregables
 
-Los tres diagramas están en [docs/diagramas.md](docs/diagramas.md) (Mermaid) y en la carpeta de figuras.
-
-![Flujo de envío a revisión](docs/figurasYEvidencias/flujo_revision.png)
-
-| Captura real | Qué demuestra |
-|---|---|
-| [Pruebas JUnit 5](docs/figurasYEvidencias/Pruebas%20JUnit%205.PNG) | 23 pruebas aprobadas y BUILD SUCCESS |
-| [Crear pregunta con JPA](docs/figurasYEvidencias/Creaci%C3%B3n%20de%20una%20pregunta%20con%20JPA%20y%20H2.PNG) | HTTP 201 y BORRADOR |
-| [Enviar a revisión con JPA](docs/figurasYEvidencias/Cambio%20de%20estado%20de%20una%20pregunta%20mediante%20el%20adaptador%20JPA.PNG) | HTTP 200 y PENDIENTE_REVISION |
-| [Validación de invariantes](docs/figurasYEvidencias/Validaci%C3%B3n%20de%20invariantes%20del%20dominio%20mediante%20DDD..PNG) | HTTP 400 por justificación corta |
-| [Activación del adaptador en memoria](docs/figurasYEvidencias/Activaci%C3%B3n%20del%20adaptador%20en%20memoria.PNG) | Inicio con el modo memory |
-| [Verificación del argumento memory](docs/figurasYEvidencias/Evidencia_05_Adaptador_Memoria.PNG) | Argumento `--app.repository=memory` |
-| [Crear pregunta con memoria](docs/figurasYEvidencias/Crear%20una%20pregunta%20usando%20el%20adaptador%20en%20memoria.PNG) | HTTP 201 y BORRADOR |
-| [Enviar a revisión con memoria](docs/figurasYEvidencias/Env%C3%ADo%20de%20una%20pregunta%20a%20revisi%C3%B3n%20utilizando%20el%20adaptador%20en%20memoria..PNG) | HTTP 200 y PENDIENTE_REVISION |
-
-[**Ver todas las figuras y evidencias**](docs/figurasYEvidencias/)
-
-## Entrega académica
-
-Este README documenta el repositorio y su uso. El **informe técnico** es un entregable independiente, preparado en la plantilla oficial `Formato-Documento.docx`, con explicaciones, diagramas y capturas. El puerto de notificaciones registra mensajes en el log; **no integra un servicio de correo o mensajería real**.
-
----
-
-**Universidad del Cauca — Laboratorio de Ingeniería de Software II — 2026.2**  
-**Repositorio:** https://github.com/britneybenitez-gif/saberpro-hexagonal-taller12
+Los dos PDF están en `docs/guias/`. El [informe técnico](docs/INFORME_TECNICO.md), los C4, la matriz y las evidencias textuales acompañan el código. La plantilla institucional `Formato-Documento.docx` no fue proporcionada: queda trasladar el informe a esa plantilla y tomar las capturas indicadas en [evidencias](docs/evidencias/README.md). La publicación en GitHub queda a cargo del propietario después de revisar los cambios.

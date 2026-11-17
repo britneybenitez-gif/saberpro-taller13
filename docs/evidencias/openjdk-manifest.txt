@@ -1,0 +1,1 @@
+no such manifest: docker.io/library/openjdk:17-jdk-slim

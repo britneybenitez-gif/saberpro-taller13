@@ -1,0 +1,112 @@
+{
+  "ejecucion": "Java 17, Maven 3.9.9 en contenedor, perfil integration",
+  "registradoEn": "2026-11-16T15:33:47.657545-05:00",
+  "suites": [
+    {
+      "modulo": "validation-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.validation.ValidationApiTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "6.833"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.019"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.032"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.question.domain.PreguntaTest",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "0.102"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "2.436"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "failsafe-reports",
+      "clase": "co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "12.234"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "failsafe-reports",
+      "clase": "co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "5.594"
+    },
+    {
+      "modulo": "question-service",
+      "runner": "failsafe-reports",
+      "clase": "co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "2.743"
+    },
+    {
+      "modulo": "lifecycle-service",
+      "runner": "surefire-reports",
+      "clase": "co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "6.801"
+    },
+    {
+      "modulo": "lifecycle-service",
+      "runner": "failsafe-reports",
+      "clase": "co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": "14.306"
+    }
+  ],
+  "total": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

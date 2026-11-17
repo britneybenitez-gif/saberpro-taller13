@@ -1,0 +1,5 @@
+Enunciado normalizado: longitud=0
+Opcion normalizada: longitud=0
+Estado=PENDIENTE_REVISION
+Exception in thread "main" java.lang.AssertionError: Se aceptó texto vacío tras normalización
+	at DomainBoundaryProbe.main(DomainBoundaryProbe.java:14)

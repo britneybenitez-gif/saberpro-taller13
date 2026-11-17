@@ -1,0 +1,5 @@
+$ docker stop saberpro-auditoria-memory
+saberpro-auditoria-memory
+
+EXIT_CODE=0
+Solo se detuvo el contenedor temporal propio creado con --rm; no se borraron volúmenes.

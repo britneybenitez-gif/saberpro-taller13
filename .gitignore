@@ -1,6 +1,16 @@
-target/
+**/target/
 .idea/
 .vscode/
 *.iml
 .DS_Store
+.env
+**/data/
+*.mv.db
+*.trace.db
+__pycache__/
 target/
+**/target/
+.classpath
+.project
+.settings/
+.env

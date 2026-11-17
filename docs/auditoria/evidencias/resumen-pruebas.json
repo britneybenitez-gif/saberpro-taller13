@@ -1,0 +1,110 @@
+{
+  "suites": [
+    {
+      "name": "co.edu.unicauca.saberpro.question.application.IntercambiabilidadTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.108",
+      "module": "question-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.application.QuestionApplicationServiceTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.084",
+      "module": "question-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.domain.PreguntaTest",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.248",
+      "module": "question-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.infrastructure.RabbitMQPublisherTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.034",
+      "module": "question-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.infrastructure.ApiEmptyIntegrationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "14.367",
+      "module": "question-service",
+      "phase": "failsafe-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.infrastructure.ApiJpaIntegrationTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.458",
+      "module": "question-service",
+      "phase": "failsafe-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.question.infrastructure.ApiMemoryIntegrationTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.455",
+      "module": "question-service",
+      "phase": "failsafe-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.validation.ValidationApiTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "17.035",
+      "module": "validation-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.lifecycle.ReviewProcessingTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "11.977",
+      "module": "lifecycle-service",
+      "phase": "surefire-reports"
+    },
+    {
+      "name": "co.edu.unicauca.saberpro.lifecycle.LifecycleIntegrationTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "15.766",
+      "module": "lifecycle-service",
+      "phase": "failsafe-reports"
+    }
+  ],
+  "total": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

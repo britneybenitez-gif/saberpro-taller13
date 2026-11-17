@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-16T20:33:36.271085+00:00",
+  "questionRestoredAfterMemory": {
+    "id": "5d7b62c6-28a0-420b-b691-e65cf11ab595",
+    "enunciado": {
+      "texto": "¿Qué principio SOLID favorece la extensión sin modificación?"
+    },
+    "justificacion": {
+      "texto": "El principio abierto cerrado permite extender comportamiento sin modificar el código existente."
+    },
+    "opciones": [
+      {
+        "texto": "Responsabilidad única",
+        "correcta": false
+      },
+      {
+        "texto": "Abierto cerrado",
+        "correcta": true
+      },
+      {
+        "texto": "Sustitución de Liskov",
+        "correcta": false
+      },
+      {
+        "texto": "Inversión de dependencias",
+        "correcta": false
+      }
+    ],
+    "estado": "PENDIENTE_REVISION"
+  },
+  "receiptBeforeRestart": {
+    "eventId": "68b3b8b0-3ea4-3736-9b01-9763ed8fb5ad",
+    "preguntaId": "5d7b62c6-28a0-420b-b691-e65cf11ab595",
+    "estado": "PENDIENTE_REVISION",
+    "processedAt": "2026-11-16T20:29:36.502519Z"
+  },
+  "receiptAfterRestart": {
+    "eventId": "68b3b8b0-3ea4-3736-9b01-9763ed8fb5ad",
+    "preguntaId": "5d7b62c6-28a0-420b-b691-e65cf11ab595",
+    "estado": "PENDIENTE_REVISION",
+    "processedAt": "2026-11-16T20:29:36.502519Z"
+  },
+  "duplicateAfterRestartIgnored": true,
+  "log": "saberpro-lifecycle-service  | 2026-11-16T20:33:35.653Z  INFO 1 --- [lifecycle-service] [ntContainer#0-1] c.e.u.s.l.m.QuestionReviewListener       : Revisión duplicada ignorada: preguntaId=5d7b62c6-28a0-420b-b691-e65cf11ab595 eventId=68b3b8b0-3ea4-3736-9b01-9763ed8fb5ad\n",
+  "success": true
+}

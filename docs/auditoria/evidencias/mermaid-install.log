@@ -1,0 +1,26 @@
+Unable to find image 'node:22-alpine' locally
+22-alpine: Pulling from library/node
+177fffbd7f51: Pulling fs layer
+87aaee1f6667: Pulling fs layer
+e868d1035e50: Pulling fs layer
+881fc932939e: Pulling fs layer
+e868d1035e50: Download complete
+177fffbd7f51: Download complete
+881fc932939e: Download complete
+468bdce65ff1: Download complete
+bf6e4951a281: Download complete
+881fc932939e: Pull complete
+87aaee1f6667: Download complete
+87aaee1f6667: Pull complete
+e868d1035e50: Pull complete
+177fffbd7f51: Pull complete
+Digest: sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a
+Status: Downloaded newer image for node:22-alpine
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+
+added 150 packages in 19s
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

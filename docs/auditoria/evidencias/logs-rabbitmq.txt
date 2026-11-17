@@ -1,0 +1,1096 @@
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:24:36.422177 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/"},[]}}
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:24:36.431982 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/etc/hosts"},[]}}
+saberpro-rabbitmq  | 2026-11-16 20:24:41.870892+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+saberpro-rabbitmq  | 2026-11-16 20:24:41.881818+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:41.883250+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:41.903946+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:41.904093+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.015001+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.037402+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:42.088195+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.134192+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.134313+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.139675+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.140738+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:42.141047+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.148592+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.148689+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.363087+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:42.375115+00:00 [notice] <0.292.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 1[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.393878+00:00 [info] <0.254.0> Khepri leader elected[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:42.394014+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.156607+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.156607+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.156607+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.156607+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   ##  ##      RabbitMQ 3.13.7
+saberpro-rabbitmq  |   ##  ##
+saberpro-rabbitmq  |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+saberpro-rabbitmq  |   ######  ##
+saberpro-rabbitmq  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Erlang:      26.2.5.16 [jit]
+saberpro-rabbitmq  |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+saberpro-rabbitmq  |   Release series support status: see https://www.rabbitmq.com/release-information
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Doc guides:  https://www.rabbitmq.com/docs
+saberpro-rabbitmq  |   Support:     https://www.rabbitmq.com/docs/contact
+saberpro-rabbitmq  |   Tutorials:   https://www.rabbitmq.com/tutorials
+saberpro-rabbitmq  |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+saberpro-rabbitmq  |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Logs: <stdout>
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Starting broker...2026-11-16 20:24:43.160971+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  node           : rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  cookie hash    : TwuO02YaUEaUhzM19GOs0A==[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:43.160971+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.443662+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.443835+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.446536+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.448024+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.451111+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.500448+00:00 [info] <0.331.0> Memory high watermark set to 6397 MiB (6708771225 bytes) of 15994 MiB (16771928064 bytes) total[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.514624+00:00 [info] <0.333.0> Enabling free disk space monitoring (disk free space: 7546613760, total memory: 16771928064)[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.514775+00:00 [info] <0.333.0> Disk free limit set to 50MB[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.527120+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.527450+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.572939+00:00 [info] <0.336.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.574211+00:00 [info] <0.337.0> FHC read buffering: OFF[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.574322+00:00 [info] <0.337.0> FHC write buffering: ON[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.575625+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.576260+00:00 [info] <0.317.0> Will use 4 processes for default worker pool[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.576373+00:00 [info] <0.317.0> Starting worker pool 'worker_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.581134+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:44.582084+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:44.589044+00:00 [notice] <0.318.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:44.896144+00:00 [notice] <0.318.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:44.896424+00:00 [notice] <0.318.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.145641+00:00 [notice] <0.318.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.146953+00:00 [notice] <0.318.0> Feature flags: attempt to enable `stream_update_config_command`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.456257+00:00 [notice] <0.318.0> Feature flags: `stream_update_config_command` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.456490+00:00 [notice] <0.318.0> Feature flags: attempt to enable `stream_filtering`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.700468+00:00 [notice] <0.318.0> Feature flags: `stream_filtering` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.700712+00:00 [notice] <0.318.0> Feature flags: attempt to enable `stream_sac_coordinator_unblock_group`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.896608+00:00 [notice] <0.318.0> Feature flags: `stream_sac_coordinator_unblock_group` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:45.896805+00:00 [notice] <0.318.0> Feature flags: attempt to enable `restart_streams`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.177199+00:00 [notice] <0.318.0> Feature flags: `restart_streams` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.177456+00:00 [notice] <0.318.0> Feature flags: attempt to enable `message_containers`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.374152+00:00 [notice] <0.318.0> Feature flags: `message_containers` enabled[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.374401+00:00 [notice] <0.318.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.578293+00:00 [notice] <0.318.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.579269+00:00 [info] <0.254.0> DB: virgin node -> run peer discovery[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:46.579404+00:00 [warning] <0.254.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:24:46.605135+00:00 [notice] <0.44.0> Application mnesia exited with reason: stopped[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.969266+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.969491+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.969720+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.969864+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.997233+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:46.997585+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.003020+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.003267+00:00 [info] <0.560.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.003369+00:00 [info] <0.560.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.004365+00:00 [info] <0.560.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.004463+00:00 [info] <0.560.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.004547+00:00 [info] <0.560.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.004629+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.004821+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005046+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005108+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005154+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005277+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005367+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005448+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005551+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005616+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005673+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005723+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005784+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005838+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.005892+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006104+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006171+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006211+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006276+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006358+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006413+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006491+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006529+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.006692+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.009804+00:00 [info] <0.568.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.009980+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.017993+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.018443+00:00 [info] <0.572.0> Starting rabbit_node_monitor (in ignore mode)[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.018820+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.019709+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.020125+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.020355+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.020449+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.020651+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.020761+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.021179+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.089409+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.090131+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.090649+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.090804+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.090955+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.091077+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.091227+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.091434+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.091559+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.091732+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.122579+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.122940+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.123135+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.123251+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.123333+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.123657+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.158794+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.158995+00:00 [info] <0.254.0> Will seed default virtual host and user...[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.159254+00:00 [info] <0.254.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.196399+00:00 [info] <0.632.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.197900+00:00 [info] <0.632.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.219989+00:00 [info] <0.632.0> Starting message stores for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.220355+00:00 [info] <0.641.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.222340+00:00 [info] <0.632.0> Started message store of type transient for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.222602+00:00 [info] <0.645.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.225123+00:00 [warning] <0.645.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.226582+00:00 [info] <0.632.0> Started message store of type persistent for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.226818+00:00 [info] <0.632.0> Recovering 0 queues of type rabbit_classic_queue took 28ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.226905+00:00 [info] <0.632.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.227010+00:00 [info] <0.632.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.233021+00:00 [info] <0.254.0> Created user 'guest'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.235277+00:00 [info] <0.254.0> Successfully set user tags for user 'guest' to [administrator][0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.238101+00:00 [info] <0.254.0> Successfully set permissions for user 'guest' in virtual host '/' to '.*', '.*', '.*'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.238258+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.238412+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.238505+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.238804+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.239130+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.239221+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.239311+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.239398+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.239464+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.240004+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.240239+00:00 [info] <0.317.0> Starting worker pool 'definition_import_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.240816+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.240983+00:00 [info] <0.254.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-n0j4vM0Y87uurFTl0lipHQ'[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.245408+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.245846+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.246034+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.246333+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:47.247105+00:00 [info] <0.682.0> Resetting node maintenance status[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0> By default, this feature can still be used for now.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:24:47.759964+00:00 [warning] <0.711.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.155363+00:00 [info] <0.748.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.155656+00:00 [info] <0.780.0> Statistics database started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.157132+00:00 [info] <0.779.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.203127+00:00 [info] <0.798.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.203475+00:00 [info] <0.682.0> Ready to start client connection listeners[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.209822+00:00 [info] <0.842.0> started TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0> Server startup complete; 5 plugins started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0>  * rabbitmq_prometheus[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0>  * rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0>  * rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0>  * rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:24:57.623386+00:00 [info] <0.682.0>  * rabbitmq_web_dispatch[0m
+saberpro-rabbitmq  |  completed with 5 plugins.
+saberpro-rabbitmq  | 2026-11-16 20:24:57.685290+00:00 [info] <0.9.0> Time to start RabbitMQ: 21395 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:11.970772+00:00 [info] <0.851.0> accepting AMQP connection <0.851.0> (172.18.0.4:57408 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:12.091077+00:00 [info] <0.851.0> connection <0.851.0> (172.18.0.4:57408 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#1c3eeda4:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:12.107601+00:00 [info] <0.851.0> connection <0.851.0> (172.18.0.4:57408 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:18.058983+00:00 [info] <0.885.0> accepting AMQP connection <0.885.0> (172.18.0.5:46968 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:18.126218+00:00 [info] <0.885.0> connection <0.885.0> (172.18.0.5:46968 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#5bd585a5:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:25:18.133888+00:00 [info] <0.885.0> connection <0.885.0> (172.18.0.5:46968 -> 172.18.0.2:5672 - rabbitConnectionFactory#5bd585a5:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:23.836089+00:00 [info] <0.945.0> accepting AMQP connection <0.945.0> (172.18.0.6:41114 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:23.879669+00:00 [info] <0.945.0> connection <0.945.0> (172.18.0.6:41114 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#2101e969:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:23.885139+00:00 [info] <0.945.0> connection <0.945.0> (172.18.0.6:41114 -> 172.18.0.2:5672 - rabbitConnectionFactory#2101e969:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:28.243634+00:00 [info] <0.961.0> accepting AMQP connection <0.961.0> (172.18.0.6:41122 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:28.246895+00:00 [info] <0.961.0> connection <0.961.0> (172.18.0.6:41122 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#47c8ced:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:28.248762+00:00 [info] <0.961.0> connection <0.961.0> (172.18.0.6:41122 -> 172.18.0.2:5672 - rabbitConnectionFactory#47c8ced:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:28.760447+00:00 [info] <0.945.0> closing AMQP connection <0.945.0> (172.18.0.6:41114 -> 172.18.0.2:5672 - rabbitConnectionFactory#2101e969:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:28.785034+00:00 [info] <0.961.0> closing AMQP connection <0.961.0> (172.18.0.6:41122 -> 172.18.0.2:5672 - rabbitConnectionFactory#47c8ced:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:49.271524+00:00 [info] <0.995.0> accepting AMQP connection <0.995.0> (172.18.0.6:47030 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:49.300116+00:00 [info] <0.995.0> connection <0.995.0> (172.18.0.6:47030 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#6dabad5c:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:49.304479+00:00 [info] <0.995.0> connection <0.995.0> (172.18.0.6:47030 -> 172.18.0.2:5672 - rabbitConnectionFactory#6dabad5c:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:26:53.705681+00:00 [info] <0.995.0> closing AMQP connection <0.995.0> (172.18.0.6:47030 -> 172.18.0.2:5672 - rabbitConnectionFactory#6dabad5c:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:37.256137+00:00 [notice] <0.64.0> SIGTERM received - shutting down[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:37.256137+00:00 [notice] <0.64.0> [0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:37.261529+00:00 [warning] <0.704.0> HTTP listener registry could not find context rabbitmq_prometheus_tls[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:37.286499+00:00 [warning] <0.704.0> HTTP listener registry could not find context rabbitmq_management_tls[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.317970+00:00 [info] <0.842.0> stopped TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:29:37.319240+00:00 [error] <0.851.0> Error on AMQP connection <0.851.0> (172.18.0.4:57408 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:29:37.319240+00:00 [error] <0.851.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:29:37.319240+00:00 [error] <0.885.0> Error on AMQP connection <0.885.0> (172.18.0.5:46968 -> 172.18.0.2:5672 - rabbitConnectionFactory#5bd585a5:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:29:37.319240+00:00 [error] <0.885.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.324681+00:00 [info] <0.632.0> Virtual host '/' is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.325243+00:00 [info] <0.1121.0> Closing all connections in vhost '/' on node 'rabbit@rabbitmq' because the vhost is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.336248+00:00 [info] <0.645.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.345195+00:00 [info] <0.645.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent' is stopped[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.345482+00:00 [info] <0.641.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:37.350973+00:00 [info] <0.641.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient' is stopped[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:37.413320+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/"}}[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:37.413628+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/etc/hosts"}}[0m
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:29:39.704162 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/"},[]}}
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:29:39.713190 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/etc/hosts"},[]}}
+saberpro-rabbitmq  | 2026-11-16 20:29:42.825013+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+saberpro-rabbitmq  | 2026-11-16 20:29:42.830294+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:42.831212+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.839218+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.839402+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.897172+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.907532+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:42.920496+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.939661+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.939763+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.941429+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 1 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.954184+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 1 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:42.954507+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.961232+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:42.961309+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.042751+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.068134+00:00 [info] <0.254.0> Khepri leader elected[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.068249+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:29:43.281941+00:00 [notice] <0.293.0> RabbitMQ metadata store: candidate -> leader in term: 2 machine version: 1[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.681695+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.681695+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.681695+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.681695+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   ##  ##      RabbitMQ 3.13.7
+saberpro-rabbitmq  |   ##  ##
+saberpro-rabbitmq  |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+saberpro-rabbitmq  |   ######  ##
+saberpro-rabbitmq  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Erlang:      26.2.5.16 [jit]
+saberpro-rabbitmq  |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+saberpro-rabbitmq  |   Release series support status: see https://www.rabbitmq.com/release-information
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Doc guides:  https://www.rabbitmq.com/docs
+saberpro-rabbitmq  |   Support:     https://www.rabbitmq.com/docs/contact
+saberpro-rabbitmq  |   Tutorials:   https://www.rabbitmq.com/tutorials
+saberpro-rabbitmq  |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+saberpro-rabbitmq  |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Logs: <stdout>
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Starting broker...2026-11-16 20:29:43.684035+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  node           : rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  cookie hash    : TwuO02YaUEaUhzM19GOs0A==[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:43.684035+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.222881+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.223652+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.226265+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.226515+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.227298+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.243844+00:00 [info] <0.407.0> Memory high watermark set to 6397 MiB (6708771225 bytes) of 15994 MiB (16771928064 bytes) total[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.250656+00:00 [info] <0.409.0> Enabling free disk space monitoring (disk free space: 7015034880, total memory: 16771928064)[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.250794+00:00 [info] <0.409.0> Disk free limit set to 50MB[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.253733+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.253886+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.264227+00:00 [info] <0.412.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.264563+00:00 [info] <0.413.0> FHC read buffering: OFF[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.264651+00:00 [info] <0.413.0> FHC write buffering: ON[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.265591+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.265764+00:00 [info] <0.341.0> Will use 4 processes for default worker pool[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.265847+00:00 [info] <0.341.0> Starting worker pool 'worker_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.266791+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.267497+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.269682+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.272964+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.281989+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.282259+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.282529+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.282684+00:00 [info] <0.427.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.282794+00:00 [info] <0.427.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.282888+00:00 [info] <0.427.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283048+00:00 [info] <0.427.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283177+00:00 [info] <0.427.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283282+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283438+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283719+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283793+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.283867+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284150+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284267+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284365+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284444+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284510+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284581+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284652+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284750+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.284839+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285012+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285259+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285363+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285458+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285552+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285677+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285788+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.285856+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.286033+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.286268+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.287873+00:00 [info] <0.435.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.288090+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.292816+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.293325+00:00 [info] <0.439.0> Starting rabbit_node_monitor (in ignore mode)[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.293560+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.294396+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.294750+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.294987+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.295075+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.295235+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.295358+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.295536+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.320563+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.321577+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.322410+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.322600+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.322754+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.322943+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.323149+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.323600+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.323742+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.323963+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.338660+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.339028+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.342060+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.342215+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.342318+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.342733+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.368059+00:00 [info] <0.489.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.384191+00:00 [info] <0.489.0> Starting message stores for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.384605+00:00 [info] <0.498.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.387770+00:00 [info] <0.489.0> Started message store of type transient for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.388125+00:00 [info] <0.502.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.391840+00:00 [info] <0.489.0> Started message store of type persistent for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.420272+00:00 [info] <0.489.0> Recovering 4 queues of type rabbit_classic_queue took 50ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.420400+00:00 [info] <0.489.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.420538+00:00 [info] <0.489.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.430762+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.430886+00:00 [info] <0.254.0> Will not seed default virtual host and user: have definitions to load...[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.431019+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.436494+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.436601+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.436821+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437073+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437173+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437226+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437278+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437309+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437491+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.437628+00:00 [info] <0.341.0> Starting worker pool 'definition_import_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.438156+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.438241+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.438447+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.438628+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.439000+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:44.439194+00:00 [info] <0.564.0> Resetting node maintenance status[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0> By default, this feature can still be used for now.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:29:44.727425+00:00 [warning] <0.593.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.213042+00:00 [info] <0.630.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.213354+00:00 [info] <0.662.0> Statistics database started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.213577+00:00 [info] <0.661.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.227478+00:00 [info] <0.680.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.227779+00:00 [info] <0.564.0> Ready to start client connection listeners[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.230011+00:00 [info] <0.724.0> started TCP listener on [::]:5672[0m
+saberpro-rabbitmq  |  completed with 5 plugins.
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0> Server startup complete; 5 plugins started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0>  * rabbitmq_prometheus[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0>  * rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0>  * rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0>  * rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.345805+00:00 [info] <0.564.0>  * rabbitmq_web_dispatch[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:48.464797+00:00 [info] <0.9.0> Time to start RabbitMQ: 8906 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:49.190248+00:00 [info] <0.732.0> accepting AMQP connection <0.732.0> (172.18.0.5:58170 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:49.192816+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.5:58170 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#5bd585a5:5[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:49.194169+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.5:58170 -> 172.18.0.2:5672 - rabbitConnectionFactory#5bd585a5:5): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:50.125779+00:00 [info] <0.748.0> accepting AMQP connection <0.748.0> (172.18.0.4:40638 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:50.128134+00:00 [info] <0.748.0> connection <0.748.0> (172.18.0.4:40638 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#1c3eeda4:9[0m
+saberpro-rabbitmq  | 2026-11-16 20:29:50.129496+00:00 [info] <0.748.0> connection <0.748.0> (172.18.0.4:40638 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:9): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:31.744429+00:00 [info] <0.732.0> closing AMQP connection <0.732.0> (172.18.0.5:58170 -> 172.18.0.2:5672 - rabbitConnectionFactory#5bd585a5:5, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:47.846850+00:00 [info] <0.827.0> accepting AMQP connection <0.827.0> (172.18.0.5:41604 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:47.893133+00:00 [info] <0.827.0> connection <0.827.0> (172.18.0.5:41604 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#a4388f1:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:47.900448+00:00 [info] <0.827.0> connection <0.827.0> (172.18.0.5:41604 -> 172.18.0.2:5672 - rabbitConnectionFactory#a4388f1:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:49.484068+00:00 [notice] <0.64.0> SIGTERM received - shutting down[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:49.484068+00:00 [notice] <0.64.0> [0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:31:49.487521+00:00 [warning] <0.586.0> HTTP listener registry could not find context rabbitmq_prometheus_tls[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:31:49.501091+00:00 [warning] <0.586.0> HTTP listener registry could not find context rabbitmq_management_tls[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.528407+00:00 [info] <0.724.0> stopped TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:31:49.530853+00:00 [error] <0.748.0> Error on AMQP connection <0.748.0> (172.18.0.4:40638 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:9, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:31:49.530853+00:00 [error] <0.748.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:31:49.531023+00:00 [error] <0.827.0> Error on AMQP connection <0.827.0> (172.18.0.5:41604 -> 172.18.0.2:5672 - rabbitConnectionFactory#a4388f1:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:31:49.531023+00:00 [error] <0.827.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.532412+00:00 [info] <0.489.0> Virtual host '/' is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.532585+00:00 [info] <0.853.0> Closing all connections in vhost '/' on node 'rabbit@rabbitmq' because the vhost is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.541529+00:00 [info] <0.502.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent'[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.551385+00:00 [info] <0.502.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent' is stopped[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.551640+00:00 [info] <0.498.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient'[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:49.558336+00:00 [info] <0.498.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient' is stopped[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:49.690266+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/"}}[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:49.690464+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/etc/hosts"}}[0m
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:31:54.872074 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/"},[]}}
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:31:54.880130 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/etc/hosts"},[]}}
+saberpro-rabbitmq  | 2026-11-16 20:31:58.051819+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+saberpro-rabbitmq  | 2026-11-16 20:31:58.057083+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:58.058189+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.068045+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.068179+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.137824+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.150731+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:58.167997+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.188104+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.188195+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.189728+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 1 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.204489+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 1 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:58.204779+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.212287+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.212362+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.299985+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.324309+00:00 [info] <0.254.0> Khepri leader elected[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:58.324414+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:31:58.751430+00:00 [notice] <0.293.0> RabbitMQ metadata store: candidate -> leader in term: 3 machine version: 1[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.135885+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.135885+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.135885+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.135885+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   ##  ##      RabbitMQ 3.13.7
+saberpro-rabbitmq  |   ##  ##
+saberpro-rabbitmq  |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+saberpro-rabbitmq  |   ######  ##
+saberpro-rabbitmq  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Erlang:      26.2.5.16 [jit]
+saberpro-rabbitmq  |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+saberpro-rabbitmq  |   Release series support status: see https://www.rabbitmq.com/release-information
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Doc guides:  https://www.rabbitmq.com/docs
+saberpro-rabbitmq  |   Support:     https://www.rabbitmq.com/docs/contact
+saberpro-rabbitmq  |   Tutorials:   https://www.rabbitmq.com/tutorials
+saberpro-rabbitmq  |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+saberpro-rabbitmq  |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Logs: <stdout>
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Starting broker...2026-11-16 20:31:59.138062+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  node           : rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  cookie hash    : TwuO02YaUEaUhzM19GOs0A==[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.138062+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.867113+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.867268+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.867826+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.868093+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.868826+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.884577+00:00 [info] <0.391.0> Memory high watermark set to 6397 MiB (6708771225 bytes) of 15994 MiB (16771928064 bytes) total[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.889092+00:00 [info] <0.393.0> Enabling free disk space monitoring (disk free space: 7014621184, total memory: 16771928064)[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.889222+00:00 [info] <0.393.0> Disk free limit set to 50MB[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.892321+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.892511+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.902095+00:00 [info] <0.396.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.902465+00:00 [info] <0.397.0> FHC read buffering: OFF[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.902563+00:00 [info] <0.397.0> FHC write buffering: ON[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.903172+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.903327+00:00 [info] <0.341.0> Will use 4 processes for default worker pool[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.903419+00:00 [info] <0.341.0> Starting worker pool 'worker_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.904090+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.904811+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.906936+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.912068+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.920375+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.920732+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921105+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921313+00:00 [info] <0.411.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921379+00:00 [info] <0.411.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921469+00:00 [info] <0.411.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921655+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921782+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.921882+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.922092+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.922313+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.922434+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.922528+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.922820+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923038+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923178+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923269+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923374+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923476+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923638+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923751+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923853+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.923978+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924166+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924292+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924445+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924582+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924693+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924802+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.924884+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.925070+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.925462+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.926872+00:00 [info] <0.419.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.927093+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.930559+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.931153+00:00 [info] <0.423.0> Starting rabbit_node_monitor (in ignore mode)[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.931350+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.932155+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.932463+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.932659+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.932758+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.932896+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.933006+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.933150+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.947347+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948036+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948482+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948575+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948649+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948729+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.948852+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.949008+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.949139+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.949336+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.959294+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.959575+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.959760+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.959892+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.960022+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.960469+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.980985+00:00 [info] <0.473.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+saberpro-rabbitmq  | 2026-11-16 20:31:59.999570+00:00 [info] <0.473.0> Starting message stores for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.000674+00:00 [info] <0.482.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.005657+00:00 [info] <0.473.0> Started message store of type transient for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.006013+00:00 [info] <0.486.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.013660+00:00 [info] <0.473.0> Started message store of type persistent for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.037562+00:00 [info] <0.473.0> Recovering 4 queues of type rabbit_classic_queue took 54ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.037672+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.037934+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042082+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042181+00:00 [info] <0.254.0> Will not seed default virtual host and user: have definitions to load...[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042408+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042675+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042740+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.042962+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043117+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043168+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043227+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043274+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043316+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043439+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043487+00:00 [info] <0.341.0> Starting worker pool 'definition_import_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043790+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.043857+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.044178+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.044301+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.044533+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:00.044639+00:00 [info] <0.548.0> Resetting node maintenance status[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0> By default, this feature can still be used for now.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:32:00.324746+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.503055+00:00 [info] <0.614.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.503361+00:00 [info] <0.646.0> Statistics database started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.503548+00:00 [info] <0.645.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.518229+00:00 [info] <0.664.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.518497+00:00 [info] <0.548.0> Ready to start client connection listeners[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.520762+00:00 [info] <0.708.0> started TCP listener on [::]:5672[0m
+saberpro-rabbitmq  |  completed with 5 plugins.
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0> Server startup complete; 5 plugins started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0>  * rabbitmq_prometheus[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0>  * rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0>  * rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0>  * rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.622807+00:00 [info] <0.548.0>  * rabbitmq_web_dispatch[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.686013+00:00 [info] <0.9.0> Time to start RabbitMQ: 8949 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.925170+00:00 [info] <0.716.0> accepting AMQP connection <0.716.0> (172.18.0.5:36804 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.927572+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.5:36804 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#a4388f1:4[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:03.929136+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.5:36804 -> 172.18.0.2:5672 - rabbitConnectionFactory#a4388f1:4): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:04.857532+00:00 [info] <0.732.0> accepting AMQP connection <0.732.0> (172.18.0.4:35344 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:04.860031+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.4:35344 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#1c3eeda4:18[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:04.863734+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.4:35344 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:18): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:32:56.353533+00:00 [info] <0.716.0> closing AMQP connection <0.716.0> (172.18.0.5:36804 -> 172.18.0.2:5672 - rabbitConnectionFactory#a4388f1:4, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:12.548967+00:00 [info] <0.781.0> accepting AMQP connection <0.781.0> (172.18.0.5:41354 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:12.601251+00:00 [info] <0.781.0> connection <0.781.0> (172.18.0.5:41354 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#61d1315b:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:12.607251+00:00 [info] <0.781.0> connection <0.781.0> (172.18.0.5:41354 -> 172.18.0.2:5672 - rabbitConnectionFactory#61d1315b:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:13.910866+00:00 [info] <0.732.0> closing AMQP connection <0.732.0> (172.18.0.4:35344 -> 172.18.0.2:5672 - rabbitConnectionFactory#1c3eeda4:18, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:33.674198+00:00 [info] <0.815.0> accepting AMQP connection <0.815.0> (172.18.0.4:53508 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:33.744739+00:00 [info] <0.815.0> connection <0.815.0> (172.18.0.4:53508 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#4a9b4d4e:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:33:33.750879+00:00 [info] <0.815.0> connection <0.815.0> (172.18.0.4:53508 -> 172.18.0.2:5672 - rabbitConnectionFactory#4a9b4d4e:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:33:34.799141+00:00 [warning] <0.833.0> AMQP 0-9-1 client call timeout was 70000 ms, is updated to a safe effective value of 130000 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:50:28.257511+00:00 [info] <0.1260.0> accepting AMQP connection <0.1260.0> (172.18.0.6:35932 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:50:28.389139+00:00 [info] <0.1260.0> connection <0.1260.0> (172.18.0.6:35932 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#12d28106:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:50:28.409693+00:00 [info] <0.1260.0> connection <0.1260.0> (172.18.0.6:35932 -> 172.18.0.2:5672 - rabbitConnectionFactory#12d28106:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:06.437842+00:00 [info] <0.1286.0> accepting AMQP connection <0.1286.0> (172.18.0.7:55536 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:06.469172+00:00 [info] <0.1286.0> connection <0.1286.0> (172.18.0.7:55536 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#385269dd:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:06.474711+00:00 [info] <0.1286.0> connection <0.1286.0> (172.18.0.7:55536 -> 172.18.0.2:5672 - rabbitConnectionFactory#385269dd:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:09.320039+00:00 [info] <0.1300.0> accepting AMQP connection <0.1300.0> (172.18.0.7:54092 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:09.323298+00:00 [info] <0.1300.0> connection <0.1300.0> (172.18.0.7:54092 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#147c3a88:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:09.329516+00:00 [info] <0.1300.0> connection <0.1300.0> (172.18.0.7:54092 -> 172.18.0.2:5672 - rabbitConnectionFactory#147c3a88:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:09.944703+00:00 [info] <0.1286.0> closing AMQP connection <0.1286.0> (172.18.0.7:55536 -> 172.18.0.2:5672 - rabbitConnectionFactory#385269dd:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:09.973943+00:00 [info] <0.1300.0> closing AMQP connection <0.1300.0> (172.18.0.7:54092 -> 172.18.0.2:5672 - rabbitConnectionFactory#147c3a88:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:40.474313+00:00 [info] <0.1333.0> accepting AMQP connection <0.1333.0> (172.18.0.7:52470 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:40.504281+00:00 [info] <0.1333.0> connection <0.1333.0> (172.18.0.7:52470 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#4f1a4d61:0[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:40.509330+00:00 [info] <0.1333.0> connection <0.1333.0> (172.18.0.7:52470 -> 172.18.0.2:5672 - rabbitConnectionFactory#4f1a4d61:0): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:51:45.153848+00:00 [info] <0.1333.0> closing AMQP connection <0.1333.0> (172.18.0.7:52470 -> 172.18.0.2:5672 - rabbitConnectionFactory#4f1a4d61:0, vhost: '/', user: 'guest')[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:06.714847+00:00 [notice] <0.64.0> SIGTERM received - shutting down[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:06.714847+00:00 [notice] <0.64.0> [0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:06.718780+00:00 [warning] <0.570.0> HTTP listener registry could not find context rabbitmq_prometheus_tls[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:06.733644+00:00 [warning] <0.570.0> HTTP listener registry could not find context rabbitmq_management_tls[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.753220+00:00 [info] <0.708.0> stopped TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754291+00:00 [error] <0.781.0> Error on AMQP connection <0.781.0> (172.18.0.5:41354 -> 172.18.0.2:5672 - rabbitConnectionFactory#61d1315b:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754291+00:00 [error] <0.781.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754403+00:00 [error] <0.815.0> Error on AMQP connection <0.815.0> (172.18.0.4:53508 -> 172.18.0.2:5672 - rabbitConnectionFactory#4a9b4d4e:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754403+00:00 [error] <0.815.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754478+00:00 [error] <0.1260.0> Error on AMQP connection <0.1260.0> (172.18.0.6:35932 -> 172.18.0.2:5672 - rabbitConnectionFactory#12d28106:0, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:53:06.754478+00:00 [error] <0.1260.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.756297+00:00 [info] <0.473.0> Virtual host '/' is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.756475+00:00 [info] <0.1408.0> Closing all connections in vhost '/' on node 'rabbit@rabbitmq' because the vhost is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.769815+00:00 [info] <0.486.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.780661+00:00 [info] <0.486.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent' is stopped[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.781087+00:00 [info] <0.482.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:06.787478+00:00 [info] <0.482.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient' is stopped[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:06.846741+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/"}}[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:06.846984+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/etc/hosts"}}[0m
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:53:09.063031 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/"},[]}}
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:53:09.071461 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/etc/hosts"},[]}}
+saberpro-rabbitmq  | 2026-11-16 20:53:12.421282+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+saberpro-rabbitmq  | 2026-11-16 20:53:12.427301+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:12.428388+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.439528+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.439685+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.507820+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.521904+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:12.539835+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.560757+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.560876+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.562855+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 1 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.579080+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 1 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:12.579438+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.587975+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.588070+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.679500+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.710270+00:00 [info] <0.254.0> Khepri leader elected[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:12.710379+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:53:12.857521+00:00 [notice] <0.293.0> RabbitMQ metadata store: candidate -> leader in term: 4 machine version: 1[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.297843+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.297843+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.297843+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.297843+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   ##  ##      RabbitMQ 3.13.7
+saberpro-rabbitmq  |   ##  ##
+saberpro-rabbitmq  |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+saberpro-rabbitmq  |   ######  ##
+saberpro-rabbitmq  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Erlang:      26.2.5.16 [jit]
+saberpro-rabbitmq  |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+saberpro-rabbitmq  |   Release series support status: see https://www.rabbitmq.com/release-information
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Doc guides:  https://www.rabbitmq.com/docs
+saberpro-rabbitmq  |   Support:     https://www.rabbitmq.com/docs/contact
+saberpro-rabbitmq  |   Tutorials:   https://www.rabbitmq.com/tutorials
+saberpro-rabbitmq  |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+saberpro-rabbitmq  |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Logs: <stdout>
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Starting broker...2026-11-16 20:53:13.299828+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  node           : rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  cookie hash    : TwuO02YaUEaUhzM19GOs0A==[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.299828+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.922957+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.923109+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.924012+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.924223+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.925297+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.941495+00:00 [info] <0.391.0> Memory high watermark set to 6397 MiB (6708771225 bytes) of 15994 MiB (16771928064 bytes) total[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.946535+00:00 [info] <0.393.0> Enabling free disk space monitoring (disk free space: 6593474560, total memory: 16771928064)[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.946641+00:00 [info] <0.393.0> Disk free limit set to 50MB[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.949818+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.950007+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.964553+00:00 [info] <0.396.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.964839+00:00 [info] <0.397.0> FHC read buffering: OFF[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.964987+00:00 [info] <0.397.0> FHC write buffering: ON[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.965735+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.965880+00:00 [info] <0.341.0> Will use 4 processes for default worker pool[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.966090+00:00 [info] <0.341.0> Starting worker pool 'worker_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.966489+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.967101+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.969214+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.972210+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.981451+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.981739+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982106+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982300+00:00 [info] <0.411.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982412+00:00 [info] <0.411.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982504+00:00 [info] <0.411.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982616+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982706+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982814+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.982937+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983105+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983151+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983227+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983408+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983512+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983613+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983695+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.983875+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.984131+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.984367+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.984558+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.984688+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.985190+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.985373+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.985523+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.985667+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.985888+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.986052+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.986158+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.986252+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.986352+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.986878+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.988468+00:00 [info] <0.419.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.988663+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.993057+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.993658+00:00 [info] <0.423.0> Starting rabbit_node_monitor (in ignore mode)[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.993946+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.994828+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995238+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995408+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995472+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995534+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995624+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:13.995770+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.018102+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.018809+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019335+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019469+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019574+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019658+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019816+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.019994+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.020083+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.020247+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.030414+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.030718+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.030895+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.031226+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.031315+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.031874+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.053926+00:00 [info] <0.473.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.068796+00:00 [info] <0.473.0> Starting message stores for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.069153+00:00 [info] <0.482.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.071951+00:00 [info] <0.473.0> Started message store of type transient for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.072313+00:00 [info] <0.486.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.075276+00:00 [info] <0.473.0> Started message store of type persistent for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.097191+00:00 [info] <0.473.0> Recovering 4 queues of type rabbit_classic_queue took 41ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.097322+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.097459+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.102133+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.102274+00:00 [info] <0.254.0> Will not seed default virtual host and user: have definitions to load...[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.102396+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.102504+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.102582+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103041+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103305+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103389+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103490+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103650+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.103841+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.104075+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.104196+00:00 [info] <0.341.0> Starting worker pool 'definition_import_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.104861+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.105010+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.105635+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.105816+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.106357+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:14.106608+00:00 [info] <0.548.0> Resetting node maintenance status[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0> By default, this feature can still be used for now.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:53:14.402118+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.245999+00:00 [info] <0.614.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.246244+00:00 [info] <0.646.0> Statistics database started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.246352+00:00 [info] <0.645.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.261142+00:00 [info] <0.664.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.261511+00:00 [info] <0.548.0> Ready to start client connection listeners[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.263588+00:00 [info] <0.708.0> started TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0> Server startup complete; 5 plugins started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0>  * rabbitmq_prometheus[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0>  * rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0>  * rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0>  * rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.382369+00:00 [info] <0.548.0>  * rabbitmq_web_dispatch[0m
+saberpro-rabbitmq  |  completed with 5 plugins.
+saberpro-rabbitmq  | 2026-11-16 20:53:18.542415+00:00 [info] <0.9.0> Time to start RabbitMQ: 9599 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.604431+00:00 [info] <0.716.0> accepting AMQP connection <0.716.0> (172.18.0.5:33914 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.606653+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.5:33914 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#61d1315b:4[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:18.608343+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.5:33914 -> 172.18.0.2:5672 - rabbitConnectionFactory#61d1315b:4): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:21.406800+00:00 [info] <0.734.0> accepting AMQP connection <0.734.0> (172.18.0.4:44046 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:21.409182+00:00 [info] <0.734.0> connection <0.734.0> (172.18.0.4:44046 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#4a9b4d4e:9[0m
+saberpro-rabbitmq  | 2026-11-16 20:53:21.410758+00:00 [info] <0.734.0> connection <0.734.0> (172.18.0.4:44046 -> 172.18.0.2:5672 - rabbitConnectionFactory#4a9b4d4e:9): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:53.390487+00:00 [info] <0.893.0> accepting AMQP connection <0.893.0> (172.18.0.6:33194 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:53.397893+00:00 [info] <0.893.0> connection <0.893.0> (172.18.0.6:33194 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#12d28106:1[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:53.399751+00:00 [info] <0.893.0> connection <0.893.0> (172.18.0.6:33194 -> 172.18.0.2:5672 - rabbitConnectionFactory#12d28106:1): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:58:54.518623+00:00 [notice] <0.64.0> SIGTERM received - shutting down[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:58:54.518623+00:00 [notice] <0.64.0> [0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:58:54.522197+00:00 [warning] <0.570.0> HTTP listener registry could not find context rabbitmq_prometheus_tls[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:58:54.533145+00:00 [warning] <0.570.0> HTTP listener registry could not find context rabbitmq_management_tls[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.554693+00:00 [info] <0.708.0> stopped TCP listener on [::]:5672[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.555768+00:00 [error] <0.734.0> Error on AMQP connection <0.734.0> (172.18.0.4:44046 -> 172.18.0.2:5672 - rabbitConnectionFactory#4a9b4d4e:9, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.555768+00:00 [error] <0.734.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.555895+00:00 [error] <0.716.0> Error on AMQP connection <0.716.0> (172.18.0.5:33914 -> 172.18.0.2:5672 - rabbitConnectionFactory#61d1315b:4, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.555895+00:00 [error] <0.716.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.556051+00:00 [error] <0.893.0> Error on AMQP connection <0.893.0> (172.18.0.6:33194 -> 172.18.0.2:5672 - rabbitConnectionFactory#12d28106:1, vhost: '/', user: 'guest', state: running), channel 0:[0m
+saberpro-rabbitmq  | [38;5;160m2026-11-16 20:58:54.556051+00:00 [error] <0.893.0>  operation none caused a connection exception connection_forced: "broker forced connection closure with reason 'shutdown'"[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.559934+00:00 [info] <0.473.0> Virtual host '/' is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.560186+00:00 [info] <0.930.0> Closing all connections in vhost '/' on node 'rabbit@rabbitmq' because the vhost is stopping[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.568114+00:00 [info] <0.486.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent'[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.573614+00:00 [info] <0.486.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent' is stopped[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.573932+00:00 [info] <0.482.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient'[0m
+saberpro-rabbitmq  | 2026-11-16 20:58:54.579475+00:00 [info] <0.482.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient' is stopped[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:58:54.633989+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/"}}[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:58:54.634205+00:00 [notice] <0.86.0>     alarm_handler: {clear,{disk_almost_full,"/etc/hosts"}}[0m
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:58:59.898967 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/"},[]}}
+saberpro-rabbitmq  | =INFO REPORT==== 16-Nov-2026::20:58:59.907756 ===
+saberpro-rabbitmq  |     alarm_handler: {set,{{disk_almost_full,"/etc/hosts"},[]}}
+saberpro-rabbitmq  | 2026-11-16 20:59:03.078180+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+saberpro-rabbitmq  | 2026-11-16 20:59:03.084435+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:59:03.085563+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.094839+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.095006+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.170223+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.181148+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:59:03.196503+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.212854+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.212961+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.214501+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 1 registered servers[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.227101+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 1 record(s) recovered[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:59:03.227347+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.235291+00:00 [info] <0.254.0> ra: starting system coordination[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.235368+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.315291+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.337790+00:00 [info] <0.254.0> Khepri leader elected[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.337907+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | [38;5;87m2026-11-16 20:59:03.508283+00:00 [notice] <0.293.0> RabbitMQ metadata store: candidate -> leader in term: 5 machine version: 1[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.894331+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.894331+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.894331+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.894331+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   ##  ##      RabbitMQ 3.13.7
+saberpro-rabbitmq  |   ##  ##
+saberpro-rabbitmq  |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+saberpro-rabbitmq  |   ######  ##
+saberpro-rabbitmq  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Erlang:      26.2.5.16 [jit]
+saberpro-rabbitmq  |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+saberpro-rabbitmq  |   Release series support status: see https://www.rabbitmq.com/release-information
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Doc guides:  https://www.rabbitmq.com/docs
+saberpro-rabbitmq  |   Support:     https://www.rabbitmq.com/docs/contact
+saberpro-rabbitmq  |   Tutorials:   https://www.rabbitmq.com/tutorials
+saberpro-rabbitmq  |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+saberpro-rabbitmq  |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Logs: <stdout>
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+saberpro-rabbitmq  | 
+saberpro-rabbitmq  |   Starting broker...2026-11-16 20:59:03.896463+00:00 [info] <0.254.0> [0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  node           : rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  cookie hash    : TwuO02YaUEaUhzM19GOs0A==[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:03.896463+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.376079+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.376246+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.376828+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.377117+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.377972+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.391706+00:00 [info] <0.391.0> Memory high watermark set to 6397 MiB (6708771225 bytes) of 15994 MiB (16771928064 bytes) total[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.396509+00:00 [info] <0.393.0> Enabling free disk space monitoring (disk free space: 6592663552, total memory: 16771928064)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.396617+00:00 [info] <0.393.0> Disk free limit set to 50MB[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.399380+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.399513+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.407443+00:00 [info] <0.396.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.407667+00:00 [info] <0.397.0> FHC read buffering: OFF[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.407742+00:00 [info] <0.397.0> FHC write buffering: ON[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.408496+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.408617+00:00 [info] <0.340.0> Will use 4 processes for default worker pool[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.408714+00:00 [info] <0.340.0> Starting worker pool 'worker_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.409311+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.409971+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.411805+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.414886+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.423387+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.423617+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.423958+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424104+00:00 [info] <0.411.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424175+00:00 [info] <0.411.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424327+00:00 [info] <0.411.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424430+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424535+00:00 [info] <0.411.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424693+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.424877+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425208+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425280+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425348+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425538+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425705+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.425876+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426019+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426124+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426217+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426318+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426412+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426510+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426612+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426741+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426856+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.426947+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427038+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427142+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427266+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427355+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427491+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.427768+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.429042+00:00 [info] <0.419.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.429227+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.432898+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.433372+00:00 [info] <0.423.0> Starting rabbit_node_monitor (in ignore mode)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.433605+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.434459+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.434755+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.434927+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.435009+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.435087+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.435156+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.435273+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.458153+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.459159+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.459699+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.459819+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.459927+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.460004+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.460183+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.460421+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.460558+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.460752+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.472332+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.472638+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.472787+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.472871+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.472993+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.473969+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.492685+00:00 [info] <0.473.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.511112+00:00 [info] <0.473.0> Starting message stores for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.511759+00:00 [info] <0.482.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.514861+00:00 [info] <0.473.0> Started message store of type transient for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.515336+00:00 [info] <0.486.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.518752+00:00 [info] <0.473.0> Started message store of type persistent for vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.538534+00:00 [info] <0.473.0> Recovering 4 queues of type rabbit_classic_queue took 43ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.538668+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.538846+00:00 [info] <0.473.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.543737+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.543890+00:00 [info] <0.254.0> Will not seed default virtual host and user: have definitions to load...[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.543971+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544131+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544203+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544375+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544483+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544514+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544549+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544583+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544675+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544763+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.544831+00:00 [info] <0.340.0> Starting worker pool 'definition_import_pool' with 4 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.545898+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.546124+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.546590+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.546746+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.547115+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:04.547333+00:00 [info] <0.548.0> Resetting node maintenance status[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0> By default, this feature can still be used for now.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+saberpro-rabbitmq  | [38;5;214m2026-11-16 20:59:04.823566+00:00 [warning] <0.577.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.514552+00:00 [info] <0.614.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.514958+00:00 [info] <0.646.0> Statistics database started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.515112+00:00 [info] <0.645.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.531130+00:00 [info] <0.664.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.531371+00:00 [info] <0.548.0> Ready to start client connection listeners[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.533448+00:00 [info] <0.708.0> started TCP listener on [::]:5672[0m
+saberpro-rabbitmq  |  completed with 5 plugins.
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0> Server startup complete; 5 plugins started.[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0>  * rabbitmq_prometheus[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0>  * rabbitmq_federation[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0>  * rabbitmq_management[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0>  * rabbitmq_management_agent[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.645254+00:00 [info] <0.548.0>  * rabbitmq_web_dispatch[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.799388+00:00 [info] <0.9.0> Time to start RabbitMQ: 9031 ms[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.979534+00:00 [info] <0.716.0> accepting AMQP connection <0.716.0> (172.18.0.6:34586 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.983521+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.6:34586 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#12d28106:3[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:08.985415+00:00 [info] <0.716.0> connection <0.716.0> (172.18.0.6:34586 -> 172.18.0.2:5672 - rabbitConnectionFactory#12d28106:3): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:10.350324+00:00 [info] <0.732.0> accepting AMQP connection <0.732.0> (172.18.0.4:46658 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:10.352784+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.4:46658 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#4a9b4d4e:18[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:10.354782+00:00 [info] <0.732.0> connection <0.732.0> (172.18.0.4:46658 -> 172.18.0.2:5672 - rabbitConnectionFactory#4a9b4d4e:18): user 'guest' authenticated and granted access to vhost '/'[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:12.590500+00:00 [info] <0.748.0> accepting AMQP connection <0.748.0> (172.18.0.5:49144 -> 172.18.0.2:5672)[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:12.593152+00:00 [info] <0.748.0> connection <0.748.0> (172.18.0.5:49144 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#61d1315b:8[0m
+saberpro-rabbitmq  | 2026-11-16 20:59:12.594843+00:00 [info] <0.748.0> connection <0.748.0> (172.18.0.5:49144 -> 172.18.0.2:5672 - rabbitConnectionFactory#61d1315b:8): user 'guest' authenticated and granted access to vhost '/'[0m
